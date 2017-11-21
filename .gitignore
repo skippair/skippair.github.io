@@ -1,9 +1,3 @@
-<<<<<<< HEAD
 .sass-cache/*
 .idea/
-build/
-=======
-.idea/*
-build/*
-node_modules/*
->>>>>>> parent of cde0072... update project files architecture
+
