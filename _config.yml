@@ -28,7 +28,7 @@ plugins:
   - jekyll-feed
 
 source: src
-destination: docs
+destination: _site
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
