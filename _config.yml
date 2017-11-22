@@ -25,8 +25,22 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 # Build settings
+source: _src
+destination: _site
+
+#Markdown settings
 markdown: kramdown
-theme: minima
+
+kramdown:
+  input: GFM
+  syntax_highligter: rouge
+
+#Minifications + sass compilations
+sass:
+  add_charset: true
+  sass_dir: assets/css
+  style: :compressed
+
 plugins:
   - jekyll-feed
 
