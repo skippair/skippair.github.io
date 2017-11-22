@@ -24,14 +24,23 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 
-# Build settings
-<<<<<<< HEAD
-source: _src
-destination: _site
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - package.json
+  - README.md
+  - assets/sass
 
 #Markdown settings
 markdown: kramdown
-
 kramdown:
   input: GFM
   syntax_highligter: rouge
@@ -41,22 +50,3 @@ sass:
   add_charset: true
   sass_dir: assets/css
   style: :compressed
-
-=======
-markdown: kramdown
-theme: minima
->>>>>>> parent of fba7092... Update site
-plugins:
-  - jekyll-feed
-
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
