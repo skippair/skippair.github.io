@@ -6,7 +6,9 @@ p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
   margin: 0;
   padding: 0; }
-
+.site-title {
+  color: red;
+}
 /**
  * Basic styling
  */
