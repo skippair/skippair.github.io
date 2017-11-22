@@ -35,8 +35,6 @@ github_username:  BMerceron
 
 # Build settings
 
-theme: jekyll-theme-cayman
-
 plugins:
   - jekyll-feed
 
