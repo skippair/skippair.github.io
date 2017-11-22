@@ -16,6 +16,8 @@
 
 title: Your awesome title
 
+encoding: UTF-8
+
 email: your-email@example.com
 
 description: >- # this means to ignore newlines until "baseurl:"
@@ -58,7 +60,13 @@ markdown: kramdown
 kramdown:
   input: GFM
   syntax_highligter: rouge
+  hard_wrap: false
 
+future: true
+
+jailed: false
+
+gfm_quirks: paragraph_end
 #Minifications + sass compilations
 sass:
   add_charset: true
