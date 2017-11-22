@@ -26,7 +26,7 @@ github_username:  jekyll
 
 plugins:
   - jekyll-feed
-  
+
 source: src
 destination: _site
 # Exclude from processing.
