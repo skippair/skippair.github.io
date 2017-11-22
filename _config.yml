@@ -25,6 +25,7 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 # Build settings
+<<<<<<< HEAD
 source: _src
 destination: _site
 
@@ -41,6 +42,10 @@ sass:
   sass_dir: assets/css
   style: :compressed
 
+=======
+markdown: kramdown
+theme: minima
+>>>>>>> parent of fba7092... Update site
 plugins:
   - jekyll-feed
 
