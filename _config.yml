@@ -35,8 +35,6 @@ github_username:  BMerceron
 
 # Build settings
 
-theme: jekyll-theme-architect
-
 plugins:
   - jekyll-feed
 
