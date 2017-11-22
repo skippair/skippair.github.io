@@ -26,8 +26,9 @@ github_username:  jekyll
 
 plugins:
   - jekyll-feed
-  - jekyll-sitemap
-
+  
+source: src
+destination: _site
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
