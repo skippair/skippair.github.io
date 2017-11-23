@@ -46,8 +46,8 @@ kramdown:
   input: GFM
   syntax_highligter: rouge
 
-#Minifications + sass compilations
-sass:
-  add_charset: true
-  sass_dir: assets/css
-  style: :compressed
+##Minifications + sass compilations
+#sass:
+#  add_charset: true
+#  sass_dir: assets/css
+#  style: :compressed
