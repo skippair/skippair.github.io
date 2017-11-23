@@ -26,17 +26,6 @@ gulp.task('sass', function () {
       .pipe(gulp.dest('./assets/css'));
 });
 
-gulp.task('sass-bootstrap', function () {
-  return gulp.src([
-    './assets/scss/bootstrap/bootstrap.scss'
-  ])
-      .pipe(sass().on('error', sass.logError))
-      .pipe(csso())
-      .pipe(cssmin())
-      .pipe(rename({suffix: '.min'}))
-      .pipe(gulp.dest('./assets/css'));
-});
-
 gulp.task('watch', function () {
   var onChange = function (event) {
     console.log('File ' + event.path + ' has been ' + event.type);
