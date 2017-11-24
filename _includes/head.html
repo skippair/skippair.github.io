@@ -6,7 +6,6 @@
   <title>{% if page.title %}{{page.title | escape }}{% else %}{{ site.tile | escape}}{% endif %}</title>
   <meta name="description" content="{{page.excerpt | default:site.description |strip_html | normalize_whitespace | truncate: 160 | escape }}">
 
-  <link rel="stylesheet" href="{{ "/assets/css/main.scss" | relative_url }}">
+  <link rel="stylesheet" href="assets/css/main.min.css">
   <link rel="canonical" href="{{ page.url | replace:'index.html', '' | absolute_url }}">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 </head>
