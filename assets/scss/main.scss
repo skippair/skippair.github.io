@@ -1,0 +1,9 @@
+//our SCSS files
+@import "components/nav/aside_nav";
+@import "components/content/content.scss";
+//bootstrap 4
+@import "bootstrap/bootstrap";
+
+body {
+  padding: 15px;
+}
