@@ -1,6 +1,9 @@
+//variables
+@import "utilities/variables_colors";
 //our SCSS files
-@import "components/nav/aside_nav";
-@import "components/content/content.scss";
+@import "content/aside_nav";
+@import "content/colors";
+@import "content/content";
 //bootstrap 4
 @import "bootstrap/bootstrap";
 

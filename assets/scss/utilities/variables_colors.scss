@@ -1,0 +1,48 @@
+//Corporate colors
+$corporate-primary: #00CCCC;
+$corporate-primary-hover: #00A1A1;
+
+//Pro colors
+$pro-primary: #2669D5;
+$pro-primary-hover: #2159B3;
+
+//Gift colors
+$gift-primary: #FF6666;
+$gift-primary-hover: #E55C5C;
+
+//Order colors
+$order-waiting: #FBD644;
+
+//backgrounds
+.corporate-primary-bckg {
+  background-color: $corporate-primary;
+}
+.pro-primary-bckg {
+  background-color: $pro-primary;
+}
+.gift-primary-bckg {
+  background-color: $gift-primary;
+}
+.order-waiting-bckg {
+  background-color: $order-waiting;
+}
+.order-confirmed-bckg {
+  background-color: $corporate-primary;
+}
+
+// colors
+.corporate-primary {
+  color: $corporate-primary;
+}
+.pro-primary {
+  color: $pro-primary;
+}
+.gift-primary {
+  color: $gift-primary;
+}
+.order-waiting {
+  color: $order-waiting;
+}
+.order-confirmed {
+  color: $corporate-primary;
+}
