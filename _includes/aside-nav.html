@@ -2,18 +2,22 @@
   <div class="an-header">
     <img class="an-logo" src="/assets/img/logo_skippair.png" alt="logo">
   </div>
-  <div id="exampleAccordion" data-children=".item">
-    <div class="item">
-      <a data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion1" aria-expanded="true" aria-controls="exampleAccordion1">
+  <div id="an-node-utilities" class="an-nodes-container" data-children="an-node-utilities-list">
+      <a class="an-node-btn-collapse" data-toggle="collapse" data-parent="#an-node-utilities" href="#an-node-utilities-list" aria-expanded="true" aria-controls="first-node">
         Utilities
       </a>
-      <div id="exampleAccordion1" class="collapse show" role="tabpanel">
-        <ul>
-          <li><a href="">Typography</a></li>
-          <li><a href="">Typography</a></li>
-          <li><a href="">Typography</a></li>
+      <div id="an-node-utilities-list" class="an-node-list-container collapse show" role="tabpanel">
+        <ul class="nav nav-tabs an-node-list" id="utilities-tab" role="tablist">
+          <li class="nav-item an-node-link-container">
+            <a class="nav-link an-node-link active" id="typography-tab" data-toggle="tab" href="#typography" role="tab" aria-controls="typography" aria-selected="true">Typography</a>
+          </li>
+          <li class="nav-item an-node-link-container">
+            <a class="nav-link an-node-link" id="grids-tab" data-toggle="tab" href="#grids" role="tab" aria-controls="grids" aria-selected="false">Grids</a>
+          </li>
+          <li class="nav-item an-node-link-container">
+            <a class="nav-link an-node-link" id="color-tab" data-toggle="tab" href="#colors" role="tab" aria-controls="colors" aria-selected="false">Colors</a>
+          </li>
         </ul>
       </div>
-    </div>
   </div>
 </aside>

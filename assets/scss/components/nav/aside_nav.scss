@@ -6,4 +6,29 @@
       height: 50px;
     }
   }
+  #an-node-utilities {
+    a.an-node-btn-collapse {
+      text-transform: uppercase;
+    }
+    a {
+      color: black;
+    }
+    .an-node-list-container{
+      .an-node-list {
+        background-color: #f4f4fe;
+        border: none;
+        display: block;
+        .an-node-link-container {
+          .an-node-link {
+            border: none;
+          }
+          .active {
+            color: #00cccc;
+            background-color: #f4f4fe;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
 }
