@@ -15,9 +15,11 @@ var source = require('vinyl-source-stream');
 
 gulp.task('js', function () {
   return gulp.src([
-    './node_modules/bootstrap/dist/js/bootstrap.js'
+    './node_modules/bootstrap/dist/js/bootstrap.js',
+      './assets/js/nav/asideNav.js'
   ])
-      .pipe(gulp.dest('./assets/js/bootstrap'));
+      .pipe(concat('main.js'))
+      .pipe(gulp.dest('./assets/js'));
 });
 
 gulp.task('sass', function () {
@@ -50,8 +52,8 @@ gulp.task('watch', function () {
   ], ['sass']).on('change', onChange);
   // another files to watch
   gulp.watch([
-    '.assets/js/bootstrap/*.js',
-    './assets/js/*.js'
+      './assets/js/*.js',
+      './assets/js/nav/*.js'
   ], ['js']).on('change', onChange);
   gulp.watch([
     '.assets/img/.+(png|jpg|gif|svg|jpeg)'
