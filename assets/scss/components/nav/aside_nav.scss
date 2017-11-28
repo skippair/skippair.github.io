@@ -6,7 +6,7 @@
       height: 50px;
     }
   }
-  #an-node-utilities {
+  .an-nodes-container {
     a.an-node-btn-collapse {
       text-transform: uppercase;
     }
@@ -26,6 +26,7 @@
             color: #00cccc;
             background-color: #f4f4fe;
             font-weight: bold;
+            border-left:3px solid;
           }
         }
       }
