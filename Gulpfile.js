@@ -4,14 +4,40 @@ var csso = require('gulp-csso');
 var cssmin = require('gulp-cssmin');
 var rename = require('gulp-rename');
 var runsequence = require('run-sequence');
+var browserify = require('browserify');
+var fs = require('fs');
+var babel = require('gulp-babel');
+var babelify = require('babelify');
+var uglify = require('gulp-uglify');
+var concat = require('gulp-concat');
+var buffer = require('vinyl-buffer');
+var source = require('vinyl-source-stream');
 
 gulp.task('js', function () {
   return gulp.src([
-    './node_modules/bootstrap/js/src/collapse.js',
-    './node_modules/bootstrap/js/src/util.js'
+    './node_modules/bootstrap/dist/js/bootstrap.js'
   ])
       .pipe(gulp.dest('./assets/js/bootstrap'));
 });
+gulp.task('js-es6', function () {
+  return gulp.src('./assets/js/bootstrap/main.js')
+      .pipe(babel({
+        presets : ['es2015']
+      }))
+      .pipe(gulp.dest('./assets/js/bootstrap/test'));
+});
+//
+// gulp.task('js-compress', function () {
+//   var bundler = browserify('.assets/js/bootstrap/main.js');
+//   bundler.transform(babelify);
+//
+//   bundler.bundle()
+//       .on('error', function (err) { console.error(err); })
+//       .pipe(source('./assets/js/bootstrap/main.js'))
+//       .pipe(buffer())
+//       .pipe(uglify()) // Use any gulp plugins you want now
+//       .pipe(gulp.dest('dist'));
+// });
 
 gulp.task('sass', function () {
   return gulp.src([
