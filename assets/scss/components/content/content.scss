@@ -1,4 +1,13 @@
 .content {
-  background-color: #eff1fe;
+  background-color: #f4f4fe;
   height: 100vh;
+  padding-left: 100px!important;
+  padding-top: 50px;
+  padding-right: 50px!important;
+  .markdown-container {
+    background-color: white;
+    .highlight.na {
+      color: teal!important;
+    }
+  }
 }
