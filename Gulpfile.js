@@ -19,25 +19,6 @@ gulp.task('js', function () {
   ])
       .pipe(gulp.dest('./assets/js/bootstrap'));
 });
-gulp.task('js-es6', function () {
-  return gulp.src('./assets/js/bootstrap/main.js')
-      .pipe(babel({
-        presets : ['es2015']
-      }))
-      .pipe(gulp.dest('./assets/js/bootstrap/test'));
-});
-//
-// gulp.task('js-compress', function () {
-//   var bundler = browserify('.assets/js/bootstrap/main.js');
-//   bundler.transform(babelify);
-//
-//   bundler.bundle()
-//       .on('error', function (err) { console.error(err); })
-//       .pipe(source('./assets/js/bootstrap/main.js'))
-//       .pipe(buffer())
-//       .pipe(uglify()) // Use any gulp plugins you want now
-//       .pipe(gulp.dest('dist'));
-// });
 
 gulp.task('sass', function () {
   return gulp.src([
