@@ -1,19 +1,28 @@
 //Corporate colors
 $corporate-primary: #00CCCC;
-$corporate-primary-hover: #00A1A1;
+$corporate-secondary: #00A1A1;
 
 //Pro colors
 $pro-primary: #2669D5;
-$pro-primary-hover: #2159B3;
+$pro-secondary: #2159B3;
 
 //Gift colors
 $gift-primary: #FF6666;
-$gift-primary-hover: #E55C5C;
+$gift-secondary: #E55C5C;
 
 //Order colors
 $order-waiting: #FBD644;
 
-//backgrounds
+//BACKGROUNDS
+//  Status--------------------
+.order-waiting-bckg {
+  background-color: $order-waiting;
+}
+.order-confirmed-bckg {
+
+  background-color: $corporate-primary;
+}
+//  Primary----------------------
 .corporate-primary-bckg {
   background-color: $corporate-primary;
 }
@@ -23,14 +32,26 @@ $order-waiting: #FBD644;
 .gift-primary-bckg {
   background-color: $gift-primary;
 }
-.order-waiting-bckg {
-  background-color: $order-waiting;
+//  Secondary----------------------
+.corporate-secondary-bckg {
+  background-color: $corporate-secondary;
 }
-.order-confirmed-bckg {
-  background-color: $corporate-primary;
+.pro-secondary-bckg {
+  background-color: $pro-secondary;
+}
+.gift-secondary-bckg {
+  background-color: $gift-secondary;
 }
 
-// colors
+// COLORS
+//  Status
+.order-waiting {
+  color: $order-waiting;
+}
+.order-confirmed {
+  color: $corporate-primary;
+}
+//  Primary------------------------
 .corporate-primary {
   color: $corporate-primary;
 }
@@ -40,9 +61,13 @@ $order-waiting: #FBD644;
 .gift-primary {
   color: $gift-primary;
 }
-.order-waiting {
-  color: $order-waiting;
+//  Secondary-------------------------
+.corporate-secondary {
+  color: $corporate-secondary;
 }
-.order-confirmed {
-  color: $corporate-primary;
+.pro-secondary {
+  color: $pro-secondary;
+}
+.gift-secondary {
+  color: $gift-secondary;
 }
