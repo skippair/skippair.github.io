@@ -7,29 +7,41 @@
     }
   }
   .an-nodes-container {
-    a.an-node-btn-collapse {
-      text-transform: uppercase;
-    }
-    a {
-      color: black;
-    }
-    .an-node-list-container{
-      .an-node-list {
-        background-color: #f4f4fe;
-        border: none;
-        display: block;
-        .an-node-link-container {
-          .an-node-link {
-            border: none;
-          }
-          .active {
-            color: #00cccc;
-            background-color: #f4f4fe;
-            font-weight: bold;
-            border-left:3px solid;
+    margin-top: 50px;
+    .item {
+      font-weight: bold;
+      margin-bottom: 20px;
+      a.an-node-btn-collapse {
+        text-transform: uppercase;
+      }
+      a {
+        color: black;
+      }
+      .an-node-list-container{
+        .an-node-list {
+          background-color: #f4f4fe;
+          border: none;
+          display: block;
+          .an-node-link-container {
+            .an-node-link {
+              font-weight: normal;
+              border: none;
+            }
+            .active {
+              color: #00cccc;
+              background-color: #f4f4fe;
+              font-weight: bold;
+              border-left:3px solid;
+              font-weight: bold;
+            }
           }
         }
       }
+    }
+    :hover {
+      font-weight: bold;
+      color: $corporate-primary!important;
+      text-decoration: none;
     }
   }
 }

@@ -49,9 +49,9 @@ gulp.task('watch', function () {
   gulp.watch([
     './assets/scss/*.scss',
     './assets/scss/bootstrap/*.scss',
-    './assets/scss/components/**/*.scss',
-    './assets/scss/utilities/*/*scss.',
-    './assets/scss/content/**/*.scss'
+    './assets/scss/components/*.scss',
+    './assets/scss/utilities/*.scss',
+    './assets/scss/content/*.scss'
   ], ['sass']).on('change', onChange);
   // another files to watch
   gulp.watch([
