@@ -1,12 +1,10 @@
-//variables
-@import "utilities/variables_colors";
+//font-framework
+@import "utilities/_colors";
+@import "utilities/_layouts";
 //our SCSS files
 @import "content/aside_nav";
 @import "content/colors";
+@import "content/layouts";
 @import "content/content";
 //bootstrap 4
 @import "bootstrap/bootstrap";
-
-body {
-  padding: 15px;
-}
