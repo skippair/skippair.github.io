@@ -1,14 +1,17 @@
 //Bootstrap 4
 @import "bootstrap/bootstrap";
 
-//Font-Framework
+//Front-Framework
 @import "utilities/_breakpoints";
 @import "utilities/_typography";
 @import "utilities/_spacings";
 @import "utilities/_layouts";
 @import "utilities/_colors";
 
-//Our SCSS files for styleguide site
+//Our Components
+@import "components/_header";
+
+//Our SCSS files just for styleguide site
 @import "content/content";
 @import "content/aside_nav";
 @import "content/colors";

@@ -19,10 +19,16 @@ $text: #868E96;
 //sub-title color
 $sub-title: #505050;
 
+// Text on image
+$text-img: #ffffff;
+.text-img-color {
+  color: $text-img;
+}
 //Text-color
 .text-color {
   color: $text;
 }
+
 //BACKGROUNDS
 //  Status--------------------
 .order-waiting-bckg {
