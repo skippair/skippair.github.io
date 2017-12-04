@@ -1,0 +1,17 @@
+.s-container {
+  height: 100%;
+  margin-top: 60px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (max-width: $sm) {
+  .s-container {
+    width: 90%;
+  }
+}
+@media (min-width: $lg){
+  .s-container {
+    width: 75%;
+  }
+}

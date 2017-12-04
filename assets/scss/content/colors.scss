@@ -2,5 +2,11 @@
   .color-panel {
     width: 75px;
     height: 75px;
+    span {
+      font-size: 14px;
+    }
   }
+}
+.text-color-bckg {
+  background-color: $text;
 }

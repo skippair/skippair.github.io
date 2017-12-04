@@ -7,6 +7,7 @@
     "bootstrap": "^4.0.0-beta.2",
     "browserify": "^14.5.0",
     "cssmin": "^0.4.3",
+    "del": "^3.0.0",
     "fs": "0.0.1-security",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",

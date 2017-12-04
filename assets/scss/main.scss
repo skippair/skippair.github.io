@@ -1,12 +1,20 @@
-//variables
-@import "utilities/variables_colors";
-//our SCSS files
+//Font-Framework
+@import "utilities/_breakpoints";
+@import "utilities/_layouts";
+@import "utilities/_colors";
+
+//Our SCSS files for styleguide site
+@import "content/content";
 @import "content/aside_nav";
 @import "content/colors";
-@import "content/content";
-//bootstrap 4
+@import "content/layouts";
+
+//Bootstrap 4
 @import "bootstrap/bootstrap";
 
-body {
+.main {
   padding: 15px;
+}
+p {
+  color: $text;
 }
