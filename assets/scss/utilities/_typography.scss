@@ -1,0 +1,25 @@
+//TITLES
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700');
+//  Typo for titles
+h1, h2, h3 {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+//  font-size for titles
+h1 {
+  font-size: 26px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+h3 {
+  font-size: 18px;
+}
+//TEXT
+//  Typo and font-size for texts
+p {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+}
