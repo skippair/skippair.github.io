@@ -1,4 +1,6 @@
 .an-aside-nav {
+  border-right: 1px solid #ccd8e4;
+  min-height: 96vh!important;
   .an-header {
     padding-bottom: 20px;
     .an-logo {
@@ -19,7 +21,7 @@
       }
       .an-node-list-container{
         .an-node-list {
-          background-color: #f4f4fe;
+          background-color: $background-color-generic;
           border: none;
           display: block;
           .an-node-link-container {
@@ -29,10 +31,9 @@
             }
             .active {
               color: #00cccc;
-              background-color: #f4f4fe;
+              background-color: $background-color-generic;
               font-weight: bold;
               border-left:3px solid;
-              font-weight: bold;
             }
           }
         }

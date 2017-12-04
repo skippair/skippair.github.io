@@ -1,0 +1,17 @@
+.s-container {
+  height: 50px;
+}
+.mobile-device-fake {
+  height: 200px;
+  width: 320px;
+  background-color: $background-color-generic;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.desktop-device-fake {
+  height: 200px;
+  width: 100%;
+  background-color: $background-color-generic;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}

@@ -4,6 +4,7 @@ var csso = require('gulp-csso');
 var cssmin = require('gulp-cssmin');
 var rename = require('gulp-rename');
 var runsequence = require('run-sequence');
+var del = require('del');
 var browserify = require('browserify');
 var fs = require('fs');
 var babel = require('gulp-babel');
@@ -41,6 +42,14 @@ gulp.task('img', function () {
       .pipe(gulp.dest('./assets/img'));
 });
 
+gulp.task('clean', function () {
+  del([
+    './assets/css/main.min.css',
+    './assets/js/main.js'
+  ]);
+});
+
+
 gulp.task('watch', function () {
   var onChange = function (event) {
     console.log('File ' + event.path + ' has been ' + event.type);
@@ -64,5 +73,5 @@ gulp.task('watch', function () {
 });
 
 gulp.task('build', function (callback) {
-  runsequence('sass', 'img', 'js', callback)
+  runsequence('clean', 'sass', 'img', 'js', callback)
 });
