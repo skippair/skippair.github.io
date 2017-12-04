@@ -1,7 +1,7 @@
 //Bootstrap 4
 @import "bootstrap/bootstrap";
 
-//Front-Framework
+//Utilities
 @import "utilities/_breakpoints";
 @import "utilities/_typography";
 @import "utilities/_spacings";
@@ -10,6 +10,7 @@
 
 //Our Components
 @import "components/_header";
+@import "components/navbar";
 
 //Our SCSS files just for styleguide site
 @import "content/content";
