@@ -1,10 +1,20 @@
-//font-framework
-@import "utilities/_colors";
+//Font-Framework
+@import "utilities/_breakpoints";
 @import "utilities/_layouts";
-//our SCSS files
+@import "utilities/_colors";
+
+//Our SCSS files for styleguide site
+@import "content/content";
 @import "content/aside_nav";
 @import "content/colors";
 @import "content/layouts";
-@import "content/content";
-//bootstrap 4
+
+//Bootstrap 4
 @import "bootstrap/bootstrap";
+
+.main {
+  padding: 15px;
+}
+p {
+  color: $text;
+}

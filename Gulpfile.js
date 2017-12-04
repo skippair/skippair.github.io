@@ -44,7 +44,7 @@ gulp.task('img', function () {
 
 gulp.task('clean', function () {
   del([
-    './assets/scss/main.scss',
+    './assets/css/main.min.css',
     './assets/js/main.js'
   ]);
 });
