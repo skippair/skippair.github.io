@@ -1,6 +1,10 @@
+//Bootstrap 4
+@import "bootstrap/bootstrap";
+
 //Font-Framework
 @import "utilities/_breakpoints";
-@import "utilities/_typography.scss";
+@import "utilities/_typography";
+@import "utilities/_spacings";
 @import "utilities/_layouts";
 @import "utilities/_colors";
 
@@ -9,9 +13,7 @@
 @import "content/aside_nav";
 @import "content/colors";
 @import "content/layouts";
-
-//Bootstrap 4
-@import "bootstrap/bootstrap";
+@import "content/spacings";
 
 .main {
   padding: 15px;

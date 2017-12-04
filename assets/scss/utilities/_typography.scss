@@ -1,3 +1,10 @@
+// font size variables
+$h1: 26px;
+$h2: 22px;
+$h3: 18px;
+$p: 16px;
+
+
 //TITLES
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700');
 //  Typo for titles
@@ -6,20 +13,20 @@ h1, h2, h3 {
 }
 //  font-size for titles
 h1 {
-  font-size: 26px;
+  font-size: $h1;
   text-transform: uppercase;
 }
 
 h2 {
-  font-size: 22px;
+  font-size: $h2;
 }
 
 h3 {
-  font-size: 18px;
+  font-size: $h3;
 }
 //TEXT
 //  Typo and font-size for texts
 p {
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 16px;
+  font-size: $p;
 }
