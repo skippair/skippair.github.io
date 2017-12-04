@@ -1,0 +1,20 @@
+.navbar {
+  background-color: #ffffff;
+  box-shadow: 0px 2px 5.9px 0.1px rgba(2, 3, 2, 0.15);
+  .navbar-brand {
+    .navbar-logo {
+      width: 130px;
+      height: 30px;
+    }
+  }
+  .navbar-collapse {
+    ul {
+      li.navbar-links {
+        text-transform: uppercase;
+      }
+      li.navbar-link-account {
+
+      }
+    }
+  }
+}
