@@ -56,7 +56,6 @@ gulp.task('fonts', function () {
       .pipe(gulp.dest('./assets/fonts'));
 });
 
-
 gulp.task('watch', function () {
   var onChange = function (event) {
     console.log('File ' + event.path + ' has been ' + event.type);
@@ -64,13 +63,15 @@ gulp.task('watch', function () {
   // Watch Sass files
   gulp.watch([
     './assets/scss/*.scss',
-    './assets/fonts/*.ttf',
     './assets/scss/bootstrap/*.scss',
     './assets/scss/components/*.scss',
     './assets/scss/utilities/*.scss',
     './assets/scss/content/*.scss'
   ], ['sass']).on('change', onChange);
   // another files to watch
+  gulp.watch([
+    './assets/fonts/*.ttf'
+  ], ['fonts']).on('change', onChange);
   gulp.watch([
     './assets/js/*.js',
     './assets/js/nav/*.js'
