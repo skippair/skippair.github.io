@@ -17,7 +17,7 @@ var source = require('vinyl-source-stream');
 gulp.task('js', function () {
   return gulp.src([
     './node_modules/bootstrap/dist/js/bootstrap.js',
-    './assets/js/nav/asideNav.js'
+    './assets/js/nav/asideNav.js',
   ])
       .pipe(concat('main.js'))
       .pipe(gulp.dest('./assets/js'));

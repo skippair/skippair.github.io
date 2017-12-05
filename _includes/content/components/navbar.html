@@ -2,33 +2,33 @@
   <h1>Navbar</h1>
   <p>We have an exhaustive list of links regrouped in a navbar.</p>
   
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar main-navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#"><img class="navbar-logo" src="../../../assets/img/logo_skippair.png"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <i class="fa fa-bars"></i>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item navbar-links">
-          <a class="nav-link" href="#">Croisières <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="#">Link 1<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item navbar-links">
-          <a class="nav-link" href="#">Nos Professionnels</a>
+          <a class="nav-link" href="#">Link 2</a>
         </li>
         <li class="nav-item navbar-links">
-          <a class="nav-link" href="#">Où partir ?</a>
+          <a class="nav-link" href="#">Link 3</a>
         </li>
         <li class="nav-item navbar-links">
-          <a class="nav-link" href="#">Offrir une box</a>
+          <a class="nav-link" href="#">Link 4</a>
         </li>
-        <li class="nav-item navbar-links">
-          <a class="nav-link" href="#">Blog</a>
-        </li>
-        <li class="nav-item navbar-link-account dropdown float-right">
+        <!-- if user not connected = "Se connecter"-->
+        <!--if user is connected = "username"-->
+        <li class="nav-item navbar-link-account dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            User
+            <i class="fa fa-user-o"></i> Se connecter
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <!--if user is connected mobile-->
+          <div class="dropdown-menu dropdown-account" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="#">Mon profil</a>
             <a class="dropdown-item" href="#">Mes Voyages</a>
             <a class="dropdown-item" href="#">Mes messages</a>
