@@ -27,13 +27,13 @@
   }
   .navbar-collapse {
     ul {
-      font-size: $menu;
+      font-size: $text-sm;
       li.navbar-links {
         text-transform: uppercase;
       }
       li.navbar-link-account {
         .dropdown-account {
-          font-size: $menu;
+          font-size: $text-sm;
           border: none;
         }
       }
