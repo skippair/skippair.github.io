@@ -2,6 +2,7 @@
   <h1>Popups</h1>
   <p>To notify the user of the completion of his actions, we set up a system of popups that appear.</p>
   <button class="call-to-action-show" onclick="showPopup()">Connexion</button>
+  <br>
   <div class="popup">
     <div class="popup-icon">
       <i class="corporate-primary fa fa-user-circle-o"></i>
@@ -11,17 +12,23 @@
       <a class="corporate-primary" href="">voir mon profil</a>
     </div>
     <div class="popup-close">
-      <i class="fa fa-times"></i>
+      <i class="fa fa-times" onclick="hidePopup()"></i>
     </div>
   </div>
-  <script>
-    function showPopup() {
-      $(".popup").addClass("show");
-    }
-  </script>
   <div class="markdown-container">
     {% highlight html %}
-
+    <div class="popup">
+      <div class="popup-icon">
+        <i class="corporate-primary fa fa-user-circle-o"></i>
+      </div>
+      <div class="popup-text">
+        <p>Bienvenue à bord <span class="corporate-primary">user</span>,</p>
+        <a class="corporate-primary" href="">voir mon profil</a>
+      </div>
+      <div class="popup-close" onclick="hidePopup()">
+        <i class="fa fa-times"></i>
+      </div>
+    </div>
     {% endhighlight %}
   </div>
 </div>
