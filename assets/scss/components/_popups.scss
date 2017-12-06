@@ -1,0 +1,41 @@
+.popup {
+  position: fixed;
+  width: 315px;
+  height: 60px;
+  right: 0;
+  bottom: -60px;
+  border: 1px solid $border-color-grey;
+
+  transition: 1s;
+  .popup-icon {
+    display: inline-block;
+    font-size: 24px;
+    position: relative;
+    top: -15px;
+    right: 12px;
+    margin-left: 40px;
+  }
+  .popup-text {
+    padding-top: 10px;
+    display: inline-block;
+    p {
+      margin-bottom: 0px;
+    }
+  }
+  .popup-close {
+    color: $text;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    position: relative;
+    top: -26px;
+    right: -64px;
+  }
+  .popup-close:hover {
+    color: black;
+  }
+}
+.popup.show {
+  transition: 1s;
+  bottom: 0;
+}
