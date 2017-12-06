@@ -14,14 +14,20 @@
       <i class="fa fa-times"></i>
     </div>
   </div>
-  <script>
-    function showPopup() {
-      $(".popup").addClass("show");
-    }
-  </script>
   <div class="markdown-container">
     {% highlight html %}
-
+    <div class="popup">
+      <div class="popup-icon">
+        <i class="corporate-primary fa fa-user-circle-o"></i>
+      </div>
+      <div class="popup-text">
+        <p>Bienvenue à bord <span class="corporate-primary">user</span>,</p>
+        <a class="corporate-primary" href="">voir mon profil</a>
+      </div>
+      <div class="popup-close">
+        <i class="fa fa-times"></i>
+      </div>
+    </div>
     {% endhighlight %}
   </div>
 </div>
