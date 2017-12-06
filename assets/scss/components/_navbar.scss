@@ -1,6 +1,18 @@
 .main-navbar {
   background-color: #ffffff;
   box-shadow: 0px 2px 5.9px 0.1px rgba(2, 3, 2, 0.15);
+  .link-mobile{
+    color: $corporate-primary;
+    font-size: 20px;
+    position: absolute;
+    top: 15px;
+  }
+  .link-phone {
+    right: 60px;
+  }
+  .link-search {
+    right: 95px;
+  }
   .navbar-brand {
     .navbar-logo {
       width: 130px;
@@ -8,6 +20,7 @@
     }
   }
   .navbar-toggler {
+    border: none;
     i {
       color: $corporate-primary;
     }
@@ -21,7 +34,6 @@
       li.navbar-link-account {
         .dropdown-account {
           font-size: $menu;
-          background-color: #ffffff;
           border: none;
         }
       }
@@ -30,6 +42,9 @@
 }
 @media screen and (min-width: $lg) {
   .main-navbar {
+    .link-mobile {
+      display: none;
+    }
     .navbar-collapse {
       ul {
         li.navbar-link-account {
