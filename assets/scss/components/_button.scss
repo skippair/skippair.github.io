@@ -1,11 +1,64 @@
 .btn-big {
+  font-weight: 900;
+  border-radius: 4px;
   padding: 15px 80px;
+  border: none;
   cursor: pointer;
+  text-transform: uppercase;
 }
 .btn-validate {
-  color: $text-img;
-  font-weight: 900;
-  border: none;
-  border-radius: 4px;
+  color: $color-white1;
   background-color: $corporate-primary;
+}
+.btn-validate:hover {
+  transition: 0.7s;
+  background-color: $corporate-secondary;
+}
+.btn-validate-disabled {
+  color: $text;
+  border: solid 2px $color-grey1;
+  background-color: $color-white1;
+}
+.btn-group {
+  .btn-action {
+    border-radius: 4px 0px 0px 4px;
+    color: $color-white1;
+    background-color: $corporate-primary;
+  }
+  i {
+    color: $color-white1;
+    background-color: $corporate-secondary;
+    padding: 15px 10px;
+    border-radius: 0px 4px 4px 0px;
+  }
+  .btn-action:hover {
+    transition: 0.7s;
+    background-color: $corporate-secondary;
+  }
+}
+.btn-group.disabled {
+  .btn-action {
+    border-top: solid 2px $color-grey1;
+    border-bottom: solid 2px $color-grey1;
+    border-left: solid 2px $color-grey1;
+    border-radius: 4px 0px 0px 4px;
+    color: $text;
+    background-color: $color-white1;
+  }
+  i {
+    color: $color-white1;
+    background-color: $color-grey2;
+    padding: 15px 10px;
+    border-radius: 0px 4px 4px 0px;
+  }
+}
+.btn-return {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  color: $text;
+}
+.btn-return:hover {
+  transition: 0.7s;
+  color: $text-hover;
 }
