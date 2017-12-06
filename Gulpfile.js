@@ -49,13 +49,6 @@ gulp.task('clean', function () {
   ]);
 });
 
-gulp.task('fonts', function () {
-  return gulp.src([
-    './assets/fonts/*.ttf'
-  ])
-      .pipe(gulp.dest('./assets/fonts'));
-});
-
 gulp.task('watch', function () {
   var onChange = function (event) {
     console.log('File ' + event.path + ' has been ' + event.type);
@@ -82,5 +75,5 @@ gulp.task('watch', function () {
 });
 
 gulp.task('build', function (callback) {
-  runsequence('clean', 'sass','fonts', 'img', 'js', callback)
+  runsequence('clean', 'sass', 'img', 'js', callback)
 });
