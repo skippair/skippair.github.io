@@ -1,0 +1,14 @@
+.title-icon {
+  .icon {
+    border-right: 2px solid;
+    padding-right: 12px;
+    margin-right: 6px;
+  }
+}
+.title-step {
+  color: $corporate-primary;
+  text-decoration: underline;
+  span:first-child {
+    text-transform: uppercase;
+  }
+}
