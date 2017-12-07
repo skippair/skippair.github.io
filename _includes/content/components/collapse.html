@@ -1,7 +1,22 @@
 <div class="tab-pane s-container fade" id="collapse" role="tabpanel" aria-labelledby="collapse-tab">
   <h1>Collapse</h1>
+  <h2>Link to know more</h2>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias corporis eius eum hic iste laudantium libero, nemo neque nulla perferendis quisquam totam! Adipisci doloremque iusto optio perferendis quibusdam quo vitae?
+    <a href="#know-more-content-1" id="know-more-link-1" class="know-more-link" data-toggle="collapse" aria-expanded="false" aria-controls="know-more" onclick="updateIconCollapseFirst()" title="En savoir plus..."><i class="corporate-primary fa fa-plus-square-o"></i></a>
+  </p>
+  <div class="know-more-content collapse" id="know-more-content-1">
+      <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</p>
+  </div>
   <div class="markdown-container">
     {% highlight html %}
     {% endhighlight %}
   </div>
+
+  <script>
+    function updateIconCollapseFirst() {
+      debugger;
+      $("#know-more-link-1").find(".fa").removeClass(".fa-plus-square-o").addClass(".fa-minus-square-o");
+    }
+  </script>
 </div>
