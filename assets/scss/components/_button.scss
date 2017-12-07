@@ -1,7 +1,8 @@
 .btn-big {
   font-weight: 900;
+  min-width: 280px;
   border-radius: 4px;
-  padding: 15px 80px;
+  padding: 15px 10px;
   border: none;
   cursor: pointer;
   text-transform: uppercase;
@@ -22,6 +23,7 @@
   background-color: $color-white1;
 }
 .btn-group {
+  min-width: 280px;
   .btn-action {
     transition: $transition-time;
     border-radius: 4px 0px 0px 4px;
