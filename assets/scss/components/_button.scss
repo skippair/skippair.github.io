@@ -7,6 +7,9 @@
   cursor: pointer;
   text-transform: uppercase;
 }
+button:focus {
+  outline: 0;
+}
 .btn-validate {
   transition: $transition-time;
   color: $color-white1;
