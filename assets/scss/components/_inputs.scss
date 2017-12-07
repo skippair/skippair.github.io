@@ -50,7 +50,7 @@
 .control input:checked ~ .control-indicator:after {
   display: block;
 }
-.control--checkbox .control-indicator:after {
+.control-checkbox .control-indicator:after {
   left: 8px;
   top: 4px;
   width: 3px;
@@ -59,7 +59,7 @@
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
 }
-.control--checkbox input:disabled ~ .control-indicator:after {
+.control-checkbox input:disabled ~ .control-indicator:after {
   border-color: #7b7b7b;
 }
 .control--radio .control-indicator:after {
@@ -73,6 +73,7 @@
 .control--radio input:disabled ~ .control-indicator:after {
   background: #7b7b7b;
 }
+// SELECT
 .select {
   min-width: 280px;
   position: relative;
