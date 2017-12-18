@@ -12,7 +12,7 @@
   </div>
   <h2>Button with action</h2>
   <div class="s-btn btn-group" role="group">
-    <button type="button" class="btn-big btn-action">Signer mon contrat</button>
+    <button type="button" class="btn-big btn-action sign">Signer mon contrat</button>
     <i class="fa fa-pencil"></i>
   </div>
   <div class=" s-btn btn-group disabled" role="group">
@@ -21,13 +21,26 @@
   </div>
   <div class="markdown-container">
     {% highlight html %}
-    <div class="s-btn btn-group" role="group">
+    <div class="s-btn btn-group sign" role="group">
       <button type="button" class="btn-big btn-action">Signer mon contrat</button>
       <i class="fa fa-pencil"></i>
     </div>
     <div class="s-btn btn-group disabled">
       <button type="button" class="btn-big btn-action">Signer mon contrat</button>
       <i class="fa fa-pencil"></i>
+    </div>
+    {% endhighlight %}
+  </div>
+  <h2>Socials buttons</h2>
+  <div class="s-btn btn-group" role="group">
+    <button type="button" class="btn-big btn-action facebook">Continuer avec facebook</button>
+    <i class="fa fa-facebook"></i>
+  </div>
+  <div class="markdown-container">
+    {% highlight html %}
+    <div class="s-btn btn-group" role="group">
+      <button type="button" class="btn-big btn-action facebook">Continuer avec facebook</button>
+      <i class="fa fa-facebook"></i>
     </div>
     {% endhighlight %}
   </div>
