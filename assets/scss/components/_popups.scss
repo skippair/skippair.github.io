@@ -1,7 +1,7 @@
 .popup {
   position: fixed;
   width: 315px;
-  height: 60px;
+  height: 70px;
   right: 0;
   bottom: -60px;
   border: 1px solid $color-grey1;
@@ -29,8 +29,8 @@
     display: inline-block;
     font-size: 16px;
     position: relative;
-    top: -26px;
-    right: -64px;
+    top: 3px;
+    left: -9px;
   }
   .popup-close:hover {
     color: black;
