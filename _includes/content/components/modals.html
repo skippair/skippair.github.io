@@ -1,0 +1,53 @@
+<div class="tab-pane s-container fade" id="modals" role="tabpanel" aria-labelledby="modals-tab">
+  <h1>Modals</h1>
+  <p>Skippair.com have a modal structure. This structure can be fill with some other components.</p>
+  <!-- Button trigger modal -->
+  <button type="button" class="s-btn btn-big btn-validate" data-toggle="modal" data-target="#exampleModal1">
+    Launch modal structure
+  </button>
+  <!-- Modal structure-->
+  <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="markdown-container">
+    {% highlight html %}
+    {% endhighlight %}
+  </div>
+
+  <button type="button" class="s-btn btn-big btn-validate" data-toggle="modal" data-target="#exampleModal2">
+    Launch modal with other components hey hey hey
+  </button>
+  <!-- Modal with contents-->
+  <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <i class="fa fa-check-circle-o fa-5 corporate-primary"></i>
+          <h1>Message envoyé</h1>
+          <button type="button" class="btn-big btn-validate" data-toggle="modal" data-target="#exampleModal1">
+            Voir mes messages
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="markdown-container">
+    {% highlight html %}
+    {% endhighlight %}
+  </div>
+</div>

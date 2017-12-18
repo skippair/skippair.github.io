@@ -1,0 +1,34 @@
+.modal-dialog {
+  width: 400px;
+  .modal-header {
+    border: none;
+  }
+  .modal-content {
+    padding-bottom: 70px;
+    margin-top: 140px;
+    .modal-body {
+      text-align: center;
+      i {
+        font-size: 126px;
+      }
+    }
+  }
+}
+@media screen and (max-width: $md) {
+  .modal {
+    .modal-dialog {
+      width: 100%;
+      max-width: 100%;
+      height: 100vh;
+      margin: 0px;
+      .modal-content {
+        border: none;
+        border-radius: 0;
+        margin-top: 57px;
+        .modal-body {
+          height: 100vh;
+        }
+      }
+    }
+  }
+}

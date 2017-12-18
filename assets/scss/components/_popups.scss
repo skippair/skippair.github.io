@@ -5,6 +5,7 @@
   right: 0;
   bottom: -60px;
   border: 1px solid $color-grey1;
+  background-color: $color-white1;
 
   transition: 1s;
   .popup-icon {
@@ -38,4 +39,10 @@
 .popup.show {
   transition: 1s;
   bottom: 0;
+}
+
+@media screen and (max-width: $sm) {
+  .popup {
+    width: 100%;
+  }
 }
