@@ -25,7 +25,7 @@
   width: 20px;
   background: #e6e6e6;
 }
-.control--radio .control-indicator {
+.control-radio .control-indicator {
   border-radius: 50%;
 }
 .control:hover input ~ .control-indicator {
@@ -62,7 +62,7 @@
 .control-checkbox input:disabled ~ .control-indicator:after {
   border-color: #7b7b7b;
 }
-.control--radio .control-indicator:after {
+.control-radio .control-indicator:after {
   left: 7px;
   top: 7px;
   height: 6px;
@@ -70,7 +70,7 @@
   border-radius: 50%;
   background: #fff;
 }
-.control--radio input:disabled ~ .control-indicator:after {
+.control-radio input:disabled ~ .control-indicator:after {
   background: #7b7b7b;
 }
 // SELECT
