@@ -1,8 +1,11 @@
+.s-btn {
+  margin-bottom: 18px;
+}
 .btn-big {
   font-weight: 900;
   min-width: 280px;
   border-radius: 4px;
-  padding: 15px 10px;
+  padding: 18px 16px;
   border: none;
   cursor: pointer;
   text-transform: uppercase;
@@ -31,17 +34,32 @@ button:focus {
     transition: $transition-time;
     border-radius: 4px 0px 0px 4px;
     color: $color-white1;
-    background-color: $corporate-primary;
   }
   i {
     color: $color-white1;
-    background-color: $corporate-secondary;
-    padding: 15px 10px;
+    padding: 20px 16px;
     border-radius: 0px 4px 4px 0px;
   }
   .btn-action:hover {
     transition: 0.7s;
+  }
+  .sign {
+    background-color: $corporate-primary;
+  }
+  .sign ~ i {
     background-color: $corporate-secondary;
+  }
+  .sign:hover {
+    background-color: $corporate-secondary;
+  }
+  .facebook {
+    background-color: $facebook-primary;
+  }
+  .facebook ~ i {
+    background-color: $facebook-secondary;
+  }
+  .facebook:hover {
+    background-color: $facebook-secondary;
   }
 }
 .btn-group.disabled {
@@ -57,7 +75,7 @@ button:focus {
   i {
     color: $color-white1;
     background-color: $color-grey2;
-    padding: 15px 10px;
+    padding: 20px 16px;
     border-radius: 0px 4px 4px 0px;
   }
 }
