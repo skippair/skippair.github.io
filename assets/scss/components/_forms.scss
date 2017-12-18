@@ -14,7 +14,6 @@
     outline:none;
     border-bottom: none;
   }
-
   // Labels
   label 				 {
     color:#999;
@@ -28,14 +27,12 @@
     -moz-transition:0.2s ease all;
     -webkit-transition:0.2s ease all;
   }
-
   // Active State
   input:focus ~ label, input:valid ~ label 		{
     top:-20px;
     font-size:14px;
     color:$corporate-primary;
   }
-
   // Border bottom forms
   .bar 	{
     position:relative;
@@ -59,12 +56,10 @@
   .bar:after {
     right:50%;
   }
-
   // Active State
   input:focus ~ .bar:before, input:focus ~ .bar:after {
     width:50%;
   }
-
   // Highlighter
   .highlight {
     position:absolute;
@@ -75,14 +70,12 @@
     pointer-events:none;
     opacity:0.5;
   }
-
   // Active state
   input:focus ~ .highlight {
     -webkit-animation:inputHighlighter 0.3s ease;
     -moz-animation:inputHighlighter 0.3s ease;
     animation:inputHighlighter 0.3s ease;
   }
-
   // ANIMATIONS
   @-webkit-keyframes inputHighlighter {
     from { background:$corporate-primary; }
