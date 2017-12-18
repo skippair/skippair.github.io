@@ -1,6 +1,16 @@
 .know-more-link {
   margin-left: 10px;
-  i {
-    font-size: 21px;
-  }
+  font-family: FontAwesome;
+  font-size: 21px;
+  text-decoration: none;
+}
+.know-more-link:after {
+  content: "\f147 ";
+}
+.know-more-link.collapsed:after {
+  content: "\f196";
+}
+.know-more-link:hover {
+  color: $corporate-secondary;
+  text-decoration: none;
 }
