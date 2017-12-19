@@ -31,3 +31,7 @@ p {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: $p;
 }
+a.text-link {
+  color: $corporate-primary;
+  text-decoration: underline;
+}
