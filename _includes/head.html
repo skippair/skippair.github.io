@@ -6,7 +6,6 @@
   <title>{% if page.title %}{{page.title | escape }}{% else %}{{ site.tile | escape}}{% endif %}</title>
   <meta name="description" content="{{page.excerpt | default:site.description |strip_html | normalize_whitespace | truncate: 160 | escape }}">
 
-  <link rel="stylesheet" href="assets/css/styleguide.min.css">
   <link rel="stylesheet" href="assets/css/main.min.css">
   <link rel="canonical" href="{{ page.url | replace:'index.html', '' | absolute_url }}">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
