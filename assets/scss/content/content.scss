@@ -1,6 +1,13 @@
 //backgrounds colors
 $background-color-generic: #ecf3f5;
 
+.main {
+  padding: 15px;
+}
+p {
+  color: $text;
+}
+
 .content {
   min-height: 100%;
   padding-right: 0;
