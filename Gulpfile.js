@@ -24,9 +24,21 @@ gulp.task('js', function () {
       .pipe(gulp.dest('./assets/js'));
 });
 
-gulp.task('sass', function () {
+gulp.task('sass-main', function () {
   return gulp.src([
     './assets/scss/main.scss'
+    //    another sccs files to compile
+  ])
+      .pipe(sass().on('error', sass.logError))
+      .pipe(csso())
+      .pipe(cssmin())
+      .pipe(rename({suffix: '.min'}))
+      .pipe(gulp.dest('./assets/css'));
+});
+
+gulp.task('sass-styleguide', function () {
+  return gulp.src([
+    './assets/scss/styleguide.scss'
     //    another sccs files to compile
   ])
       .pipe(sass().on('error', sass.logError))
@@ -61,7 +73,7 @@ gulp.task('watch', function () {
     './assets/scss/components/*.scss',
     './assets/scss/utilities/*.scss',
     './assets/scss/content/*.scss'
-  ], ['sass']).on('change', onChange);
+  ], ['sass-main', 'sass-styleguide']).on('change', onChange);
   // another files to watch
   gulp.watch([
     './assets/fonts/*.ttf'
@@ -76,5 +88,5 @@ gulp.task('watch', function () {
 });
 
 gulp.task('build', function (callback) {
-  runsequence('clean', 'sass', 'img', 'js', callback)
+  runsequence('clean','sass-styleguide','sass-main','img','js',callback)
 });
