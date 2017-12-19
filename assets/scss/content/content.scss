@@ -4,24 +4,10 @@ $background-color-generic: #ecf3f5;
 .main {
   padding: 15px;
 }
-p {
-  color: $text;
-}
-
 .content {
   min-height: 100%;
   padding-right: 0;
   padding-left: 0;
-}
-
-h1 {
-  color: $corporate-primary;
-}
-h2 {
-  color: $sub-title;
-}
-h3,p {
-  color: $text;
 }
 .markdown-container {
   margin-top: 20px;
