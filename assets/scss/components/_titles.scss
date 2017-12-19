@@ -1,3 +1,12 @@
+h1 {
+  color: $corporate-primary;
+}
+h2 {
+  color: $sub-title;
+}
+h3,p {
+  color: $text;
+}
 .title-icon {
   .icon {
     border-right: 2px solid;
