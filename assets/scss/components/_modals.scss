@@ -1,10 +1,11 @@
 .modal-dialog {
   width: 400px;
+  padding-right: 30px;
+  padding-left: 30px;
   .modal-header {
     border: none;
   }
   .modal-content {
-    padding-bottom: 70px;
     margin-top: 140px;
     .modal-body {
       text-align: center;
