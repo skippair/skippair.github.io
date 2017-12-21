@@ -14,5 +14,19 @@ $background-color-generic: #ecf3f5;
   margin-bottom: 20px;
 }
 .popup {
+  bottom: -60px;
+}
 
+@media screen and (min-width: $lg) {
+  .main-navbar {
+    .navbar-collapse {
+      ul {
+        li.navbar-link-account {
+          .dropdown-account {
+            left: -50px;
+          }
+        }
+      }
+    }
+  }
 }
