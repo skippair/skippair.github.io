@@ -1,6 +1,7 @@
-function showPopup() {
+$(".js-link-show-popup").on("click", function() {
   $(".popup").addClass("show");
-}
-function hidePopup() {
+});
+
+$(".js-link-hide-popup").on("click", function () {
   $(".popup").removeClass("show");
-}
+});

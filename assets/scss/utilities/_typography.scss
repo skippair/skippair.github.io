@@ -1,6 +1,6 @@
 // font size variables
-$h1: 26px;
-$h2: 22px;
+$h1: 24px;
+$h2: 20px;
 $h3: 18px;
 $p: 16px;
 $text-sm: 12px;
@@ -15,14 +15,17 @@ h1, h2, h3 {
 //  Font-size for titles
 h1 {
   font-size: $h1;
+  font-weight: bold;
   text-transform: uppercase;
 }
 
 h2 {
+  font-weight: bold;
   font-size: $h2;
 }
 
 h3 {
+  font-weight: bold;
   font-size: $h3;
 }
 //TEXT

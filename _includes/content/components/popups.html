@@ -1,7 +1,7 @@
 <div class="tab-pane s-container fade" id="popups" role="tabpanel" aria-labelledby="popups-tab">
   <h1>Popups</h1>
   <p>To notify the user of the completion of his actions, we set up a system of popups that appear.</p>
-  <button class="btn-big btn-validate" onclick="showPopup()">Connexion</button>
+  <button class="btn-big btn-validate js-link-show-popup">Connexion</button>
   <br>
   <div class="popup">
     <div class="popup-icon">
@@ -12,7 +12,7 @@
       <a class="corporate-primary" href="">voir mon profil</a>
     </div>
     <div class="popup-close pull-right">
-      <i class="fa fa-times" onclick="hidePopup()"></i>
+      <i class="fa fa-times js-link-hide-popup"></i>
     </div>
   </div>
   <div class="markdown-container">
@@ -25,10 +25,13 @@
         <p>Bienvenue à bord <span class="corporate-primary">user</span>,</p>
         <a class="corporate-primary" href="">voir mon profil</a>
       </div>
-      <div class="popup-close pull-right" onclick="hidePopup()">
+      <div class="popup-close pull-right js-link-show-popup">
         <i class="fa fa-times"></i>
       </div>
     </div>
     {% endhighlight %}
+    <h2>Intilialize</h2>
+    <p>Add this class "js-link-show-popup" in the element where you need to click to show popup.</p>
+    <p>Add this class "js-link-hide-popup" in the element to hide the popup.</p>
   </div>
 </div>
