@@ -1,7 +1,8 @@
 .control-group {
   background: #fff;
   text-align: left;
-  margin-bottom: 18px;
+  padding: 30px;
+  margin: 10px;
 }
 .control {
   display: block;
@@ -9,8 +10,7 @@
   padding-left: 30px;
   margin-bottom: 15px;
   cursor: pointer;
-  font-size: 16px;
-  color: $text;
+  font-size: 18px;
 }
 .control input {
   position: absolute;

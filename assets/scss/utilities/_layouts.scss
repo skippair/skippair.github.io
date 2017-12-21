@@ -4,23 +4,6 @@
   margin-left: auto;
 }
 
-.form-container {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-right: 50px;
-  padding-left: 50px;
-  border: solid 1px $color-grey1;
-  margin-bottom: 16px;
-}
-
-.main-page {
-  margin-top: 80px;
-}
-
-main-page-double-nav {
-  margin-top: 130px;
-}
-
 @media (max-width: $lg) {
   .s-container {
     width: 90%;
