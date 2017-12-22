@@ -1,0 +1,24 @@
+.jumbotron-container {
+  width: 100%;
+  padding: 20px 30px;
+  border-radius: 2px;
+  background-color: $color-grey1;
+  margin-bottom: 16px;
+  .s-btn {
+    margin-bottom: 0px;
+  }
+}
+.message-input {
+  .message-text {
+    background-color: #f4f4f4;
+    textarea {
+      width: 100%;
+    }
+  }
+  .message-send {
+    width: 100%;
+    border-radius: 2px;
+    background-color: #f4f4f4;
+    border: #dce0e0;
+  }
+}
