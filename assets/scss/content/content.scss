@@ -13,3 +13,17 @@ $background-color-generic: #ecf3f5;
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
+@media screen and (min-width: $lg) {
+  .main-navbar {
+    .navbar-collapse {
+      ul {
+        li.navbar-link-account {
+          .dropdown-account {
+            left: -50px;
+          }
+        }
+      }
+    }
+  }
+}
