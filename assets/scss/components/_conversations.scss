@@ -10,15 +10,38 @@
 }
 .message-input {
   .message-text {
-    background-color: #f4f4f4;
+    height: 150px;
+    background-color: $color-grey3;
     textarea {
       width: 100%;
+      height: 100%;
+      border-radius: 2px 0px 0px 2px;
+      border: solid 1px $color-grey4;
+    }
+    textarea:focus {
+      outline: none !important;
+      border: solid 1px $color-grey4;
     }
   }
   .message-send {
     width: 100%;
-    border-radius: 2px;
-    background-color: #f4f4f4;
-    border: #dce0e0;
+    height: 40px;
+    padding: 6px;
+    border-radius: 0px 2px 2px 0px;
+    background-color: $color-grey3;
+    border: solid 1px $color-grey4;
+    border-top: none;
+    button {
+      float: right;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      text-transform: uppercase;
+      color: $text;
+      font-weight: 900;
+      i {
+        margin-left: 10px;
+      }
+    }
   }
 }
