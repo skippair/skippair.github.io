@@ -2,13 +2,14 @@
   width: 100%;
   padding: 20px 30px;
   border-radius: 2px;
-  background-color: $color-grey1;
+  background-color: $color-grey3;
   margin-bottom: 16px;
   .s-btn {
     margin-bottom: 0px;
   }
 }
 .message-input {
+  margin-bottom: $p;
   .message-text {
     height: 150px;
     background-color: $color-grey3;

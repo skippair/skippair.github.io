@@ -1,0 +1,35 @@
+.contact-card {
+  margin-bottom: $p;
+  width: 250px;
+  border: solid 1px $color-grey4;
+  padding: 15px 20px 15px 20px;
+  .infos {
+    i {
+      font-size: 22px;
+      margin-right: 10px;
+    }
+    p.link {
+      text-align: center;
+    }
+  }
+}
+.order-card {
+  .card-image {
+    position: relative;
+    min-height: 240px;
+    background-position: center;
+    background-repeat: no-repeat;
+    .avatars-description {
+      position: absolute;
+      bottom: 0px;
+      left: 16px;
+      .description {
+        p {
+          width: 200px;
+        }
+      }
+    }
+  }
+  .card-description {
+  }
+}
