@@ -1,0 +1,59 @@
+.jumbotron-container {
+  width: 100%;
+  padding: 20px 30px;
+  border-radius: 2px;
+  background-color: $color-grey1;
+  margin-bottom: 16px;
+  .s-btn {
+    margin-bottom: 0px;
+  }
+}
+.message-input {
+  .message-text {
+    height: 150px;
+    background-color: $color-grey3;
+    textarea {
+      width: 100%;
+      height: 100%;
+      border-radius: 2px 0px 0px 2px;
+      border: solid 1px $color-grey4;
+    }
+    textarea:focus {
+      outline: none !important;
+      border: solid 1px $color-grey4;
+    }
+  }
+  .message-send {
+    width: 100%;
+    height: 40px;
+    padding: 6px;
+    border-radius: 0px 2px 2px 0px;
+    background-color: $color-grey3;
+    border: solid 1px $color-grey4;
+    border-top: none;
+    button {
+      float: right;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      text-transform: uppercase;
+      color: $text;
+      font-weight: 900;
+      i {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+.conversation-content {
+  .conversation {
+    padding: 20px 16px 20px 16px;
+    border:solid 1px $color-grey4;
+  }
+  .conversation-hour.client{
+    float: right;
+  }
+  .conversation-hour.pro {
+    float: left;
+  }
+}
