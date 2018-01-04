@@ -52,3 +52,17 @@
     }
   }
 }
+.avatars-description {
+  position: relative;
+  .description {
+    position: absolute;
+    top: 0;
+    left: 70px;
+    p {
+      margin-bottom: 1px;
+      .name {
+        font-weight: 900;
+      }
+    }
+  }
+}
