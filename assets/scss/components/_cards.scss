@@ -13,3 +13,23 @@
     }
   }
 }
+.order-card {
+  .card-image {
+    position: relative;
+    min-height: 240px;
+    background-position: center;
+    background-repeat: no-repeat;
+    .avatars-description {
+      position: absolute;
+      bottom: 0px;
+      left: 16px;
+      .description {
+        p {
+          width: 200px;
+        }
+      }
+    }
+  }
+  .card-description {
+  }
+}
