@@ -45,3 +45,15 @@
     }
   }
 }
+.conversation-content {
+  .conversation {
+    padding: 20px 16px 20px 16px;
+    border:solid 1px $color-grey4;
+  }
+  .conversation-hour.client{
+    float: right;
+  }
+  .conversation-hour.pro {
+    float: left;
+  }
+}
