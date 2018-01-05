@@ -1,7 +1,6 @@
 //Don't forget the opacity for cards
 
 .timeline-item {
-  opacity: 0.5;
   padding: 10px 40px;
   position: relative;
   color: black;
@@ -12,7 +11,6 @@
     }
   }
   p.past-order-title  {
-    opacity: 0.7;
   }
   &::before {
     content: attr(date-is);
@@ -39,7 +37,6 @@
   }
 }
 .timeline-item.current-order{
-  opacity: 1;
   &::after {
     border: 2px solid $corporate-primary;
     background: $corporate-primary;
