@@ -6,11 +6,12 @@
   color: black;
   border-left: 1px solid $corporate-primary;
   p.current-order-title {
-    span {
-      font-weight: 900;
-    }
+    color: $sub-title;
+    font-weight: 900;
   }
   p.past-order-title  {
+    color: $sub-title;
+    font-weight: 900;
   }
   &::before {
     content: attr(date-is);
