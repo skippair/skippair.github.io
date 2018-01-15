@@ -19,6 +19,7 @@ gulp.task('js', function () {
     './node_modules/bootstrap/dist/js/bootstrap.js',
     './assets/js/content/asideNav.js',
     './assets/js/components/_popup.js'
+    './assets/js/components/_carousel.js'
   ])
       .pipe(concat('main.js'))
       .pipe(gulp.dest('./assets/js'));
