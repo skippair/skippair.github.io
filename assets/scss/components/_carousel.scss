@@ -1,3 +1,99 @@
 .activity-carousel {
+    .carousel-indicators {
+        margin: auto;
+        left: auto;
+        right: 20px;
+        li {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+    }
+    .activity-carousel-title {
+        position: absolute;
+        bottom:0;
+        left: 20px;
+        color: white;
+        font-size: 18px;
+        text-transform: none;
+        margin-bottom: 20px;
+    }
+    .activity-carousel-reviews {
+        position:absolute;
+        bottom: 5px;
+        left: 20px;
+        color: white !important;
+        font-size: 12px;
+        span { text-decoration: underline; }
+        &:hover, &:focus, &:visited {
+            text-decoration: none;
+        }
+    }
+    .avatars-description {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        .avatar-chips-rounded {
+            height: 50px;
+            width: 50px;
+        }
+        .description {
+            display: none;
+        }
+    }
+    img {
+        height: 200px;
+    }
+}
 
+@media (min-width: $md) {
+    .activity-carousel {
+        img { height: 400px; }
+        .avatars-description {
+            left: 5vw;
+            top: auto;
+            bottom: 80px;
+            .avatar-chips-rounded {
+                height: 80px;
+                width: 80px;
+                .chips-work {
+                    top: 24px;
+                    left: -15px;
+                    width: 30px;
+                    height: 30px;
+                    i {
+                        font-size: 15px;
+                        top: 7px;
+                        left: 7px;
+                    }
+                }
+            }
+            .description {
+                display: inline-block;
+                width: 250px;
+                left: 90px;
+                bottom: 30px;
+                top: auto;
+                .icon { margin-right: 5px; }
+            }
+        }
+        .activity-carousel-title {
+            left: 5vw;
+            bottom: 25px;
+        }
+        .activity-carousel-reviews {
+            left: 5vw;
+            bottom: 30px;
+        }
+    }
+}
+
+@media (min-width: $lg) {
+    .activity-carousel {
+        .avatars-description {
+            left: 12.5vw;
+        }
+        .activity-carousel-title { left: 12.5vw; }
+        .activity-carousel-reviews { left: 12.5vw; }
+    }
 }

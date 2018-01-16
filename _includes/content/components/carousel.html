@@ -1,7 +1,8 @@
 <div class="tab-pane s-container fade" id="carousel" role="tabpanel" aria-labelledby="buttons-tab">
-    <h1>Carrousel</h1>
-    <p>Carrousel for Activity Head</p>
+    <h1>Carousel</h1>
+    <p>Carousel for Activity Head</p>
 
+    <!-- #CAROUSEL-->
     <div id="carouselExampleIndicators" class="carousel slide activity-carousel" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -10,13 +11,16 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-100" src="https://picsum.photos/900/400/?random" alt="" height="400">
+                <img class="d-block w-100" src="https://picsum.photos/900/400/?random" alt="">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="https://picsum.photos/900/400/?random" alt="" height="400">
+                <img class="d-block w-100" src="https://picsum.photos/900/400/?random" alt="">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="https://picsum.photos/900/400/?random" alt="" height="400">
+                <img class="d-block w-100" src="https://picsum.photos/900/400/?random" alt="">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="https://picsum.photos/900/400/?random" alt="">
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -29,7 +33,15 @@
         </a>
 
         <!-- #ACTIVITY TITLE -->
-        <h1>{Activity title}</h1>
+        <h1 class="activity-carousel-title color-white">{ object.title }</h1>
+        <a class="activity-carousel-reviews" href="#">
+            <i class="icon fa fa-circle"></i>
+            <i class="icon fa fa-circle"></i>
+            <i class="icon fa fa-circle"></i>
+            <i class="icon fa fa-circle"></i>
+            <i class="icon fa fa-circle-thin"></i>
+            <span>- 4 avis</span>
+        </a>
 
         <!-- #AVATARS -->
         <div class="avatars-description">
@@ -39,15 +51,16 @@
                 </div>
             </div>
             <div class="description">
-                <p class="color-white"><span class="name">{StaffInfo Username}</span></p>
-                <p class="color-white">{Port de Départ}</p>
+                <p class="color-white"><span class="name">{ StaffInfo Username }</span></p>
+                <p class="color-white"><i class="icon fa fa-map-marker"></i>{ Starting Port }</p>
             </div>
         </div>
     </div>
 
+    <!-- #HIGHLIGHT -->
     <div class="markdown-container">
         {% highlight html %}
-        <div id="highlight-carouselExampleIndicators" class="carousel slide activity-carousel" data-ride="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide activity-carousel" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -55,13 +68,16 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="d-block w-100" src="https://picsum.photos/900/400/?random" alt="" height="400">
+                    <img class="d-block w-100" src="https://picsum.photos/900/400/?random" alt="">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="https://picsum.photos/900/400/?random" alt="" height="400">
+                    <img class="d-block w-100" src="https://picsum.photos/900/400/?random" alt="">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="https://picsum.photos/900/400/?random" alt="" height="400">
+                    <img class="d-block w-100" src="https://picsum.photos/900/400/?random" alt="">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="https://picsum.photos/900/400/?random" alt="">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -74,7 +90,15 @@
             </a>
 
             <!-- #ACTIVITY TITLE -->
-            <h1>{Activity title}</h1>
+            <h1 class="activity-carousel-title color-white">{ object.title }</h1>
+            <a class="activity-carousel-reviews" href="#">
+                <i class="icon fa fa-circle"></i>
+                <i class="icon fa fa-circle"></i>
+                <i class="icon fa fa-circle"></i>
+                <i class="icon fa fa-circle"></i>
+                <i class="icon fa fa-circle-thin"></i>
+                <span>- 4 avis</span>
+            </a>
 
             <!-- #AVATARS -->
             <div class="avatars-description">
@@ -84,8 +108,8 @@
                     </div>
                 </div>
                 <div class="description">
-                    <p class="color-white"><span class="name">{StaffInfo Username}</span></p>
-                    <p class="color-white">{Port de Départ}</p>
+                    <p class="color-white"><span class="name">{ StaffInfo Username }</span></p>
+                    <p class="color-white"><i class="icon fa fa-map-marker"></i>{ Starting Port }</p>
                 </div>
             </div>
         </div>
