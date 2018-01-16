@@ -1,0 +1,29 @@
+.activity-tags {
+    color: $color-grey2;
+    .activity-tags-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: inline;
+    }
+    .activity-tags-list .item {
+        float: left;
+        width: 33%;
+        position: relative;
+        text-align: center;
+        display: block;
+        margin-top: 20px;
+    }
+    .activity-tags-list .item .icon {
+        width: 100%;
+        font-size: 25px;
+    }
+    .activity-tags-list .item .label {
+    }
+}
+
+@media (min-width: $lg) {
+    .activity-tags .activity-tags-list .item {
+        width: 16.6%;
+    }
+}
