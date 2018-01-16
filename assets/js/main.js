@@ -3860,3 +3860,4 @@ $(".js-link-show-popup").on("click", function() {
 $(".js-link-hide-popup").on("click", function () {
   $(".popup").removeClass("show");
 });
+$('.carousel').carousel()

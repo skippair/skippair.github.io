@@ -18,7 +18,7 @@ gulp.task('js', function () {
   return gulp.src([
     './node_modules/bootstrap/dist/js/bootstrap.js',
     './assets/js/content/asideNav.js',
-    './assets/js/components/_popup.js'
+    './assets/js/components/_popup.js',
     './assets/js/components/_carousel.js'
   ])
       .pipe(concat('main.js'))
