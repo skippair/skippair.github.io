@@ -33,4 +33,12 @@
       }
     }
   }
+  .card-description {
+    .order-date {
+      display: inline-flex;
+      .date.finish {
+        padding-left: 10px;
+      }
+    }
+  }
 }

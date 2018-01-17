@@ -1,6 +1,7 @@
 <div class="tab-pane s-container fade" id="cards" role="tabpanel" aria-labelledby="cards-tab">
   <h1>Cards</h1>
   <h2>Contact Cards</h2>
+  {% capture contactCards %}
   <div class="contact-card">
     <div class="avatars-description">
       <div class="avatar-chips-rounded" style="background-image: url('https://ekoczera.wikispaces.com/file/view/seacaptain.jpg/282828784/370x331/seacaptain.jpg')">
@@ -19,29 +20,15 @@
       </div>
     </div>
   </div>
+  {% endcapture %}
+  {{ contactCards }}
   <div class="markdown-container">
     {% highlight html %}
-    <div class="contact-card">
-      <div class="avatars-description">
-        <div class="avatar-chips-rounded" style="background-image: url('https://ekoczera.wikispaces.com/file/view/seacaptain.jpg/282828784/370x331/seacaptain.jpg')">
-          <div class="chips-work">
-            <i class="fa fa-anchor pro-primary"></i>
-          </div>
-        </div>
-        <div class="description">
-          <p><span class="name corporate-primary">Username</span></p>
-          <p><i class="fa fa-map-marker"></i> Port de hendaye</p>
-        </div>
-        <div class="infos">
-          <p><i class="fa fa-phone corporate-primary"></i> 06 65 98 78 45</p>
-          <p><i class="fa fa-envelope-o corporate-primary"></i> jean.hubert@gmail.com</p>
-          <p class="link"><a href="" class="text-link corporate-primary">Voir le voyage</a></p>
-        </div>
-      </div>
-    </div>
+      {{ contactCards }}
     {% endhighlight %}
   </div>
   <h2>Order cards</h2>
+  {% capture orderCards %}
     <div class="row order-card">
         <div class="col-12 col-md-6 col-xl-4 card-image" style="background-image: url('../../../assets/img/background_header.jpg')">
           <div class="avatars-description">
@@ -57,31 +44,31 @@
           </div>
         </div>
         <div class="col-12 col-md-6 col-xl-8 card-description">
-          <h3>Lorem ipsum</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci aperiam aut beatae delectus deleniti distinctio doloremque doloribus modi molestias nemo numquam quia sapiente sequi, sit sunt vel. Laborum, sequi.</p>
-        </div>
-    </div>
-  <div class="markdown-container">
-    {% highlight html %}
-    <div class="row order-card">
-      <div class="col-12 col-md-6 col-xl-4 card-image" style="background-image: url('../../../assets/img/background_header.jpg')">
-        <div class="avatars-description">
-          <div class="avatar-chips-rounded" style="background-image: url('https://ekoczera.wikispaces.com/file/view/seacaptain.jpg/282828784/370x331/seacaptain.jpg')">
-            <div class="chips-work">
-              <i class="fa fa-anchor pro-primary"></i>
+          <h3>Croisière journée en Corse Sud</h3>
+          <p class="order-waiting states-text"><i class="fa fa-circle-thin"></i> En attente de la réponse du skipper</p>
+          <div class="order-date">
+            <div class="date start">
+              <span>Départ</span>
+              <p>17/08/2018</p>
+            </div>
+            <div>
+              <i class="fa fa-long-arrow-right"></i>
+            </div>
+            <div class="date finish">
+              <span>Arrivée</span>
+              <p>24/08/2018</p>
             </div>
           </div>
-          <div class="description">
-            <p><span class="name color-white">Username</span></p>
-            <p class="link"><a href="" class="text-link color-white"><i class="fa fa-commenting-o"></i> Contacter le responsable</a></p>
-          </div>
+          <hr>
+          <button class="s-btn btn-big btn-validate">Voir le récapitulatif</button>
+          <br>
         </div>
-      </div>
-      <div class="col-12 col-md-6 col-xl-8 card-description">
-        <h3>Lorem ipsum</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci aperiam aut beatae delectus deleniti distinctio doloremque doloribus modi molestias nemo numquam quia sapiente sequi, sit sunt vel. Laborum, sequi.</p>
-      </div>
     </div>
+  {% endcapture %}
+  {{ orderCards }}
+  <div class="markdown-container">
+    {% highlight html %}
+      {{ orderCards }}
     {% endhighlight %}
   </div>
 </div>
