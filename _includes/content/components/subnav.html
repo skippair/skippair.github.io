@@ -1,0 +1,27 @@
+<div class="tab-pane s-container fade" id="subnav" role="tabpanel" aria-labelledby="states-tab">
+    <h1>SubNav</h1>
+
+    <h2>SubNav Product Page</h2>
+
+    {% capture component %}
+    <nav class="subnav-links">
+        <ul class="navbar-nav justify-content-center">
+            <li class="nav-item navbar-link active"><a href="#" class="nav-link">Link</a></li>
+            <li class="nav-item navbar-link"><a href="#" class="nav-link">Link</a></li>
+            <li class="nav-item navbar-link"><a href="#" class="nav-link">Link</a></li>
+            <li class="nav-item navbar-link"><a href="#" class="nav-link">Link</a></li>
+            <li class="nav-item navbar-link"><a href="#" class="nav-link">Link</a></li>
+        </ul>
+    </nav>
+    {% endcapture %}
+
+    {{ component }}
+
+    <div class="markdown-container">
+        {% highlight html %}
+        {{ component }}
+        {% endhighlight %}
+    </div>
+
+
+</div>
