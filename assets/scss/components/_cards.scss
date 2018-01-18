@@ -36,6 +36,11 @@
   .card-description {
     .order-date {
       display: inline-flex;
+      .date {
+        span {
+          font-size: 12px;
+        }
+      }
       .date.finish {
         padding-left: 10px;
       }
