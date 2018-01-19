@@ -1,27 +1,101 @@
 <div class="tab-pane s-container fade" id="timeline" role="tabpanel" aria-labelledby="timeline-tab">
   <h1>Timeline</h1>
+  {% capture timeline %}
+  <div class="timeline-item current-order">
+    <p class="current-order-title"><span class="corporate-primary">2018 - </span> Voyages à venir</p>
+    <!--Insert cards or our components -->
+  </div>
+  <div class="timeline-item past-order">
+    <p class="past-order-title"><span class="corporate-primary opacity-past">2015 - </span> Voyages passés</p>
+    <!--Insert cards or our components -->
+  </div>
+  {% endcapture %}
     <div class="timeline-item current-order">
-      <p class="current-order-title"><span class="corporate-primary">2018 - </span> Voyages à venir(s)</p>
-      <h2>Card last order</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto consectetur deserunt dolores ducimus earum, eum explicabo facere illum laudantium minima modi molestias mollitia possimus quidem quod reprehenderit rerum sapiente.</p>
+      <p class="current-order-title"><span class="corporate-primary">2018 - </span> Voyages à venir</p>
+      <div class="row order-card">
+        <div class="col-12 col-md-6 col-xl-4 card-image"
+             style="background-image: url('https://picsum.photos/1920/751/?random')">
+          <div class="avatars-description">
+            <div class="avatar-chips-rounded"
+                 style="background-image: url('https://ekoczera.wikispaces.com/file/view/seacaptain.jpg/282828784/370x331/seacaptain.jpg')">
+              <div class="chips-work">
+                <i class="fa fa-anchor pro-primary"></i>
+              </div>
+            </div>
+            <div class="description">
+              <p><span class="name color-white">Username</span></p>
+              <p class="link"><a href="" class="text-link color-white"><i
+                      class="fa fa-commenting-o"></i> Contacter le responsable</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-8 card-description">
+          <h3>Croisière journée en Corse Sud</h3>
+          <p class="order-waiting states-text"><i class="fa fa-circle-thin"></i> En attente de la
+            réponse du skipper</p>
+          <div class="order-date">
+            <div class="date start">
+              <span>Départ</span>
+              <p>17/08/2018</p>
+            </div>
+            <div>
+              <i class="fa fa-long-arrow-right"></i>
+            </div>
+            <div class="date finish">
+              <span>Retour</span>
+              <p>24/08/2018</p>
+            </div>
+          </div>
+          <hr>
+          <button class="s-btn btn-big btn-validate">Voir le récapitulatif</button>
+          <br>
+        </div>
+      </div>
     </div>
     <div class="timeline-item past-order">
-      <p class="past-order-title"><span class="corporate-primary">2015 - </span> Voyages passés</p>
-      <h2>Card past orders</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi consequuntur error eveniet in molestias nam nulla! Amet commodi ducimus enim, iusto maxime minima provident quam sunt totam unde voluptate, voluptatibus.</p>
+      <p class="past-order-title"><span class="corporate-primary opacity-past">2015 - </span> Voyages passés</p>
+      <div class="row order-card">
+        <div class="col-12 col-md-6 col-xl-4 card-image"
+             style="background-image: url('https://picsum.photos/1920/753/?random')">
+          <div class="avatars-description">
+            <div class="avatar-chips-rounded"
+                 style="background-image: url('https://ekoczera.wikispaces.com/file/view/seacaptain.jpg/282828784/370x331/seacaptain.jpg')">
+              <div class="chips-work">
+                <i class="fa fa-anchor pro-primary"></i>
+              </div>
+            </div>
+            <div class="description">
+              <p><span class="name color-white">Username</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-8 card-description">
+          <h3>Croisière journée en Catalogne</h3>
+          <div class="order-date">
+            <div class="date start">
+              <span>Départ</span>
+              <p>17/08/2018</p>
+            </div>
+            <div>
+              <i class="fa fa-long-arrow-right"></i>
+            </div>
+            <div class="date finish">
+              <span>Retour</span>
+              <p>24/08/2018</p>
+            </div>
+          </div>
+          <hr>
+          <div class="s-btn btn-group" role="group">
+            <button type="button" class="btn-big btn-action sign">Laisser un avis</button>
+            <i class="fa fa-star"></i>
+          </div>
+          <br>
+        </div>
+      </div>
     </div>
   <div class="markdown-container">
     {% highlight html %}
-    <div class="timeline-item current-order">
-      <p class="current-order-title"><span class="corporate-primary">2018 - </span> Voyages à venir(s)</p>
-      <h2>Card last order</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto consectetur deserunt dolores ducimus earum, eum explicabo facere illum laudantium minima modi molestias mollitia possimus quidem quod reprehenderit rerum sapiente.</p>
-    </div>
-    <div class="timeline-item past-order">
-      <p class="past-order-title"><span class="corporate-primary">2015 - </span> Voyages passés</p>
-      <h2>Card past orders</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi consequuntur error eveniet in molestias nam nulla! Amet commodi ducimus enim, iusto maxime minima provident quam sunt totam unde voluptate, voluptatibus.</p>
-    </div>
+      {{ timeline }}
     {% endhighlight %}
   </div>
 </div>

@@ -1,3 +1,7 @@
 .states-text {
   font-size: $text-sm;
 }
+// Change opacity when a element is in the past
+.opacity-past {
+  opacity: 0.3;
+}
