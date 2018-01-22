@@ -47,3 +47,63 @@
     }
   }
 }
+
+/*
+ * # Card Staff For Product Page
+ */
+.card-staff {
+    .card-head {
+        position: relative;
+        margin-bottom: 27px;
+        background-size: cover;
+        background-position: center;
+        height: 185px;
+        .card-head__info {
+            color: white;
+            position: absolute;
+            bottom:0;
+            left:0;
+            ul {
+                list-style: none;
+                padding-left: 30px;
+                margin-bottom: 7px;
+            }
+            li:first-child { font-weight: bold; }
+            li:last-child { text-transform: uppercase; }
+            i { margin-right: 10px }
+        }
+    }
+    .card-body {
+        .card-body__motto {
+            font-style: italic;
+        }
+        .icon {
+            color: $corporate-primary;
+            margin-right: 10px;
+            float: left;
+        }
+        .s-btn {
+            display: block;
+            width: 155px;
+            margin: 0 auto;
+            text-align: center;
+            &:focus, &:hover {
+                color: white;
+                text-decoration: none;
+            }
+
+        }
+
+    }
+}
+
+@media (min-width: $lg) {
+    .card-staff {
+        .card-head {
+            width: 200px;
+            height: 266px;
+            float: left;
+            margin-right: 20px;
+        }
+    }
+}
