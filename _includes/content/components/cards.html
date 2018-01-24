@@ -76,4 +76,33 @@
       {{ orderCards }}
     {% endhighlight %}
   </div>
+
+    <h2>Staff cards</h2>
+    {% capture staffcard %}
+    <!-- Staff Card -->
+    <div class="card card-staff">
+        <div class="card-head" style="background-image: url('https://picsum.photos/400/400/?random'); background-position: center; background-size: cover">
+            <div class="card-head__info">
+                <ul>
+                    <li>Jean</li>
+                    <li><i class="icon fa fa-map-marker"></i>Bretagne</li>
+                    <li><i class="icon fa fa-question-circle"></i>fr</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card-body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam atque commodi fugit labore maxime mollitia quas quidem repellendus repudiandae sunt. Aliquam beatae consequuntur cumque dolore doloribus maxime odio porro reprehenderit.</p>
+            <i class="icon fa fa-question-circle"></i><p class="card-body__motto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias aliquid at consequatur dolores, esse facilis, harum inventore ipsa maiores maxime, minima quibusdam quidem quo reprehenderit repudiandae rerum saepe suscipit.</p>
+            <a href="#" class="s-btn btn-big btn-validate">Voir le profil</a>
+        </div>
+    </div>
+    {% endcapture %}
+    {{ staffcard }}
+
+    <div class="markdown-container">
+        {% highlight html %}
+            {{ staffcard }}
+        {% endhighlight %}
+    </div>
+
 </div>
