@@ -7,8 +7,10 @@
 }
 .title-step {
   color: $corporate-primary;
-  text-decoration: underline;
   span:first-child {
     text-transform: uppercase;
+  }
+  span:last-child {
+    font-weight: normal;
   }
 }
