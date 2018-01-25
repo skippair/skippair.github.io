@@ -15,7 +15,7 @@ button:focus {
 }
 .btn-validate {
   transition: $transition-time;
-  color: $color-white1;
+  color: $color-white1 !important;
   background-color: $corporate-primary;
 }
 .btn-validate:hover {
@@ -24,7 +24,7 @@ button:focus {
 }
 .btn-validate-disabled {
   cursor: default;
-  color: $text;
+  color: $text !important;
   border: solid 2px $color-grey1;
   background-color: $color-white1;
 }
@@ -54,6 +54,7 @@ button:focus {
   }
   .facebook {
     background-color: $facebook-primary;
+    color: $color-white1 !important;
   }
   .facebook ~ i {
     background-color: $facebook-secondary;
@@ -80,14 +81,19 @@ button:focus {
   }
 }
 .btn-return {
-  margin-bottom: 18px;
-  transition: $transition-time;
+  font-weight: 900;
+  padding: 10px 12px;
   cursor: pointer;
-  border: none;
-  background-color: transparent;
-  color: $text;
+  text-transform: uppercase;
+  transition: $transition-time;
+  color: $text !important;
+  border: solid 2px $color-grey1;
+  background-color: $color-white1;
+  border-radius: 4px;
 }
 .btn-return:hover {
   transition: $transition-time;
-  color: $text-hover;
+  text-decoration: none;
+  color: $text-hover !important;
+  border-color: $text-hover;
 }

@@ -2,15 +2,18 @@
   <h1>Buttons</h1>
   <p>We have 3 types of buttons with active and not active states</p>
   <h2>Button validation</h2>
-  <button class="s-btn btn-big btn-validate">Voir le récapitulatif</button>
-  <button class="s-btn btn-big btn-validate-disabled">Voir le récapitulatif</button>
+  {% capture btn-validate %}
+  <a class="s-btn btn-big btn-validate">Voir le récapitulatif</a>
+  <a class="s-btn btn-big btn-validate-disabled">Voir le récapitulatif</a>
+  {% endcapture %}
+  {{ btn-validate }}
   <div class="markdown-container">
     {% highlight html %}
-    <button class="s-btn btn-big btn-validate">Voir le récapitulatif</button>
-    <button class="s-btn btn-big btn-validate-disabled">Voir le récapitulatif</button>
+    {{ btn-validate }}
     {% endhighlight %}
   </div>
   <h2>Button with action</h2>
+  {% capture btn-sign %}
   <div class="s-btn btn-group" role="group">
     <button type="button" class="btn-big btn-action sign">Signer mon contrat</button>
     <i class="fa fa-pencil"></i>
@@ -19,36 +22,34 @@
     <button type="button" class="btn-big btn-action">Signer mon contrat</button>
     <i class="fa fa-pencil"></i>
   </div>
+  {% endcapture %}
+  {{ btn-sign}}
   <div class="markdown-container">
     {% highlight html %}
-    <div class="s-btn btn-group" role="group">
-      <button type="button" class="btn-big btn-action sign">Signer mon contrat</button>
-      <i class="fa fa-pencil"></i>
-    </div>
-    <div class=" s-btn btn-group disabled" role="group">
-      <button type="button" class="btn-big btn-action">Signer mon contrat</button>
-      <i class="fa fa-pencil"></i>
-    </div>
+    {{ btn-sign}}
     {% endhighlight %}
   </div>
   <h2>Socials buttons</h2>
+  {% capture btn-facebook %}
   <div class="s-btn btn-group" role="group">
-    <button type="button" class="btn-big btn-action facebook">Continuer avec facebook</button>
+    <a class="btn-big btn-action facebook">Continuer avec facebook</a>
     <i class="fa fa-facebook"></i>
   </div>
+  {% endcapture %}
+  {{ btn-facebook }}
   <div class="markdown-container">
     {% highlight html %}
-    <div class="s-btn btn-group" role="group">
-      <button type="button" class="btn-big btn-action facebook">Continuer avec facebook</button>
-      <i class="fa fa-facebook"></i>
-    </div>
+      {{ btn-facebook }}
     {% endhighlight %}
   </div>
   <h2>Button to return on previouss context</h2>
-  <button class="btn-light btn-return">Retour</button>
+  {% capture btn-return %}
+  <a href="#" class="s-btn btn-big btn-return">Retour</a>
+  {% endcapture %}
+  {{ btn-return }}
   <div class="markdown-container">
     {% highlight html %}
-    <button class="btn-light btn-return">Retour</button>
+    {{ btn-return }}
     {% endhighlight %}
   </div>
 </div>
