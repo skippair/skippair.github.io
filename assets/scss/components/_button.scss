@@ -5,7 +5,7 @@
 .btn-big {
   font-weight: 900;
   border-radius: 4px;
-  padding: 10px 12px;
+  padding: 10px 26px;
   border: none;
   cursor: pointer;
   text-transform: uppercase;
@@ -25,6 +25,7 @@ button:focus {
 .btn-validate-disabled {
   cursor: default;
   color: $text !important;
+  text-decoration: none;
   border: solid 2px $color-grey1;
   background-color: $color-white1;
 }
