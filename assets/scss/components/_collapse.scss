@@ -1,8 +1,12 @@
 .know-more-link {
   margin-left: 10px;
   font-family: FontAwesome;
-  font-size: 21px;
+  font-size: 16px;
   text-decoration: none;
+  span {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: $p;
+  }
 }
 .know-more-link:after {
   content: "\f147 ";
