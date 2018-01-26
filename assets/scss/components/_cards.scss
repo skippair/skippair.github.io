@@ -74,6 +74,7 @@
         }
     }
     .card-body {
+        margin-bottom: $paragraph-margin-bottom * 2;
         .card-body__motto {
             font-style: italic;
         }
@@ -82,18 +83,14 @@
             margin-right: 10px;
             float: left;
         }
-        .s-btn {
+        .btn-validate {
+            width: 100%;
             display: block;
-            width: 155px;
-            margin: 0 auto;
+            background-color: white;
+            color: $corporate-primary !important;
+            border: solid 1px;
             text-align: center;
-            &:focus, &:hover {
-                color: white;
-                text-decoration: none;
-            }
-
         }
-
     }
 }
 
@@ -104,6 +101,11 @@
             height: 266px;
             float: left;
             margin-right: 20px;
+        }
+        .card-body {
+            .btn-validate {
+                display: inline;
+            }
         }
     }
 }
