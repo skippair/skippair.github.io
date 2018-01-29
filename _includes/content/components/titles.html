@@ -2,14 +2,21 @@
   <h1>Titles</h1>
   <p>We currently have three types of titles on our pages.</p>
   <h2>Titles with icons</h2>
+  {% capture titleIcon %}
   <h1 class="title-icon"><i class="icon fa fa-suitcase"></i> Mes voyages</h1>
+  {% endcapture %}
+  {{ titleIcon }}
   <div class="markdown-container">
     {% highlight html %}
-    <h1 class="title-icon"><i class=""></i> text</h1>
+    {{ titleIcon }}
     {% endhighlight %}
   </div>
   <h2>Titles steps</h2>
-  <h2 class="title-step"><span>Etape 2 de 2 : </span><span>Equipage et Assurance</span></h2>
+  {% capture titleStep %}
+  <h2 class="title-step corporate-primary"><span>Etape 2 de 2 : </span><span>Equipage et Assurance</span></h2>
+  {% endcapture %}
+  {{ titleStep }}
+  <h2 class="title-step corporate-primary"><span>Etape 2 de 2 : </span><span>Equipage et Assurance</span></h2>
   <div class="markdown-container">
     {% highlight html %}
     <h2 class="title-step"><span>Steps</span><span>text</span></h2>
