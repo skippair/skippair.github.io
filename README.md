@@ -6,6 +6,9 @@ This project is in constant progress. If you have proposals to improve a compone
 Before install project, make sure you have nodeJS, npm and bundler installed in your environnement.
 
 ### First Step : Clone the repository with github
+```
+npm install
+```
 ### Seconde Step : Install node modules with npm
 ```
 npm install
