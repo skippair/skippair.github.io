@@ -7,7 +7,7 @@ Before install project, make sure you have nodeJS, npm and bundler installed in 
 
 ### First Step : Clone the repository with github
 ```
-npm install
+git clone https://github.com/skippair/skippair.github.io.git
 ```
 ### Seconde Step : Install node modules with npm
 ```
