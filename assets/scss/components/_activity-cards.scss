@@ -1,0 +1,236 @@
+/** 
+ * Cruise Cards.
+ *
+ * Created by Ripoche Sylvain on 28/01/2018
+ * Last modification by Ripoche Sylvain on 28/01/2018
+ * 
+ * Cards of a cruise used in the search pages.
+ * 
+ * Composition :
+ *     - cards-img :
+ *         - Skipper information ( Name, Img, Zone ).
+ *         - Cruise title.
+ *         - Cruise ratingn, with reviews count.
+ *         - Add to wichlist button.
+ *         - Promo label.
+ *     - cards-description :
+ *         - Starting port.
+ *         - Boat information.
+ *         - Travellers max.
+ *         - Duration.
+ *     - cards-action
+ *         - CTA "See the cruise".
+ *         - Price.
+ * 
+ * It can be in a loading state :
+ * All the content are hidden, and a background are apply to the cards. 
+ * 
+ */
+
+$cards_max_width: 600px;
+$cards_img_min_height: 260px;
+$cards_action_height: 41px;
+$cards_skipper_hat_color: $corporate-primary; // The color of the hat icon int he skipper info.
+$cards_description_color: $sub-title; // Police color for the additional information.
+$cards_button_color: #4965b5; // Background color for "See the cruise".
+$cards_price_color: #6889E0; // Background color for the price.
+$cards_promo_color: $gift-primary; // Background color for the promo label.
+
+.cruise-cards {
+    max-width: $cards_max_width;
+    border-radius: 3px;
+    overflow: hidden;
+    display: block;
+    box-shadow: 0px 4px 7.7px 0.3px rgba(2, 3, 2, 0.14);
+    .cards-img {
+        position: relative;
+        padding-bottom: 75%;
+        min-height: $cards_img_min_height;
+        overflow: hidden;
+        &__photo {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transition: all .5s ease-in-out;
+            background-size: cover;
+        }
+        &__overlay {
+            position: absolute;
+            bottom: 0px;
+            color: white;
+            padding-bottom: 15px;
+            /* Skipper round information ( Img, Name, Starting Port ) */
+            .skipper-round {
+                padding-left: 10px;
+                padding-bottom: 12px;
+                .skipper-round__icon {
+                    background-color: white;
+                    color: $cards_skipper_hat_color;
+                    border-radius: 50%;
+                    position: absolute;
+                    padding: 3px 2px;
+                    width: 12px;
+                    height: 12px;
+                    font-size: 6px;
+                }
+                .skipper-round__img {
+                    border-radius: 50%;
+                    border: 2px solid white;
+                }
+                .skipper-round__info {
+                    position: absolute;
+                    left: 59px;
+                    top: 0px;
+                    padding-left: 5px;
+                    .first-name {
+                        font-size: 15px;
+                        font-weight: 800;
+                        line-height: 1.1;
+                    }
+                    .port {
+                        font-size: 13px;
+                    }
+                }
+            }
+            /* Title of the cruise */
+            .title {
+                font-size: 18px;
+                font-weight: 800;
+                line-height: 1.2;
+                padding: 0px 10px;
+                min-height: 44.44px;
+            }
+            /* Rating of the cruise */
+            .rating {
+                padding-left: 10px;
+                padding-top: 5px;
+                font-size: 12px;
+                font-weight: 800;
+                .icon-etoile-ok {
+                    color: rgba(255, 255, 255, 0.64);
+                    padding-right: 8px;
+                    &.ok {
+                        color: #FFFFFF;
+                    }
+                }
+            }
+        }
+        .cards-like {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            background-color: rgba(0, 0, 0, 0.48);
+            border: none;
+            color: white;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 21px;
+            padding-top: 7px;
+            text-align: center;
+            outline: none;
+        }
+        .cards-promo {
+            display: none;
+            position: absolute;
+            color: white;
+            background-color: $cards_promo_color;
+            left: 10px;
+            top: 10px;
+            padding: 2px 8px;
+            border-radius: 3px;
+            text-transform: uppercase;
+            font-size: 13px;
+        }
+    }
+    .cards-description {
+        padding: 8px 10px;
+        color: $cards_description_color;
+        background-color: white;
+        .starting-port {
+            font-size: 16px;
+            .icon {
+                padding-right: 8px;
+                font-size: 14px;
+            }
+        }
+        .additional-info {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            margin: auto;
+            max-width: 500px;
+        }
+    }
+    .cards-action {
+        position: relative;
+        height: $cards_action_height;
+        display: flex;
+        .action,
+        .price {
+            height: $cards_action_height;
+            color: white;
+            text-align: center;
+        }
+        .action {
+            flex-grow: 2;
+            background-color: $cards_button_color;
+            text-transform: uppercase;
+            padding-top: 10px;
+        }
+        .price {
+            flex-grow: 1;
+            background-color: $cards_price_color;
+            font-size: 12px;
+            line-height: 1;
+            padding-top: 5px;
+            .amount {
+                font-size: 18px;
+                font-weight: 800;
+            }
+        }
+    }
+    &:hover {
+        text-decoration: initial;
+        .cards-img__photo {
+            transform: scale(1.1);
+        }
+    }
+    &.loading {
+        background-image: radial-gradient(ellipse, #FFFFFF 0%, #FFF, rgba(0, 0, 0, 0.10));
+        .cards-img,
+        .cards-description,
+        .cards-action {
+            visibility: hidden;
+        }
+    }
+    &.promo .cards-img .cards-promo {
+        display: block;
+    }
+    &.force-square {
+        position: relative;
+        &:before {
+            display: block;
+            content: "";
+            width: 100%;
+            padding-top: 100%;
+        }
+        .cards-img {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: $cards_action_height;
+            min-height: initial;
+        }
+        .cards-action {
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+        }
+        .cards-description {
+            display: none;
+        }
+    }
+}

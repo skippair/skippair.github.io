@@ -1,0 +1,135 @@
+{% capture component %}
+<a href=""
+   target="_blank"
+   title="cruise title"
+   class="cruise-cards">
+    <div class="cards-img">
+        <div class="cards-img__photo" style="background-image:linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0.8)),url('https://media.skippair.com/media/cache/11/c4/11c415d159958378dbf3e13d45f7ff5c.jpg')"></div>
+        <div class="cards-img__overlay">
+            <!-- Skipper round icon -->
+            <div class="skipper-round">
+                <div class="skipper-round__icon fa fa-anchor"></div>
+                <img class="skipper-round__img" src="https://media.skippair.com/media/cache/5a/ed/5aed936aae55dec9d77372df75f3e1db.jpg" alt="">
+                <div class="skipper-round__info">
+                    <div class="first-name">Jean-Pierre</div>
+                    <div class="port">Corse</div>
+                </div>
+            </div>
+
+            <!-- Cruise title -->
+            <div class="title">Croisière journée Corse nord : golfe de Saint-Florent</div>
+            
+            <!-- Cruise rating -->
+            <div class="rating">
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star-o"></span>
+                <span> ( 4/5 )</span>
+                <span> - 3 Avis</span>
+            </div>
+        </div>
+        <div class="cards-promo">Promo</div>
+        <div class="cards-like js-like" data-target="activity-cruise-slug" data-url="cruise-like-url" data-add-msg=".product-head__like__msg-like">
+            <i class="fa fa-heart-o"></i>
+        </div>
+    </div>
+    <div class="cards-description">
+        <div class="starting-port"><span class="icon fa fa-map-marker" aria-hidden="true"></span>Port de Saint-Florent</div>
+        <div class="additional-info">
+            <div>Voilier 9,3 m</div>
+            <div>10 pers max</div>
+            <div>1 jour(s)</div>
+        </div>
+    </div>
+    <div class="cards-action">
+        <div class="action">Voir la croisière</div>
+        <div class="price">dès <span class="amount">70€</span><br>par personne</div>
+    </div>
+</a>
+{% endcapture %}
+
+<div class="tab-pane s-container fade" id="activity-cards" role="tabpanel" aria-labelledby="states-tab">
+    <h1>Activity Cards</h1>
+
+    <h2>Activity Cards, Cruise version</h2>
+    <p>Basic cards</p>
+
+    <div style="width:300px;">
+        {{ component }}
+    </div>
+
+    <div class="markdown-container">
+        {% highlight html linenos %}{{ component }}{% endhighlight %}
+    </div>
+
+    <h2>Option available</h2>
+    <p>You can force the cards in a square form by adding force-square css class.</p>
+    <p>You can display a promo label by adding the promo css class.</p>
+
+    <div style="width:300px;">
+        <a href=""
+           target="_blank"
+           title="cruise title"
+           class="cruise-cards force-square promo">
+            <div class="cards-img">
+                <div class="cards-img__photo" style="background-image:linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0.8)),url('https://media.skippair.com/media/cache/11/c4/11c415d159958378dbf3e13d45f7ff5c.jpg')"></div>
+                <div class="cards-img__overlay">
+                    <!-- Skipper round icon -->
+                    <div class="skipper-round">
+                        <div class="skipper-round__icon fa fa-anchor"></div>
+                        <img class="skipper-round__img" src="https://media.skippair.com/media/cache/5a/ed/5aed936aae55dec9d77372df75f3e1db.jpg" alt="">
+                        <div class="skipper-round__info">
+                            <div class="first-name">Jean-Pierre</div>
+                            <div class="port">Corse</div>
+                        </div>
+                    </div>
+
+                    <!-- Cruise title -->
+                    <div class="title">Croisière journée Corse nord : golfe de Saint-Florent</div>
+                    
+                    <!-- Cruise rating -->
+                    <div class="rating">
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star-o"></span>
+                        <span> ( 4/5 )</span>
+                        <span> - 3 Avis</span>
+                    </div>
+                </div>
+                <div class="cards-promo">Promo</div>
+                <div class="cards-like js-like" data-target="activity-cruise-slug" data-url="cruise-like-url" data-add-msg=".product-head__like__msg-like">
+                    <i class="fa fa-heart-o"></i>
+                </div>
+            </div>
+            <div class="cards-description">
+                <div class="starting-port"><span class="icon fa fa-map-marker" aria-hidden="true"></span>Port de Saint-Florent</div>
+                <div class="additional-info">
+                    <div>Voilier 9,3 m</div>
+                    <div>10 pers max</div>
+                    <div>1 jour(s)</div>
+                </div>
+            </div>
+            <div class="cards-action">
+                <div class="action">Voir la croisière</div>
+                <div class="price">dès <span class="amount">70€</span><br>par personne</div>
+            </div>
+        </a>
+    </div>
+
+    <div class="markdown-container">
+{% highlight html linenos %}
+<a href=""
+   target="_blank"
+   title="cruise title"
+   class="cruise-cards force-square">
+   .......
+<a>
+{% endhighlight %}
+    </div>
+
+
+</div>
