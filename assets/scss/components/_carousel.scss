@@ -41,14 +41,18 @@
             display: none;
         }
     }
-    img {
+    .carousel-inner .carousel-item > div {
         height: 200px;
+        background-size: cover;
+        background: no-repeat center;
     }
 }
 
 @media (min-width: $md) {
     .activity-carousel {
-        img { height: 400px; }
+        .carousel-inner .carousel-item > div{
+            height: 400px;
+        }
         .avatars-description {
             left: 5vw;
             top: auto;
