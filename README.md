@@ -19,7 +19,7 @@ gulp build
 ```
 ### Fourth Step : Install gems for jekyll project with Bundler
 ```
-Bundle install
+bundle install
 ```
 ### Fifth Step : Run jekyll with bundler
 ```
