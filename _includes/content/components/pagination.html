@@ -1,0 +1,21 @@
+{% capture component %}
+<div id="page-number-container" class="pagination-container">
+    <span id="prev-span" onclick="prevPage()" class="page-number"><</span>
+    <span id="page-0" onclick="goToPage(1)" class="page-number page-active">1</span>
+    <span id="page-1" onclick="goToPage(2)" class="page-number">2</span>
+    <span id="page-2" onclick="goToPage(3)" class="page-number">3</span>
+    <span id="page-3" onclick="goToPage(4)" class="page-number">4</span>
+    <span id="page-4" onclick="goToPage(5)" class="page-number">5</span>
+    <span id="next-span" onclick="nextPage()" class="page-number">></span>
+</div>
+{% endcapture %}
+
+<div class="tab-pane s-container fade" id="pagination" role="tabpanel" aria-labelledby="states-tab">
+    <h1>Pagination</h1>
+
+    {{ component }}
+
+    <div class="markdown-container">
+        {% highlight html linenos %}{{ component }}{% endhighlight %}
+    </div>
+</div>
