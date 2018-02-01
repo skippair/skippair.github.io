@@ -32,7 +32,7 @@ $color-white1: #ffffff;
 }
 //Text-color
 .text-color {
-  color: $text;
+  color: $text!important;
 }
 $text-hover: black;
 
