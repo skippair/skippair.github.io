@@ -17,10 +17,12 @@ button:focus {
   transition: $transition-time;
   color: $color-white1 !important;
   background-color: $corporate-primary;
+  border : 2px solid $corporate-primary;
 }
 .btn-validate:hover {
   transition: $transition-time;
   background-color: $corporate-secondary;
+  border : 2px solid $corporate-secondary;
 }
 .btn-validate-disabled {
   cursor: default;
