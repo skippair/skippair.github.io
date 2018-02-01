@@ -18,6 +18,7 @@ button:focus {
   color: $color-white1 !important;
   background-color: $corporate-primary;
   border : 2px solid $corporate-primary;
+  text-decoration: none;
 }
 .btn-validate:hover {
   transition: $transition-time;
