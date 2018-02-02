@@ -17,10 +17,13 @@ button:focus {
   transition: $transition-time;
   color: $color-white1 !important;
   background-color: $corporate-primary;
+  border : 2px solid $corporate-primary;
+  text-decoration: none;
 }
 .btn-validate:hover {
   transition: $transition-time;
   background-color: $corporate-secondary;
+  border : 2px solid $corporate-secondary;
 }
 .btn-validate-disabled {
   cursor: default;
@@ -33,13 +36,13 @@ button:focus {
   .btn-action {
     width:100%;
     transition: $transition-time;
-    border-radius: 4px 0px 0px 4px;
+    border-radius: 2px 0px 0px 2px;
     color: $color-white1;
   }
   i {
     color: $color-white1;
     padding: 12px 12px;
-    border-radius: 0px 4px 4px 0px;
+    border-radius: 0px 2px 2px 0px;
   }
   .btn-action:hover {
     transition: 0.7s;
@@ -70,7 +73,7 @@ button:focus {
     border-top: solid 2px $color-grey1;
     border-bottom: solid 2px $color-grey1;
     border-left: solid 2px $color-grey1;
-    border-radius: 4px 0px 0px 4px;
+    border-radius: 2px 0px 0px 2px;
     color: $text;
     background-color: $color-white1;
   }
@@ -78,7 +81,7 @@ button:focus {
     color: $color-white1;
     background-color: $color-grey2;
     padding: 12px 12px;
-    border-radius: 0px 4px 4px 0px;
+    border-radius: 0px 2px 2px 0px;
   }
 }
 .btn-return {
@@ -90,7 +93,7 @@ button:focus {
   color: $text !important;
   border: solid 2px $color-grey1;
   background-color: $color-white1;
-  border-radius: 4px;
+  border-radius: 2px;
 }
 .btn-return:hover {
   transition: $transition-time;
