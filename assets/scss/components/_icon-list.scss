@@ -26,6 +26,12 @@
     .activity-tags-list .item .label {
     }
 }
+.text-icon {
+    i {
+        font-size: 22px;
+        margin-right: 10px;
+    }
+}
 
 @media (min-width: $lg) {
     .activity-tags .activity-tags-list .item {

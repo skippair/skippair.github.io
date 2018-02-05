@@ -31,14 +31,21 @@
         </ul>
     </div>
     {% endcapture %}
-
     {{ iconList }}
-
-
     <div class="markdown-container">
         {% highlight html %}
             {{ iconList }}
         {% endhighlight %}
     </div>
-
+    <h2>Icon text for informations</h2>
+    {% capture textIcon %}
+    <p class="text-icon"><i class="fa fa-phone corporate-primary"></i> 06 12 34 56 78</p>
+    <p class="text-icon"><i class="fa fa-envelope-o corporate-primary"></i> claire@labigboss.com</p>
+    {% endcapture %}
+    {{ textIcon }}
+    <div class="markdown-container">
+        {% highlight html %}
+        {{ textIcon }}
+        {% endhighlight %}
+    </div>
 </div>
