@@ -1,0 +1,35 @@
+{% capture component %}
+<div class="form-select">
+    <div class="form-group has-iconlabel">
+        <label class="control-label sr-only">Avec qui ?</label>
+        <input type="hidden" class="form-hidden" name="input-name" data-placeholder="Avec qui ?"/>
+        <div class="form-control" data-toggle="collapse" data-target="#options-id">Avec qui ?</div>
+        <i class="form-control-icon fa fa-users"></i>
+        <span class="remove" aria-hidden="true">x</span>
+    </div>
+    <div id="options-id" class="form-option collapse">
+        <ul>
+            <li data-value="customer-type-slug" class="selected">Customer type name 1</li>
+            <li data-value="customer-type-slug">Customer type name 2</li>
+            <li data-value="customer-type-slug">Customer type name 3</li>
+            <li data-value="customer-type-slug">Customer type name 4</li>
+        </ul>
+    </div>
+</div>
+{% endcapture %}
+
+<div class="tab-pane s-container fade" id="search-inputs" role="tabpanel" aria-labelledby="states-tab">
+    <h1>Search Inputs</h1>
+
+    <h2>Customer Type Input</h2>
+
+    <div style="background-color: #00CCCC;">
+        <div style="width: 280px; padding:16px;">
+            {{ component }}    
+        </div>
+    </div>
+
+    <div class="markdown-container">
+        {% highlight html linenos %}{{ component }}{% endhighlight %}
+    </div>
+</div>

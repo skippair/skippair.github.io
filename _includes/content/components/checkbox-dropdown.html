@@ -1,0 +1,39 @@
+{% capture component %}
+<div class="dropdown form-radio--dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        <span class="text-button">Tous type de bateaux</span><span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        <li>
+            <label>
+                <input type="radio" name="is_catamaran" value="0" data-label="Tous type de bateaux" data-default='true'>
+                Tous type de bateaux
+            </label>
+        </li>
+        <li>
+            <label>
+                <input type="radio" name="is_catamaran" value="2" checked data-label="Monocoque">
+                Monocoque
+            </label>
+        </li>
+        <li>
+            <label>
+                <input type="radio" name="is_catamaran" value="1" data-label="Catamaran">
+                Catamaran
+            </label>
+        </li>
+    </ul>
+</div>
+{% endcapture %}
+
+<div class="tab-pane s-container fade" id="checkbox-dropdown" role="tabpanel" aria-labelledby="states-tab">
+    <h1>Search Inputs</h1>
+
+    <h2>Checkbox in a dropdown</h2>
+
+    {{ component }}    
+
+    <div class="markdown-container">
+        {% highlight html linenos %}{{ component }}{% endhighlight %}
+    </div>
+</div>

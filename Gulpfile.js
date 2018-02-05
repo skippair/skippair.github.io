@@ -19,7 +19,9 @@ gulp.task('js', function () {
     './node_modules/bootstrap/dist/js/bootstrap.js',
     './assets/js/content/asideNav.js',
     './assets/js/components/_popup.js',
-    './assets/js/components/_carousel.js'
+    './assets/js/components/_carousel.js',
+    './assets/js/components/_form-select.js',
+    './assets/js/components/_checkbox-dropdown.js'
   ])
       .pipe(concat('main.js'))
       .pipe(gulp.dest('./assets/js'));

@@ -1,0 +1,115 @@
+/** 
+ * Form Select
+ *
+ * Created by Ripoche Sylvain on 10/10/2017
+ * Last modification by Ripoche Sylvain on 10/10/2017
+ * 
+ * Define a form group so he can handle :
+ *     - A .remove, to clear input.
+ *     - A .form-option collapse to display choices.
+ */
+
+.form-select,
+.form-select--autocomplete {
+    position: relative;
+    .form-group {
+        .remove {
+            display: none;
+            position: absolute;
+            right: 9px;
+            top: 2px;
+            cursor: pointer;
+            font-size: 19px;
+            color: #999;
+        }
+        input:not(:empty)~.remove {
+            display: inline-block;
+        }
+    }
+    .form-option {
+        position: absolute;
+        width: 100%;
+        padding: 6px 12px;
+        z-index: 5;
+        background-color: #fff;
+        border: 1.2px solid #f0f0f0;
+        ul {
+            padding-left: 0;
+            list-style: none;
+        }
+        ul li:hover {
+            background-color: #ddd;
+        }
+        .parent {
+            font-weight: 600;
+        }
+        .child {
+            color: grey;
+            font-size: 15px;
+            padding-left: 9px;
+        }
+    }
+}
+
+/** 
+ * Form Group With Icon
+ *
+ * Created by Ripoche Sylvain on 10/10/2017
+ * Last modification by Ripoche Sylvain on 10/10/2017
+ * 
+ * Add the possibility to display an icon ont he left of the input.
+ * The icon is hidden if the focus goes on the input.
+ * 
+ */
+ 
+ .form-group.has-iconlabel {
+    position: relative;
+    .form-control {
+        padding-left: 31px;
+        line-height: 32px;
+    }
+    .form-control:focus {
+        padding-left: 12px;
+        &+.form-control-icon {
+            display: none;
+        }
+    }
+    .form-control-icon {
+        position: absolute;
+        display: block;
+        top: 0px;
+        z-index: 2;
+        width: 33px;
+        height: 33px;
+        line-height: 33px;
+        text-align: center;
+        pointer-events: none;
+    }
+}
+
+/* Theming */
+
+.form-group {
+    .form-control {
+        background-color: white;
+        border-radius: 2px;
+        height: 33px;
+        font-size: 15px;
+        margin-bottom: 0px;
+        &::-webkit-input-placeholder,
+        &:-ms-input-placeholder,
+        &::-ms-input-placeholder {
+            color: #555;
+        }
+        &:-moz-placeholder,
+        &::-moz-placeholder {
+            color: #555;
+            opacity: 1;
+        }
+    }
+    input.form-control,
+    .form-control-icon,
+    input:not(:empty)+div {
+        color: #00CCCC;
+    }
+}
