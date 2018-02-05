@@ -1,0 +1,284 @@
+{% capture component %}
+<div class="filter-container">
+    <form id="search-form">
+        <!-- Main filter row -->
+        <div class="row main-filter">
+            <div class="col">
+                <div class="form-select--autocomplete destination-filter" data-url="https://skippair.com/fr/search-api/location-list/">
+                    <div class="form-group has-iconlabel">
+                        <label class="control-label sr-only">Where do you wish to go ?</label>
+                        <input type="hidden" class="search-parameter" name="destination"/>
+                        <input class="form-control" data-toggle="collapse" data-target="#options1" placeholder="Where do you wish to go ?"/>
+                        <i class="form-control-icon fa fa-map-marker"></i>
+                        <span class="remove" aria-hidden="true">x</span>
+                    </div>
+                    <div id="options1" class="form-option collapse">
+                        <ul>
+                            <li data-value="france" class="selected">France</li>
+                            <li data-value="france">France</li>
+                            <li data-value="france">France</li>
+                            <li data-value="france">France</li>
+                            <li data-value="france">France</li>
+                            <li data-value="france">France</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-select customer-type-filter">
+                    <div class="form-group has-iconlabel">
+                        <label class="control-label sr-only">With whom are you leaving?</label>
+                        <input type="hidden" class="form-hidden search-parameter" name="c_type" data-placeholder="With whom are you leaving?"/>
+                        <div class="form-control" data-toggle="collapse" data-target="#customer-type-option">With whom are you leaving?</div>
+                        <i class="form-control-icon fa fa-users"></i>
+                        <span class="remove" aria-hidden="true">x</span>
+                    </div>
+                    <div id="customer-type-option" class="form-option collapse">
+                        <ul>
+                            <li data-value="alone">En solo</li>
+                            <li data-value="lovers">En couple</li>
+                            <li data-value="family">En Famille</li>
+                            <li data-value="friends">Entre Amis</li>
+                            <li data-value="busisness">Offres Entreprises</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group has-iconlabel">
+                    <label class="control-label sr-only">Departure date (DD/MM/YYYY)</label>
+                    <input id="departure-date" class="form-control" name="departure_date" type="text" placeholder="Departure date (DD/MM/YYYY)" value=""/>
+                    <i class="form-control-icon fa fa-calendar"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Boat sharing filter row -->
+        <div class="row boat-sharing-filter">
+            <!-- Privated Cruise -->
+            <div class="boat-sharing-button">
+                <input class="search-parameter" type="radio" id="private-boat" name="sharing" value="private" checked="checked">
+                <label class="private-shared private" for="private-boat">
+                    <div class="priv-shr-txt">Private cruise<span class="counter-container private_count">253</span></div>
+                </label>
+            </div>
+
+            <!-- Shared Cruise -->
+            <div class="boat-sharing-button">
+                <input class="search-parameter" type="radio" id="shared-boat" name="sharing" value="shared">
+                <label class="private-shared shared" for="shared-boat">
+                    <div class="priv-shr-txt">Shared cruise<span class="counter-container shared_count">123</span></div>
+                </label>
+            </div>
+        </div>
+
+        <!-- Other filter row-->
+        <div class="row other-filter">
+            <div class="dropdown form-radio--dropdown">
+                <button class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <span class="text-button">Tous type de bateaux</span><span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li>
+                        <label>
+                            <input class="search-parameter" type="radio" name="is_catamaran" value="0" data-label="Tous type de bateaux" data-default='true'>
+                            Tous type de bateaux
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input class="search-parameter" type="radio" name="is_catamaran" value="2" checked data-label="Monocoque">
+                            Monocoque
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input class="search-parameter" type="radio" name="is_catamaran" value="1" data-label="Catamaran">
+                            Catamaran
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div class="dropdown form-radio--dropdown">
+                <button class="dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <span class="text-button">Any kind of cruise</span><span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <li>
+                        <label>
+                            <input class="search-parameter" type="radio" name="style" value="all" data-label="Any kind of cruise" data-default='true' checked>
+                            Any kind of cruise
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input class="search-parameter" type="radio" name="style" value="cruise" data-label="Cruise">
+                            Cruise
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input class="search-parameter" type="radio" name="style" value="sailing" data-label="Sailing class">
+                            Sailing class
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div class="dropdown ordering-filter">
+                <button class="dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <span class="text-button"></span><span class="text-button default">Sort by</span><span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu3">
+                    <li data-ordering="duration-up">Duration low to high</li>
+                    <li data-ordering="rating-down">Best Rated</li>
+                    <li data-ordering="price-up">Price low to high</li>
+                    <li data-ordering="price-down">Price high to low</li>
+                </ul>
+            </div>
+            <button class="other-filter-button" type="button" data-toggle="collapse" data-target="#moreFilterCollapse" aria-expanded="false" aria-controls="moreFilterCollapse">
+                <span class="text-button">More filters</span><span class="caret"></span>
+            </button>
+        </div>
+
+        <!-- Other filter collapse-->
+        <div class="other-filter-collapse collapse" id="moreFilterCollapse">
+            <div class='full-height'>
+                <div class='row'>
+                    <div class="col-6">
+                        <div class="filter-title">Duration</div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="radio">
+                                  <label>
+                                    <input class="search-parameter default" type="radio" name="duration" value="0" checked>
+                                    All duration
+                                  </label>
+                                </div>
+                                <div class="radio">
+                                  <label>
+                                    <input class="search-parameter" type="radio" name="duration" value="4">
+                                    2 to 5 days
+                                  </label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="radio">
+                                  <label>
+                                    <input class="search-parameter" type="radio" name="duration" value="1">
+                                    1 day or less
+                                  </label>
+                                </div>
+                                <div class="radio">
+                                  <label>
+                                    <input class="search-parameter" type="radio" name="duration" value="7">
+                                    6 days and more
+                                  </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="filter-title">Travelers Numbers</div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="radio">
+                                  <label>
+                                    <input class="search-parameter default" type="radio" name="travelers_nb" value="1" checked>
+                                    1 to 3
+                                  </label>
+                                </div>
+                                <div class="radio">
+                                  <label>
+                                    <input class="search-parameter" type="radio" name="travelers_nb" value="5">
+                                    5 to 8
+                                  </label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="radio">
+                                  <label>
+                                    <input class="search-parameter" type="radio" name="travelers_nb" value="3">
+                                    3 to 5
+                                  </label>
+                                </div>
+                                <div class="radio">
+                                  <label>
+                                    <input class="search-parameter" type="radio" name="travelers_nb" value="8">
+                                    8 and more
+                                  </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="filter-title">Price range</div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="radio">
+                                  <label>
+                                    <input class="search-parameter default" type="radio" name="price_range" value="0" checked>
+                                    All prices
+                                  </label>
+                                </div>
+                                <div class="radio">
+                                  <label>
+                                    <input class="search-parameter" type="radio" name="price_range" value="500">
+                                    200€ to 500€
+                                  </label>
+                                </div>
+                                <div class="radio">
+                                  <label>
+                                    <input class="search-parameter" type="radio" name="price_range" value="1500">
+                                    1000€ to 1500€
+                                  </label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="radio">
+                                  <label>
+                                    <input class="search-parameter" type="radio" name="price_range" value="200" checked>
+                                    less than 200€
+                                  </label>
+                                </div>
+                                <div class="radio">
+                                  <label>
+                                    <input class="search-parameter" type="radio" name="price_range" value="1000">
+                                    500€ to 1000€
+                                  </label>
+                                </div>
+                                <div class="radio">
+                                  <label>
+                                    <input class="search-parameter" type="radio" name="price_range" value="2000">
+                                    1500€ and more
+                                  </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='row filter-row hidden'>
+                </div>
+                <button class="s-btn btn-big btn-validate" type="button" data-toggle="collapse" data-target="#moreFilterCollapse" aria-expanded="false" aria-controls="moreFilterCollapse">
+                    See cruises
+                </button>
+                <button class="s-btn btn-big btn-return" type="button" data-toggle="collapse" data-target="#moreFilterCollapse" aria-expanded="false" aria-controls="moreFilterCollapse">
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+{% endcapture %}
+
+<div class="tab-pane s-container fade" id="search-filter-bar" role="tabpanel" aria-labelledby="states-tab">
+    <h1>Search Filter Bar</h1>
+
+    <h2>Customer Type Input</h2>
+    <p> This is the search bar used by the user to filter the Activity.</p>
+
+    {{ component }}    
+
+    <div class="markdown-container">
+        {% highlight html linenos %}{{ component }}{% endhighlight %}
+    </div>
+</div>

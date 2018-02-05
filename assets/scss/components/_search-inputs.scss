@@ -13,6 +13,7 @@
 .form-select--autocomplete {
     position: relative;
     .form-group {
+        /* The X button to reset the filter */
         .remove {
             display: none;
             position: absolute;
@@ -67,6 +68,7 @@
     .form-control {
         padding-left: 31px;
         line-height: 32px;
+        width: 100%;
     }
     .form-control:focus {
         padding-left: 12px;
@@ -88,14 +90,15 @@
 }
 
 /* Theming */
-
 .form-group {
     .form-control {
         background-color: white;
+        border:none;
         border-radius: 2px;
         height: 33px;
         font-size: 15px;
         margin-bottom: 0px;
+        color: #555;
         &::-webkit-input-placeholder,
         &:-ms-input-placeholder,
         &::-ms-input-placeholder {
@@ -111,5 +114,152 @@
     .form-control-icon,
     input:not(:empty)+div {
         color: #00CCCC;
+    }
+}
+
+.filter-container {
+    padding: 0px 15px;
+    background-color: white;
+}
+
+.main-filter {
+    padding: 16px 0px;
+    background-color: $corporate-primary;
+}
+
+/* Boat sharing filter ( radio input ) */
+.boat-sharing-filter {
+    padding: 0px 16px;
+    background-color: $corporate-primary;
+
+    .boat-sharing-button {
+        float: left;
+        position: relative;
+        margin-right:22px;
+    }
+    [type="radio"] {
+        display: none;
+    }
+    label {
+        margin-bottom: 0px;
+        cursor: pointer;
+        color: white;
+        font-weight: 400;
+        .priv-shr-txt {
+            padding-right: 30px;
+            height: 32px;
+            line-height: 2;
+            font-size: 16px;
+        }
+        .counter-container {
+            position: absolute;
+            top: 4px;
+            right: 0px;
+            width: 24px;
+            height: 24px;
+            color: white;
+            border: 1px solid white;
+            font-size: 11px;
+            border-radius: 28px;
+            font-weight: 400;
+            padding-top: 4px;
+            text-align: center;
+            line-height: 1.42857143;
+        }
+    }
+    [type="radio"]:checked+label {
+        border-bottom: 2px solid white;
+        font-weight: 600;
+        .counter-container {
+            background-color: white;
+            color: $corporate-primary;
+        }
+    }
+}
+
+/* Other filter row */
+.other-filter {
+    position: relative;
+    padding: 14px 16px;
+    /* Design for dropdown button and button on this row */
+    button,
+    button:hover,
+    button:focus {
+        height: 25px;
+        line-height: 0.8;
+        border-radius: 0px;
+        border: none;
+        background-color: initial;
+        outline: none !important;
+        box-shadow: none !important;
+        color: #555;
+        .text-button {
+            font-size: 15px;
+        }
+    }
+    .active button,
+    button.active {
+        color: #00CCCC;
+    }
+
+    /* Generics design for all dropdown */
+    .dropdown {
+        display: inline;
+        padding-right: 32px;
+        .dropdown-menu {
+            top: 30px;
+            border-radius: 0px;
+            padding: 6px 12px;
+            width: 230px;
+            border-color: #f5f5f5;
+        }
+        &.open button {
+            background-color: #f5f5f5;
+        }
+    }
+
+
+    /* Button that open the ordering option */
+    .ordering-filter {
+        position: absolute;
+        right: 15px;
+        border: solid 1px #dbdbdb;
+        border-radius: 2px;
+        padding: 0px 3px;
+        .dropdown-menu {
+            width: initial;
+            min-width: initial;
+        }
+        li {
+            cursor: pointer;
+            text-align: right;
+            width: 160px;
+            &:hover {
+                background-color: #eee;
+            }
+        }
+        .text-button {
+            &:not(.default) {
+                color: #00CCCC;
+            }
+            &:not(:empty)+.default {
+                display: none;
+            }
+        }
+        .caret {
+            margin-left: 12px;
+        }
+    }
+}
+
+/* Other filter collapse */
+.other-filter-collapse {
+    margin-top: 16px;
+    .full-height {
+        height: 100vh;
+    }
+
+    .filter-title {
+        font-weight: bold;
     }
 }
