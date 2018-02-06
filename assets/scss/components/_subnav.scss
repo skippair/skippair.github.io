@@ -34,7 +34,8 @@
 
 .nav-user-account {
     position: fixed;
-    background-color: white;
+    background-color: $color-white1;
     margin-top: 60px;
     width: 100%;
+    box-shadow: 0px 4px 5.9px 0.1px rgba(2, 3, 2, 0.04);
 }
