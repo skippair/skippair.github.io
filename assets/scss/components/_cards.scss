@@ -122,17 +122,6 @@
         background-position: center;
     }
     .card-body {
-        .double {
-            width: 100%;
-            overflow: hidden;
-        }
-        .double li {
-            //color: $text;
-            width: 50%;
-            float: left;
-            display: inline;
-            line-height: 1.5em;
-        }
     }
     // Transformer
     &.card-boat--diving {
