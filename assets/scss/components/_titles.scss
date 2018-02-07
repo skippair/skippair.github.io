@@ -1,15 +1,22 @@
 .title-icon {
-  .icon {
-    border-right: 2px solid;
-    padding-right: 12px;
-    margin-right: 6px;
-  }
+    .icon {
+        border-right: 2px solid;
+        padding-right: 12px;
+        margin-right: 6px;
+    }
+    .sub-title {
+        display: block;
+        font-size: $p;
+        text-transform: none;
+        font-weight: normal;
+        padding-left: 45px;
+    }
 }
 .title-step {
-  span:first-child {
-    text-transform: uppercase;
-  }
-  span:last-child {
-    font-weight: normal;
-  }
+    span:first-child {
+        text-transform: uppercase;
+    }
+    span:last-child {
+        font-weight: normal;
+    }
 }
