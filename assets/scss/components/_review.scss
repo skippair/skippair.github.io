@@ -1,0 +1,57 @@
+.review-container {
+    padding: 16px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 9.8px 0.2px rgba(2, 3, 2, 0.06);
+    margin-bottom: $p;
+}
+
+.review-more-button {
+    text-align: center;
+    width: 100%;
+    color: $corporate-primary;
+    background: none;
+    border: none;
+}
+
+.review-chips-container {
+    display: inline-flex;
+    margin-bottom: $p;
+    justify-content: space-between;
+    .chips {
+        height: 45px;
+        width: 45px;
+        background-color: $corporate-primary;
+        border-radius: 50%;
+        text-align: center;
+        text-transform: uppercase;
+        color: whitesmoke;
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 45px;
+    }
+    .chips-info {
+        flex: auto;
+        margin-left: 20px;
+        margin-right: 20px;
+        span {
+            display: block;
+        }
+        .chips-info__name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #505050;
+        }
+        .chips-info__subinfo {
+            font-size: 14px;
+            color: $text;
+        }
+    }
+    // Transformers
+    &.review-chips-container--right {
+        display: flex;
+        .chips-info {
+            text-align: right;
+        }
+    }
+}
