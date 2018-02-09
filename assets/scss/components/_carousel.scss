@@ -43,8 +43,10 @@
     }
     .carousel-inner .carousel-item > div {
         height: 200px;
+        background-repeat: no-repeat;
         background-size: cover;
-        background: no-repeat center;
+        background-position: center;
+        width: 100%;
     }
 }
 
