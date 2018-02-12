@@ -3,9 +3,9 @@
   width: 100%;
   height: 260px;
   margin-bottom: $p*2;
-  background-position: center;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
+  background-position-y: 50%;
 }
 .header-banner-title {
   position: absolute;
