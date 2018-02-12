@@ -1,5 +1,11 @@
 .title-step-progress {
+  display: block;
   height: 3px;
   width: 280px;
   margin-bottom: $p;
+}
+@media (min-width: $lg){
+  .title-step-progress {
+    display: none;
+  }
 }

@@ -13,10 +13,16 @@
     }
 }
 .title-step {
+    display: block;
     span:first-child {
         text-transform: uppercase;
     }
     span:last-child {
         font-weight: normal;
+    }
+}
+@media (min-width: $md){
+    .title-step {
+        display: none;
     }
 }
