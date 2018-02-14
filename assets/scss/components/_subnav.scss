@@ -45,9 +45,13 @@
     .navbar-nav {
         .nav-item {
             width: 180px;
-            .text-icon {
-                i {
-                    font-size: 18px;
+            text-align: left;
+            a {
+                padding-left: 0px;
+                .text-icon {
+                    i {
+                        font-size: 18px;
+                    }
                 }
             }
         }
