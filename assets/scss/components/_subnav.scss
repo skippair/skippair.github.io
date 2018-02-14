@@ -46,9 +46,12 @@
         height: auto;
         margin-right: auto;
         margin-left: auto;
-        .text-icon {
-            i {
-                font-size: 18px;
+        .nav-item {
+            width: 160px;
+            .text-icon {
+                i {
+                    font-size: 18px;
+                }
             }
         }
     }
