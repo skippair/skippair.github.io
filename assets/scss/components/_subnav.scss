@@ -42,9 +42,14 @@
     margin-top: 58px;
     box-shadow: 0px 4px 5.9px 0.1px rgba(2, 3, 2, 0.04);
     padding-left: 15%;
-    .text-icon {
-        i {
-            font-size: 18px;
+    .navbar-nav {
+        width: 75%;
+        margin-right: auto;
+        margin-left: 70%;
+        .text-icon {
+            i {
+                font-size: 18px;
+            }
         }
     }
 }
