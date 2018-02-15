@@ -1,0 +1,30 @@
+<div class="tab-pane s-container fade" id="cardstaff" role="tabpanel" aria-labelledby="states-tab">
+    <h1>Cards</h1>
+    <h2>Staff Cards</h2>
+    {% capture staffcard %}
+    <div class="card card-staff">
+        <div class="card-head" style="background-image: url('{{ object.user.pictures.first.image.url }}'); background-position: center; background-size: cover">
+            <div class="card-head__info">
+                <ul>
+                    <li>{{ object.user.first_name }}</li>
+                    <li><i class="icon fa fa-map-marker"></i>{{ object.zone.name }}</li>
+                    <li><i class="icon fa fa-language"></i>{% for lang in object.speak_language.all %}{{ lang.short_name }}{% if not forloop.last %} / {% endif %}{% endfor %}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card-body">
+            <p>{{ object.description|linebreaksbr }}</p>
+            <i class="fa fa-quote-left fa-2x fa-pull-left corporate-primary"></i>
+            <p class="card-body__motto">{{ object.motto }}</p>
+            <a href="#" class="s-btn btn-big btn-validate">Voir le profil</a>
+        </div>
+    </div>
+    {% endcapture %}
+    {{ staffcard }}
+    <div class="markdown-container">
+        {% highlight html %}
+        {{ staffcard }}
+        {% endhighlight %}
+    </div>
+
+</div>
