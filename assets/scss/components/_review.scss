@@ -15,7 +15,7 @@
 }
 
 .review-chips-container {
-    display: inline-flex;
+    display: flex;
     margin-bottom: $p;
     justify-content: space-between;
     .chips {
@@ -46,6 +46,9 @@
             font-size: 14px;
             color: $text;
         }
+    }
+    .chips-rate {
+        color: $corporate-primary;
     }
     // Transformers
     &.review-chips-container--right {
