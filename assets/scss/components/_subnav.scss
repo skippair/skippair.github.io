@@ -1,8 +1,5 @@
 .subnav-links {
-    //background-color: $color-white1;
-    //box-shadow: 0px 2px 5px 0px rgba(2, 3, 2, 0.14);
     padding: 0 20px;
-    //font-weight: bold;
     font-size: 14px;
     overflow: auto;
     margin-top: 30px;
@@ -18,7 +15,6 @@
         float: left;
         width: 20%;
         text-align: center;
-        height: 100%;
         position: relative;
         font-weight: normal;
         &.active {
@@ -30,10 +26,8 @@
     .nav-link {
         padding: 1rem 1rem;
         color: $color-grey2;
-        //text-transform: uppercase;
     }
 }
-
 .nav-user-account {
     display: none;
     z-index: 1;
