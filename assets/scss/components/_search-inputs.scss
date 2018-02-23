@@ -42,16 +42,22 @@ $actived_input_color: $sub-title;
     .form-option {
         position: absolute;
         width: 100%;
-        padding: 6px 12px;
+        padding: 4px 12px;
+        margin-top: 6px;
         z-index: 5;
-        background-color: #fff;
-        border: 1.2px solid #f0f0f0;
+        background-color: white;
+        border: 1px solid $color-grey1;
+        border-radius: 2px;
         ul {
             padding-left: 0;
             list-style: none;
+            margin: 0px;
+            li {
+                padding: 4px;
+            }
         }
         ul li:hover {
-            background-color: #ddd;
+            color: $corporate-primary;
         }
         .parent {
             font-weight: 600;
@@ -244,17 +250,20 @@ $actived_input_color: $sub-title;
         right: 15px;
         border: solid 1px #dbdbdb;
         border-radius: 2px;
-        padding: 0px 3px;
+        padding: 0px 0px;
         .dropdown-menu {
             width: initial;
             min-width: initial;
+            margin-top: 6px;
+            border-radius: 2px;
+            border: 1px solid $color-grey1;
         }
         li {
             cursor: pointer;
             text-align: right;
             width: 160px;
             &:hover {
-                background-color: #eee;
+                color: $corporate-primary;
             }
         }
         .text-button {
@@ -269,6 +278,35 @@ $actived_input_color: $sub-title;
             margin-left: 12px;
         }
     }
+    // .form-option {
+    //     position: absolute;
+    //     width: 100%;
+    //     padding: 4px 12px;
+    //     margin-top: 6px;
+    //     z-index: 5;
+    //     background-color: white;
+    //     border: 1px solid $color-grey1;
+    //     border-radius: 2px;
+    //     ul {
+    //         padding-left: 0;
+    //         list-style: none;
+    //         margin: 0px;
+    //         li {
+    //             padding: 4px;
+    //         }
+    //     }
+    //     ul li:hover {
+    //         color: $corporate-primary;
+    //     }
+    //     .parent {
+    //         font-weight: 600;
+    //     }
+    //     .child {
+    //         color: grey;
+    //         font-size: 15px;
+    //         padding-left: 9px;
+    //     }
+    // }
 }
 
 /* Other filter collapse */
