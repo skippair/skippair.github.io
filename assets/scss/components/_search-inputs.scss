@@ -1,3 +1,15 @@
+/**
+ * General Settings
+ *
+ *
+ *
+ */
+
+$back_color: $color-grey3;
+$empty_input_color: $color-grey2;
+$actived_input_color: $sub-title;
+
+
 /** 
  * Form Select
  *
@@ -93,27 +105,30 @@
 .form-group {
     .form-control {
         background-color: white;
-        border:none;
+        border: 1px solid $color-grey1;
         border-radius: 2px;
         height: 33px;
         font-size: 15px;
         margin-bottom: 0px;
-        color: #555;
+        color: $empty_input_color;
         &::-webkit-input-placeholder,
         &:-ms-input-placeholder,
         &::-ms-input-placeholder {
-            color: #555;
+            color: $empty_input_color;
         }
         &:-moz-placeholder,
         &::-moz-placeholder {
-            color: #555;
+            color: $empty_input_color;
             opacity: 1;
         }
     }
+    .form-control-icon {
+        color: $empty_input_color;
+    }
     input.form-control,
-    .form-control-icon,
+    input:not(:empty)~.form-control-icon,
     input:not(:empty)+div {
-        color: #00CCCC;
+        color: $actived_input_color;
     }
 }
 
@@ -123,14 +138,18 @@
 }
 
 .main-filter {
-    padding: 16px 0px;
-    background-color: $corporate-primary;
+    padding: 8px;
+    padding-top: 16px;
+    .col {
+        padding: 0 8px;
+    }
+    background-color: $back_color;
 }
 
 /* Boat sharing filter ( radio input ) */
 .boat-sharing-filter {
     padding: 0px 16px;
-    background-color: $corporate-primary;
+    background-color: $back_color;
 
     .boat-sharing-button {
         float: left;
@@ -143,7 +162,7 @@
     label {
         margin-bottom: 0px;
         cursor: pointer;
-        color: white;
+        color: $empty_input_color;
         font-weight: 400;
         .priv-shr-txt {
             padding-right: 30px;
@@ -153,26 +172,26 @@
         }
         .counter-container {
             position: absolute;
-            top: 4px;
+            top: 5px;
             right: 0px;
             width: 24px;
             height: 24px;
             color: white;
-            border: 1px solid white;
+            background-color: $empty_input_color;
             font-size: 11px;
             border-radius: 28px;
             font-weight: 400;
-            padding-top: 4px;
+            padding-top: 5px;
             text-align: center;
             line-height: 1.42857143;
         }
     }
     [type="radio"]:checked+label {
-        border-bottom: 2px solid white;
+        border-bottom: 2px solid $corporate-primary;
         font-weight: 600;
+        color: $actived_input_color;
         .counter-container {
-            background-color: white;
-            color: $corporate-primary;
+            background-color: $corporate-primary;
         }
     }
 }
@@ -192,14 +211,14 @@
         background-color: initial;
         outline: none !important;
         box-shadow: none !important;
-        color: #555;
+        color: $empty_input_color;
         .text-button {
             font-size: 15px;
         }
     }
     .active button,
     button.active {
-        color: #00CCCC;
+        color: $actived_input_color;
     }
 
     /* Generics design for all dropdown */
@@ -208,7 +227,7 @@
         padding-right: 32px;
         .dropdown-menu {
             top: 30px;
-            border-radius: 0px;
+            border-radius: 2px;
             padding: 6px 12px;
             width: 230px;
             border-color: #f5f5f5;
@@ -259,7 +278,23 @@
         height: 100vh;
     }
 
+    .filter-group {
+        margin-bottom: 16px;
+    }
+
     .filter-title {
-        font-weight: bold;
+        color: $actived_input_color;
+        margin-bottom: 6px;
+    }
+    label {
+        color: $empty_input_color;
+        input {
+            position: relative;
+            top: 1px;
+            margin-right: 5px;
+        }
+        &:hover {
+            color: $corporate-primary;
+        }
     }
 }

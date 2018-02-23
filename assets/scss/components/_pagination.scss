@@ -1,14 +1,16 @@
 /** PAGINATION **/
 
-$pagination_color: $corporate-primary;
+$other_page_color: $color-grey2;
+$active_page_color: $corporate-primary;
 
 .pagination-container {
     font-size: 1.1em;
     text-align: center;
     margin: 30px 0;
     
-    .page-number {
-        position: relative;
+    .page-number,
+    .previous,
+    .next {
         height: 25px;
         width: 25px;
         line-height: 22px;
@@ -16,22 +18,26 @@ $pagination_color: $corporate-primary;
         border-radius: 20px;
         cursor: pointer;
         margin: 0px 6px;
-        font-weight: 600;
+        color: $other_page_color;
 
         &:hover {
-            font-weight: 800;
-            color: black;
+            color: $active_page_color;
         }
 
         &.page-active {
-            border: 1px solid $pagination_color;
-            background-color: $pagination_color;
+            border: 1px solid $active_page_color;
+            background-color: $active_page_color;
             color: white;
-            font-weight: 600;
         }
 
         &.disabled {
-            color: lightgrey;
+            visibility: hidden;
         }
+    }
+
+    .next,
+    .previous {
+        color: $active_page_color;
+        border: 1px solid $active_page_color;
     }
 }
