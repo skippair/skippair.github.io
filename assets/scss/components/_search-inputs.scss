@@ -9,6 +9,9 @@ $back_color: $color-grey3;
 $empty_input_color: $color-grey2;
 $actived_input_color: $sub-title;
 
+$filter-spacing-left: 16px;
+$filter-spacing-right: 16px;
+$main-filter-col-spacing: 16px;
 
 /** 
  * Form Select
@@ -144,17 +147,19 @@ $actived_input_color: $sub-title;
 }
 
 .main-filter {
-    padding: 8px;
+    padding-left: $filter-spacing-left - $main-filter-col-spacing/2;
+    padding-right: $filter-spacing-right - $main-filter-col-spacing/2;
     padding-top: 16px;
     .col {
-        padding: 0 8px;
+        padding: 0 $main-filter-col-spacing/2;
     }
     background-color: $back_color;
 }
 
 /* Boat sharing filter ( radio input ) */
 .boat-sharing-filter {
-    padding: 0px 16px;
+    padding-left: $filter-spacing-left;
+    padding-right: $filter-spacing-right;
     background-color: $back_color;
 
     .boat-sharing-button {
@@ -205,7 +210,10 @@ $actived_input_color: $sub-title;
 /* Other filter row */
 .other-filter {
     position: relative;
-    padding: 14px 16px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: $filter-spacing-left;
+    padding-right: $filter-spacing-right;
     /* Design for dropdown button and button on this row */
     button,
     button:hover,
@@ -247,7 +255,7 @@ $actived_input_color: $sub-title;
     /* Button that open the ordering option */
     .ordering-filter {
         position: absolute;
-        right: 15px;
+        right: $filter-spacing-right;
         border: solid 1px #dbdbdb;
         border-radius: 2px;
         padding: 0px 0px;
