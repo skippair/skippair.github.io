@@ -33,9 +33,9 @@ $main-filter-col-spacing: 16px;
             display: none;
             position: absolute;
             right: 9px;
-            top: 2px;
+            top: 7px;
             cursor: pointer;
-            font-size: 19px;
+            font-size: 14px;
             color: #999;
         }
         input:not(:empty)~.remove {
@@ -51,6 +51,7 @@ $main-filter-col-spacing: 16px;
         background-color: white;
         border: 1px solid $color-grey1;
         border-radius: 2px;
+        color: $color-grey2;
         ul {
             padding-left: 0;
             list-style: none;
@@ -63,7 +64,7 @@ $main-filter-col-spacing: 16px;
             color: $corporate-primary;
         }
         .parent {
-            font-weight: 600;
+            // font-weight: 600;
         }
         .child {
             color: grey;
@@ -93,6 +94,7 @@ $main-filter-col-spacing: 16px;
     }
     .form-control:focus {
         padding-left: 12px;
+        outline-color: $corporate-primary;
         &+.form-control-icon {
             display: none;
         }
@@ -270,6 +272,7 @@ $main-filter-col-spacing: 16px;
             cursor: pointer;
             text-align: right;
             width: 160px;
+            color: $color-grey2;
             &:hover {
                 color: $corporate-primary;
             }
