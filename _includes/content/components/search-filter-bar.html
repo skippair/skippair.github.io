@@ -6,13 +6,16 @@
             <div class="col">
                 <div class="form-select--autocomplete destination-filter" data-url="https://skippair.com/fr/search-api/location-list/">
                     <div class="form-group has-iconlabel">
-                        <label class="control-label sr-only">Where do you wish to go ?</label>
+                        <label class="control-label sr-only">Specify a destination</label>
                         <input type="hidden" class="search-parameter" name="destination"/>
-                        <input class="form-control" data-toggle="collapse" data-target="#options1" placeholder="Where do you wish to go ?"/>
+                        <input class="form-control" data-toggle="collapse" data-target="#destination-options" placeholder="Specify a destination"/>
                         <i class="form-control-icon fa fa-map-marker"></i>
                         <span class="remove" aria-hidden="true"><i class="fa fa-times-circle"></i></span>
+                        <span class="angle down" data-toggle="collapse" data-target="#destination-options"><i class="fa fa-angle-down"></i></span>
+                        <span class="angle up" data-toggle="collapse" data-target="#destination-options"><i class="fa fa-angle-up"></i></span>
                     </div>
-                    <div id="options1" class="form-option collapse">
+                    <div id="destination-options" class="form-option collapse">
+                        <div class="default-info">Popular Cruise</div>
                         <ul>
                             <li data-value="france" class="selected">France</li>
                             <li data-value="france">France</li>
@@ -27,13 +30,15 @@
             <div class="col">
                 <div class="form-select customer-type-filter">
                     <div class="form-group has-iconlabel">
-                        <label class="control-label sr-only">With whom are you leaving?</label>
-                        <input type="hidden" class="form-hidden search-parameter" name="c_type" data-placeholder="With whom are you leaving?"/>
-                        <div class="form-control" data-toggle="collapse" data-target="#customer-type-option">With whom are you leaving?</div>
+                        <label class="control-label sr-only">Who are you going with?</label>
+                        <input type="hidden" class="form-hidden search-parameter" name="c_type" data-placeholder="Who are you going with?"/>
+                        <div class="form-control" data-toggle="collapse" data-target="#customer-type-options">Who are you going with?</div>
                         <i class="form-control-icon fa fa-users"></i>
                         <span class="remove" aria-hidden="true"><i class="fa fa-times-circle"></i></span>
+                        <span class="angle down" data-toggle="collapse" data-target="#customer-type-options"><i class="fa fa-angle-down"></i></span>
+                        <span class="angle up" data-toggle="collapse" data-target="#customer-type-options"><i class="fa fa-angle-up"></i></span>
                     </div>
-                    <div id="customer-type-option" class="form-option collapse">
+                    <div id="customer-type-options" class="form-option collapse">
                         <ul>
                             <li data-value="alone">En solo</li>
                             <li data-value="lovers">En couple</li>
@@ -46,8 +51,8 @@
             </div>
             <div class="col">
                 <div class="form-group has-iconlabel">
-                    <label class="control-label sr-only">Departure date (DD/MM/YYYY)</label>
-                    <input id="departure-date" class="form-control" name="departure_date" type="text" placeholder="Departure date (DD/MM/YYYY)" value=""/>
+                    <label class="control-label sr-only">Departure date</label>
+                    <input id="departure-date" class="form-control" name="departure_date" type="text" placeholder="Departure date" value=""/>
                     <i class="form-control-icon fa fa-calendar"></i>
                 </div>
             </div>
