@@ -4,8 +4,16 @@
   width: 280px;
   margin-bottom: $p;
 }
+.s-progress {
+    height: 3px;
+    width: 100%;
+}
+
 @media (min-width: $md){
   .title-step-progress {
     display: none;
   }
+    .s-progress {
+        width: 300px;
+    }
 }
