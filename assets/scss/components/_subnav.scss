@@ -1,60 +1,63 @@
+/** 
+ * Subnav links for account.
+ *
+ * Created by Ripoche Sylvain on 03/05/2018
+ * Last modification by Ripoche Sylvain on 03/05/2018
+ * 
+ * Todo :
+ *   - Gestion de l'affichage en fonction de la taille d'écrant.
+ *   - Container pour aligner avec la page, pour l'instant pas de marge à gauche.
+ */
+
 .subnav-links {
-    padding: 0 20px;
-    font-size: 14px;
     overflow: auto;
-    margin-top: 30px;
+    background-color: white;
+    box-shadow: 0px 4px 5.9px 0.1px rgba(2, 3, 2, 0.04);
+
     .navbar-nav {
-        margin-bottom: 0;
-        padding-left: 0;
-        list-style: none;
         display: inline;
-        height: auto;
-        width: 100%;
     }
+
     .nav-item {
         float: left;
-        width: 20%;
-        text-align: center;
-        position: relative;
-        font-weight: normal;
+        margin-right: 48px;
+
+        .nav-link {
+            color: $color-grey2;
+            font-size: 18px;
+            padding-right: 1px;
+            padding-left: 1px;
+            padding-top: 10px;
+            padding-bottom: 11px;
+            i {
+                padding-right: 12px;
+            }
+        }
+
         &.active {
             font-weight: bold;
-            border-bottom: solid 2px $corporate-primary;
-            .nav-link { color: $corporate-primary; }
-        }
-    }
-    .nav-link {
-        padding: 1rem 1rem;
-        color: $color-grey2;
-    }
-}
-.nav-user-account {
-    display: none;
-    z-index: 1;
-    width: 100%;
-    height: 50px;
-    padding: 0px;
-    background-color: $color-white1;
-    font-weight: normal;
-    margin-top: 58px;
-    box-shadow: 0px 4px 5.9px 0.1px rgba(2, 3, 2, 0.04);
-    .navbar-nav {
-        .nav-item {
-            width: 180px;
-            text-align: left;
-            a {
-                padding-left: 0px;
-                .text-icon {
-                    i {
-                        font-size: 18px;
-                    }
-                }
+            border-bottom: solid 2px $sub-title;
+            .nav-link { 
+                color: $sub-title;
             }
         }
     }
-}
-@media (min-width: $lg){
-    .nav-user-account {
-        display: block;
+
+    &.client {
+        .nav-item.active {
+            border-color:$corporate-primary;
+            .nav-link { 
+                color: $corporate-primary;
+            }
+        }
+    }
+
+    &.pro {
+        .nav-item.active {
+            border-color:$pro-primary;
+            .nav-link { 
+                color: $pro-primary;
+            }
+        }
     }
 }

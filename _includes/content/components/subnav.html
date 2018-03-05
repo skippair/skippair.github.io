@@ -1,21 +1,42 @@
-<div class="tab-pane s-container fade" id="subnav" role="tabpanel" aria-labelledby="states-tab">
+{% capture subnavLinks_client %}
+<nav class="subnav-links client">
+    <ul class="navbar-nav">
+        <li class="nav-item navbar-link active"><a href="#" class="nav-link"><i class="fa fa-user"></i>Mon profil</a></li>
+        <li class="nav-item navbar-link"><a href="#" class="nav-link"><i class="fa fa-suitcase"></i>Mes voyages</a></li>
+        <li class="nav-item navbar-link"><a href="#" class="nav-link"><i class="fa fa-comments"></i>Mes messages</a></li>
+        <li class="nav-item navbar-link"><a href="#" class="nav-link"><i class="fa fa-heart"></i>Mes favoris</a></li>
+    </ul>
+</nav>
+{% endcapture %}
+
+{% capture subnavLinks_pro %}
+<nav class="subnav-links pro">
+    <ul class="navbar-nav">
+        <li class="nav-item navbar-link active"><a href="#" class="nav-link"><i class="fa fa-th-large"></i>Résumé</a></li>
+        <li class="nav-item navbar-link"><a href="#" class="nav-link"><i class="fa fa-comments"></i>Messages</a></li>
+        <li class="nav-item navbar-link"><a href="#" class="nav-link"><i class="fa fa-calendar"></i>Calendrier</a></li>
+        <li class="nav-item navbar-link"><a href="#" class="nav-link"><i class="fa fa-shopping-cart"></i>Réservations</a></li>
+        <li class="nav-item navbar-link"><a href="#" class="nav-link"><i class="fa fa-bookmark"></i>Offres</a></li>
+        <li class="nav-item navbar-link"><a href="#" class="nav-link"><i class="fa fa-building"></i>Entreprise</a></li>
+    </ul>
+</nav>
+{% endcapture %}
+
+<div class="tab-pane s-container fade active show" id="subnav" role="tabpanel" aria-labelledby="states-tab">
     <h1>SubNav</h1>
-    <h2>SubNav Product Page</h2>
-    {% capture subnavLinks %}
-    <nav class="subnav-links">
-        <ul class="navbar-nav justify-content-center">
-            <li class="nav-item navbar-link active"><a href="#" class="nav-link">Link</a></li>
-            <li class="nav-item navbar-link"><a href="#" class="nav-link">Link</a></li>
-            <li class="nav-item navbar-link"><a href="#" class="nav-link">Link</a></li>
-            <li class="nav-item navbar-link"><a href="#" class="nav-link">Link</a></li>
-            <li class="nav-item navbar-link"><a href="#" class="nav-link">Link</a></li>
-        </ul>
-    </nav>
-    {% endcapture %}
-    {{ subnavLinks }}
+    <h2>SubNav for client account</h2>
+    
+    {{ subnavLinks_client }}
+
     <div class="markdown-container">
-        {% highlight html %}
-        {{ subnavLinks }}
-        {% endhighlight %}
+        {% highlight html linenos %}{{ subnavLinks_client }}{% endhighlight %}
+    </div>
+
+    <h2>SubNav Pro account</h2>
+    
+    {{ subnavLinks_pro }}
+
+    <div class="markdown-container">
+        {% highlight html linenos %}{{ subnavLinks_pro }}{% endhighlight %}
     </div>
 </div>
