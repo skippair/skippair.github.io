@@ -1,56 +1,110 @@
-<div class="tab-pane s-container fade" id="buttons" role="tabpanel" aria-labelledby="buttons-tab">
-  <h1>Buttons</h1>
-  <p>We have 3 types of buttons with active and not active states</p>
-  <p>You can switch "< a>< /a>" to a "< button>< /button>" if you need a button type submit.</p>
-  <h2>Button validation</h2>
-  {% capture btn-validate %}
-  <a class="s-btn btn-big btn-validate">Voir le récapitulatif</a>
-  <a class="s-btn btn-big btn-validate-disabled">Voir le récapitulatif</a>
-  {% endcapture %}
-  {{ btn-validate }}
-  <div class="markdown-container">
-    {% highlight html %}
-    {{ btn-validate }}
-    {% endhighlight %}
-  </div>
-  <h2>Button with action</h2>
-  {% capture btn-sign %}
-  <div class="s-btn btn-group" role="group">
-    <button type="button" class="btn-big btn-action sign">Signer mon contrat</button>
-    <i class="fa fa-pencil"></i>
-  </div>
-  <div class=" s-btn btn-group disabled" role="group">
-    <button type="button" class="btn-big btn-action">Signer mon contrat</button>
-    <i class="fa fa-pencil"></i>
-  </div>
-  {% endcapture %}
-  {{ btn-sign}}
-  <div class="markdown-container">
-    {% highlight html %}
+<div class="tab-pane s-container fade active show" id="buttons" role="tabpanel" aria-labelledby="buttons-tab">
+    <h1>Skippair buttons</h1>
+
+<!--Basics Button-->
+{% capture btn-basics %}
+<button type="button" class="btn">Annuler</button>
+<button type="button" class="btn btn-primary">Voir le récapitulatif</button>
+<button type="button" class="btn btn-pro">Réserver</button>
+<button type="button" class="btn btn-gift">Gift</button>
+<a type="button" class="btn btn-gift">Gift</a>
+{% endcapture %}
+
+    <h2>Basics buttons</h2>
+    {{ btn-basics }}
+    <div class="markdown-container">
+        {% highlight html linenos %}{{ btn-basics }}{% endhighlight %}
+    </div>
+
+<!--Outline Button-->
+{% capture btn-outline %}
+<button type="button" class="btn btn-outline">Annuler</button>
+<button type="button" class="btn btn-outline btn-primary">Voir le récapitulatif</button>
+<button type="button" class="btn btn-outline btn-pro">Réserver</button>
+<button type="button" class="btn btn-outline btn-gift">Gift</button>
+{% endcapture %}
+
+    <h2>Outline buttons</h2>
+    {{ btn-outline }}
+    <div class="markdown-container">
+        {% highlight html linenos %}{{ btn-outline }}{% endhighlight %}
+    </div>
+
+
+<!--Icon Button-->
+{% capture btn-icon %}
+<button class="btn btn-group btn-primary" type="button">
+    <span class="text">Signer mon contrat</span>
+    <span class="icon"><i class="fa fa-pencil"></i></span>
+</button>
+<button class="btn btn-group btn-facebook" type="button">
+    <span class="text">Continuer avec facabook</span>
+    <span class="icon"><i class="fa fa-facebook"></i></span>
+</button>
+{% endcapture %}
+
+    <h2>Buttons with icons</h2>
+    {{ btn-icon }}
+    <div class="markdown-container">
+        {% highlight html linenos %}{{ btn-icon }}{% endhighlight %}
+    </div>
+
+
+<!--Size Button-->
+{% capture btn-size %}
+<button type="button" class="btn btn-block btn-primary">Voir le récapitulatif</button>
+<button type="button" class="btn btn-block btn-gift">Gift</button>
+{% endcapture %}
+
+    <h2>Buttons with icons</h2>
+    {{ btn-size }}
+    <div class="markdown-container">
+        {% highlight html linenos %}{{ btn-size }}{% endhighlight %}
+    </div>
+
+
+
+
+
+
+    <h2>Button with action</h2>
+    {% capture btn-sign %}
+    <div class="s-btn btn-group" role="group">
+        <button type="button" class="btn-big btn-action sign">Signer mon contrat</button>
+        <i class="fa fa-pencil"></i>
+    </div>
+    <div class=" s-btn btn-group disabled" role="group">
+        <button type="button" class="btn-big btn-action">Signer mon contrat</button>
+        <i class="fa fa-pencil"></i>
+    </div>
+    {% endcapture %}
     {{ btn-sign}}
-    {% endhighlight %}
-  </div>
-  <h2>Socials buttons</h2>
-  {% capture btn-facebook %}
-  <div class="s-btn btn-group" role="group">
-    <a class="btn-big btn-action facebook">Continuer avec facebook</a>
-    <i class="fa fa-facebook"></i>
-  </div>
-  {% endcapture %}
-  {{ btn-facebook }}
-  <div class="markdown-container">
-    {% highlight html %}
-      {{ btn-facebook }}
-    {% endhighlight %}
-  </div>
-  <h2>Button to return on previouss context</h2>
-  {% capture btn-return %}
-  <a href="#" class="s-btn btn-big btn-return">Retour</a>
-  {% endcapture %}
-  {{ btn-return }}
-  <div class="markdown-container">
-    {% highlight html %}
+    <div class="markdown-container">
+        {% highlight html %}
+        {{ btn-sign}}
+        {% endhighlight %}
+    </div>
+    <h2>Socials buttons</h2>
+    {% capture btn-facebook %}
+    <div class="s-btn btn-group" role="group">
+        <a class="btn-big btn-action facebook">Continuer avec facebook</a>
+        <i class="fa fa-facebook"></i>
+    </div>
+    {% endcapture %}
+    {{ btn-facebook }}
+    <div class="markdown-container">
+        {% highlight html %}
+            {{ btn-facebook }}
+        {% endhighlight %}
+    </div>
+    <h2>Button to return on previouss context</h2>
+    {% capture btn-return %}
+    <a href="#" class="s-btn btn-big btn-return">Retour</a>
+    {% endcapture %}
     {{ btn-return }}
-    {% endhighlight %}
-  </div>
+    <div class="markdown-container">
+        {% highlight html %}
+        {{ btn-return }}
+        {% endhighlight %}
+    </div>
 </div>

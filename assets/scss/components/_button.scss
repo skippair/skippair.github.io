@@ -1,104 +1,269 @@
-.s-btn {
-  margin-bottom: 18px;
-  min-width: 240px;
-  margin-right : 10px;
+.btn {
+    text-transform: uppercase;
+    border-radius: 2px;
+    font-weight: bold;
+    padding: 6px 16px;
+    box-shadow: initial !important;
+    border: 1px solid black inside;
+
+    // Color gestion
+    background-color: white;
+    border-color: white;
+    color: $color-grey2;
+
+    &:not(:disabled):not(.disabled) {
+        &:hover,
+        &:active {
+            background-color: $color-grey1;
+            border-color: $color-grey1;
+        }
+        
+    }
 }
-.btn-big {
-  font-weight: 900;
-  border-radius: 4px;
-  padding: 10px 26px;
-  border: none;
-  cursor: pointer;
-  text-transform: uppercase;
+
+.btn-outline {
+    background-color: initial !important;
+    border-color: $color-grey2;
+    &:not(:disabled):not(.disabled) {
+        &:hover,
+        &:active {
+            border-color: $sub-title;
+            color: $sub-title;
+        }
+    }
+
 }
-button:focus {
-  outline: 0;
-}
-.btn-validate {
-  transition: $transition-time;
-  color: $color-white1 !important;
-  background-color: $corporate-primary;
-  border : 2px solid $corporate-primary;
-  text-decoration: none;
-}
-.btn-validate:hover {
-  transition: $transition-time;
-  background-color: $corporate-secondary;
-  border : 2px solid $corporate-secondary;
-}
-.btn-validate-disabled {
-  cursor: default;
-  color: $text !important;
-  text-decoration: none;
-  border: solid 2px $color-grey1;
-  background-color: $color-white1;
-}
+
+
 .btn-group {
-  .btn-action {
-    width:100%;
-    transition: $transition-time;
-    border-radius: 2px 0px 0px 2px;
-    color: $color-white1;
-  }
-  i {
-    color: $color-white1;
-    padding: 12px 12px;
-    border-radius: 0px 2px 2px 0px;
-  }
-  .btn-action:hover {
-    transition: 0.7s;
-  }
-  .sign {
+    padding: 0px;
+    border: none;
+    overflow: hidden;
+    .text {
+        padding: 7px 13px;
+        margin-right: 38px;
+    }
+    .icon {
+        height: 100%;
+        position: absolute;
+        right: 0px;
+        width: 38px;
+        padding-top: 5px;
+    }
+}
+
+
+// Color
+.btn-primary {
     background-color: $corporate-primary;
-  }
-  .sign ~ i {
-    background-color: $corporate-secondary;
-  }
-  .sign:hover {
-    background-color: $corporate-secondary;
-  }
-  .facebook {
+    border-color: $corporate-primary;
+    color: white;
+    &:not(:disabled):not(.disabled) {
+        &:hover,
+        &:active {
+            background-color: $corporate-secondary;
+            border-color: $corporate-secondary;
+        }
+    }
+    &.btn-outline {
+        color: $corporate-primary;
+        &:not(:disabled):not(.disabled) {
+            &:hover,
+            &:active {
+                color: $corporate-secondary;
+            }
+        }
+    }
+    .icon {
+        background-color: $corporate-secondary;
+    }
+}
+
+.btn-pro {
+    background-color: $pro-primary;
+    border-color: $pro-primary;
+    color: white;
+    &:not(:disabled):not(.disabled) {
+        &:hover,
+        &:active {
+            background-color: $pro-secondary;
+            border-color: $pro-secondary;
+        }
+    }
+    &.btn-outline {
+        color: $pro-primary;
+        &:not(:disabled):not(.disabled) {
+            &:hover,
+            &:active {
+                color: $pro-secondary;
+            }
+        }
+    }
+    .icon {
+        background-color: $pro-secondary;
+    }
+}
+
+.btn-gift {
+    background-color: $gift-primary;
+    border-color: $gift-primary;
+    color: white;
+    &:not(:disabled):not(.disabled) {
+        &:hover,
+        &:active {
+            background-color: $gift-secondary;
+            border-color: $gift-secondary;
+        }
+    }
+    &.btn-outline {
+        color: $gift-primary;
+        &:not(:disabled):not(.disabled) {
+            &:hover,
+            &:active {
+                color: $gift-secondary;
+            }
+        }
+    }
+    .icon {
+        background-color: $gift-secondary;
+    }
+}
+
+.btn-facebook {
     background-color: $facebook-primary;
-    color: $color-white1 !important;
-  }
-  .facebook ~ i {
-    background-color: $facebook-secondary;
-  }
-  .facebook:hover {
-    background-color: $facebook-secondary;
-  }
+    border-color: $facebook-primary;
+    color: white;
+    &:not(:disabled):not(.disabled) {
+        &:hover,
+        &:active {
+            background-color: $facebook-secondary;
+            border-color: $facebook-secondary;
+        }
+    }
+    &.btn-outline {
+        color: $facebook-primary;
+        &:not(:disabled):not(.disabled) {
+            &:hover,
+            &:active {
+                color: $facebook-secondary;
+            }
+        }
+    }
+    .icon {
+        background-color: $facebook-secondary;
+    }
 }
-.btn-group.disabled {
-  .btn-action {
-    cursor: default;
-    border-top: solid 2px $color-grey1;
-    border-bottom: solid 2px $color-grey1;
-    border-left: solid 2px $color-grey1;
-    border-radius: 2px 0px 0px 2px;
-    color: $text;
-    background-color: $color-white1;
-  }
-  i {
-    color: $color-white1;
-    background-color: $color-grey2;
-    padding: 12px 12px;
-    border-radius: 0px 2px 2px 0px;
-  }
-}
-.btn-return {
-  font-weight: 900;
-  padding: 10px 12px;
-  cursor: pointer;
-  text-transform: uppercase;
-  transition: $transition-time;
-  color: $text !important;
-  border: solid 2px $color-grey1;
-  background-color: $color-white1;
-  border-radius: 2px;
-}
-.btn-return:hover {
-  transition: $transition-time;
-  text-decoration: none;
-  color: $text-hover !important;
-  border-color: $text-hover;
-}
+
+// .s-btn {
+//     margin-bottom: 18px;
+//     min-width: 240px;
+//     margin-right : 10px;
+// }
+
+// .btn-big {
+//     font-weight: 900;
+//     border-radius: 4px;
+//     padding: 10px 26px;
+//     border: none;
+//     cursor: pointer;
+//     text-transform: uppercase;
+// }
+
+// button:focus {
+//     outline: 0;
+// }
+
+// .btn-validate {
+//     transition: $transition-time;
+//     color: $color-white1 !important;
+//     background-color: $corporate-primary;
+//     border : 2px solid $corporate-primary;
+//     text-decoration: none;
+// }
+
+// .btn-validate:hover {
+//     transition: $transition-time;
+//     background-color: $corporate-secondary;
+//     border : 2px solid $corporate-secondary;
+// }
+
+// .btn-validate-disabled {
+//     cursor: default;
+//     color: $text !important;
+//     text-decoration: none;
+//     border: solid 2px $color-grey1;
+//     background-color: $color-white1;
+// }
+
+// .btn-group {
+//     .btn-action {
+//         width:100%;
+//         transition: $transition-time;
+//         border-radius: 2px 0px 0px 2px;
+//         color: $color-white1;
+//     }
+//     i {
+//         color: $color-white1;
+//         padding: 12px 12px;
+//         border-radius: 0px 2px 2px 0px;
+//     }
+//     .btn-action:hover {
+//         transition: 0.7s;
+//     }
+//     .sign {
+//         background-color: $corporate-primary;
+//     }
+//     .sign ~ i {
+//         background-color: $corporate-secondary;
+//     }
+//     .sign:hover {
+//         background-color: $corporate-secondary;
+//     }
+//     .facebook {
+//         background-color: $facebook-primary;
+//         color: $color-white1 !important;
+//     }
+//     .facebook ~ i {
+//         background-color: $facebook-secondary;
+//     }
+//     .facebook:hover {
+//         background-color: $facebook-secondary;
+//     }
+// }
+
+// .btn-group.disabled {
+//     .btn-action {
+//         cursor: default;
+//         border-top: solid 2px $color-grey1;
+//         border-bottom: solid 2px $color-grey1;
+//         border-left: solid 2px $color-grey1;
+//         border-radius: 2px 0px 0px 2px;
+//         color: $text;
+//         background-color: $color-white1;
+//     }
+//     i {
+//         color: $color-white1;
+//         background-color: $color-grey2;
+//         padding: 12px 12px;
+//         border-radius: 0px 2px 2px 0px;
+//     }
+// }
+
+// .btn-return {
+//     font-weight: 900;
+//     padding: 10px 12px;
+//     cursor: pointer;
+//     text-transform: uppercase;
+//     transition: $transition-time;
+//     color: $text !important;
+//     border: solid 2px $color-grey1;
+//     background-color: $color-white1;
+//     border-radius: 2px;
+// }
+
+// .btn-return:hover {
+//     transition: $transition-time;
+//     text-decoration: none;
+//     color: $text-hover !important;
+//     border-color: $text-hover;
+// }
