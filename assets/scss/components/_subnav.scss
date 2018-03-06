@@ -4,9 +4,6 @@
  * Created by Ripoche Sylvain on 03/05/2018
  * Last modification by Ripoche Sylvain on 03/05/2018
  * 
- * Todo :
- *   - Gestion de l'affichage en fonction de la taille d'écrant.
- *   - Container pour aligner avec la page, pour l'instant pas de marge à gauche.
  */
 
 .subnav-links {
@@ -18,48 +15,100 @@
     margin-top: 58px;
 
     .navbar-nav {
-        display: inline;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     .nav-item {
-        float: left;
-        margin-right: 48px;
-
         .nav-link {
-            color: $color-grey2;
+            color: #89a6e4;
             font-size: 16px;
             padding-right: 1px;
             padding-left: 1px;
             padding-top: 13px;
             padding-bottom: 11px;
+            .text {
+                display: none;
+            }
             i {
                 padding-right: 12px;
+                padding-left: 12px;
             }
         }
 
         &.active {
             font-weight: bold;
-            border-bottom: solid 2px $sub-title;
+            border-bottom: solid 2px white;
             .nav-link { 
-                color: $sub-title;
+                color: white;
             }
         }
     }
 
     &.client {
-        .nav-item.active {
-            border-color:$corporate-primary;
-            .nav-link { 
-                color: $corporate-primary;
-            }
-        }
+        background-color: $corporate-primary;
     }
 
     &.pro {
-        .nav-item.active {
-            border-color:$pro-primary;
-            .nav-link { 
-                color: $pro-primary;
+        background-color: $pro-primary;
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    .subnav-links {
+        .navbar-nav {
+            padding: 0px 64px;
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .subnav-links {
+        .navbar-nav {
+            display: inline;
+            padding: 0px;
+        }
+
+        .nav-item {
+            float: left;
+            margin-right: 46px;
+
+            .nav-link {
+                color: $color-grey2;
+                .text {
+                    display: initial;
+                }
+                i {
+                    padding-left: 0px;
+                }
+            }
+
+            &.active {
+                border-color: $sub-title;
+                .nav-link { 
+                    color: $sub-title;
+                }
+            }
+        }
+
+        &.client {
+            background-color: white;
+            .nav-item.active {
+                border-color:$corporate-primary;
+                .nav-link { 
+                    color: $corporate-primary;
+                }
+            }
+        }
+
+        &.pro {
+            background-color: white;
+            .nav-item.active {
+                border-color:$pro-primary;
+                .nav-link { 
+                    color: $pro-primary;
+                }
             }
         }
     }
