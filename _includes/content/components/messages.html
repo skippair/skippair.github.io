@@ -3,12 +3,12 @@
 
     <p>Gestion d'affichage des conversation.</p>
 
-{% capture table %}
+{% capture messages %}
 <a href="#" class="message-cards">
     <img class="user-img" src="https://media.skippair.com/media/cache/fb/40/fb4013a1d1d21621ad5ef47740b5f38d.jpg">
     <div class="time">15:05</div>
     <div class="message-detail">
-        <div class="title">Thibault Schultz<span class="flag-new">Nouveau</span></div>
+        <div class="title">Thibault Schultz <span class="flag-new">Nouveau</span></div>
         <div class="content">
             <span>Lorem ipsum De nombreux utils sont disponible pour les tables de bootstrap, allez voir, De nombreux utils sont disponible pour les tables de bootstrap, allez voir</span>
         </div>
@@ -20,7 +20,7 @@
     <img class="user-img" src="https://media.skippair.com/media/cache/fb/40/fb4013a1d1d21621ad5ef47740b5f38d.jpg">
     <div class="time">15:05</div>
     <div class="message-detail">
-        <div class="title">Thibault Schultz<span class="flag-new">Nouveau</span></div>
+        <div class="title">Thibault Schultz <span class="flag-new">Nouveau</span></div>
         <div class="content">
             <span>Lorem ipsum De nombreux utils sont disponible pour les tables de bootstrap, allez voir, De nombreux utils sont disponible pour les tables de bootstrap, allez voir</span>
         </div>
@@ -33,12 +33,12 @@
 
     <p>Les cards s'empile correctement, pas de marge à l'extérieur.</p>
 
-    {{ table }}
+    {{ messages }}
     <div class="markdown-container">
-        {% highlight html linenos %}{{ table }}{% endhighlight %}
+        {% highlight html linenos %}{{ messages }}{% endhighlight %}
     </div>
 
-{% capture table %}
+{% capture messages-status %}
 <a href="#" class="message-cards">
     <img class="user-img" src="https://media.skippair.com/media/cache/fb/40/fb4013a1d1d21621ad5ef47740b5f38d.jpg">
     <div class="time">15:05</div>
@@ -80,8 +80,44 @@
 
     <p>Trois class sont disponible pour gérer la couleur du status. <strong>.info</strong> <strong>.warning</strong> <strong>.error</strong></p>
 
-    {{ table }}
+    {{ messages-status }}
     <div class="markdown-container">
-        {% highlight html linenos %}{{ table }}{% endhighlight %}
+        {% highlight html linenos %}{{ messages-status }}{% endhighlight %}
+    </div>
+
+{% capture messages-responsiveness %}
+<div style="width: 240px">
+    <a href="#" class="message-cards">
+        <img class="user-img" src="https://media.skippair.com/media/cache/fb/40/fb4013a1d1d21621ad5ef47740b5f38d.jpg">
+        <div class="time">15:05</div>
+        <div class="message-detail">
+            <div class="title">Thibault Schultz <span class="flag-new">Nouveau</span></div>
+            <div class="content">
+                <span>Lorem ipsum De nombreux utils sont disponible pour les tables de bootstrap, allez voir, De nombreux utils sont disponible pour les tables de bootstrap, allez voir</span>
+            </div>
+            <div class="status info"><i class="fa fa-circle-thin"></i> Pré-approuvé</div>
+        </div>    
+    </a>
+    <a href="#" class="message-cards">
+        <img class="user-img" src="https://media.skippair.com/media/cache/fb/40/fb4013a1d1d21621ad5ef47740b5f38d.jpg">
+        <div class="time">15:05</div>
+        <div class="message-detail">
+            <div class="title">Thibault Schultz</div>
+            <div class="content">
+                <span>Lorem ipsum De nombreux utils sont disponible pour les tables de bootstrap, allez voir, De nombreux utils sont disponible pour les tables de bootstrap, allez voir</span>
+            </div>
+            <div class="status warning"><i class="fa fa-circle-thin"></i> En attenre de validation</div>
+        </div>    
+    </a>
+</div>
+{% endcapture %}
+    
+    <h2>Responsive</h2>
+
+    <p>Si le nom est trop long il s'écrit alors sur plusieur ligne et la hauteur de la cards augmentes. Le <strong>flag new</strong> peut se retrouver sur la ligne suivante si il n'y a pas la place.</p>
+
+    {{ messages-responsiveness }}
+    <div class="markdown-container">
+        {% highlight html linenos %}{{ messages-responsiveness }}{% endhighlight %}
     </div>
 </div>

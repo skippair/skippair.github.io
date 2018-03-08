@@ -1,13 +1,16 @@
 .message-cards {
     display: block;
     position: relative;
-    height: 66px;
+    text-decoration: none !important;
     
     &+.message-cards {
         margin-top: 24px;
     }
 
     .user-img {
+        position: absolute;
+        left: 0px;
+        top: 0px;
         border-radius: 50%;
         border: 2px solid white;
     }
@@ -21,22 +24,19 @@
     }
 
     .message-detail {
-        position: absolute;
-        top: 0px;
-        left: 60px;
-        right: 0px;
+        margin-left: 60px;
 
         .title {
             color: $sub-title;
             font-size: 16px;
             font-weight: bold;
+            margin-right: 38px;
             .flag-new {
                 background-color: $info-color;
                 color: white;
                 font-size: 12px;
                 border-radius: 2px;
                 padding: 2px 4px;
-                margin-left: 8px;
             }
         }
 
