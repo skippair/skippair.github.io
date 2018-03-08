@@ -1,0 +1,53 @@
+<div class="tab-pane s-container fade" id="tables" role="tabpanel" aria-labelledby="buttons-tab">
+    <h1>Skippair tables</h1>
+
+    <p>De nombreux utils sont disponible pour les tables de bootstrap, allez voir <a href="https://getbootstrap.com/docs/4.0/content/tables/">la documentation</a>.</p>
+
+{% capture table %}
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Intitulé voyage</th>
+      <th scope="col">Date de départ</th>
+      <th scope="col">Type</th>
+      <th scope="col">Nombre voyageurs</th>
+      <th scope="col">Durée</th>
+      <th scope="col">Options</th>
+      <th scope="col">Montant</th>
+      <th scope="col">Message</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Croisière plongée dans les Cyclades</td>
+      <td>12/03/18</td>
+      <td>Partagé</td>
+      <td>10</td>
+      <td>2 jours</td>
+      <td>Hotesse</td>
+      <td>5000€</td>
+      <td><a href="#">voir le message</a></td>
+      <td>valider refuser</td>
+    </tr>
+    <tr>
+      <td>Croisière plongée dans les Cyclades</td>
+      <td>12/03/18</td>
+      <td>Partagé</td>
+      <td>10</td>
+      <td>2 jours</td>
+      <td>Hotesse</td>
+      <td>5000€</td>
+      <td><a href="#">voir le message</a></td>
+      <td>valider refuser</td>
+    </tr>
+  </tbody>
+</table>
+{% endcapture %}
+    
+    <h2>Exemple classique</h2>
+    {{ table }}
+    <div class="markdown-container">
+        {% highlight html linenos %}{{ table }}{% endhighlight %}
+    </div>
+</div>

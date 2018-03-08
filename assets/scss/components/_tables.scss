@@ -1,0 +1,42 @@
+.table {
+    border-radius: 2px;
+    overflow: hidden;
+
+    // Border management
+    td, th, thead th {
+        border: none;
+    }
+    th + th, th + td, td + td {
+        border-left: 1px solid $color-grey1;
+    }
+    tbody tr {
+        border-top: 1px solid $color-grey1; 
+    }
+
+    // Heading
+    th {
+        background-color: $color-grey3;
+        color: $pro-primary;
+    }
+
+    // Row
+    td {
+        background-color: white;
+        color: $color-grey2;        
+    }
+
+    // Text
+    thead th, tbody th {
+        vertical-align: top;
+    }
+    th, td {
+        padding: 16px 8px;
+    }
+    th {
+        line-height: 16px;
+    }
+    td {
+        font-size: 14px;
+        line-height: 14px;
+    }
+}

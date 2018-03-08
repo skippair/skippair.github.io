@@ -1,0 +1,69 @@
+.message-cards {
+    display: block;
+    position: relative;
+    height: 66px;
+    
+    &+.message-cards {
+        margin-top: 24px;
+    }
+
+    .user-img {
+        border-radius: 50%;
+        border: 2px solid white;
+    }
+
+    .time {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        color: $sub-title;
+        font-size: 14px;
+    }
+
+    .message-detail {
+        position: absolute;
+        top: 0px;
+        left: 60px;
+        right: 0px;
+
+        .title {
+            color: $sub-title;
+            font-size: 16px;
+            font-weight: bold;
+            .flag-new {
+                background-color: $info-color;
+                color: white;
+                font-size: 12px;
+                border-radius: 2px;
+                padding: 2px 4px;
+                margin-left: 8px;
+            }
+        }
+
+        .content {
+            color: $sub-title;
+            font-size: 14px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            span {
+                white-space: nowrap;
+            }
+        }
+    }
+
+    .status {
+        font-size: 14px;
+        i {
+            font-size: 12px;
+        }
+        &.info {
+            color: $info-color;
+        }
+        &.warning {
+            color: $warning-color;
+        }
+        &.error {
+            color: $error-color;
+        }
+    }
+}
