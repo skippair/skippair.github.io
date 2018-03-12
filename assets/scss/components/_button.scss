@@ -61,11 +61,19 @@
     font-weight: initial;
     border: none;
     color: $color-grey2;
-    padding: 4px 0px;
+    padding: 0px;
 
     +.btn-light {
         margin-left: 12px;
     }
+}
+
+// Size
+.btn.small {
+    font-size: 12px;
+}
+.btn.large {
+    font-size: 20px;
 }
 
 
