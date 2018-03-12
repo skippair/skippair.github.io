@@ -1,44 +1,79 @@
-.checked-list-container {
-    .checked-list-title {
-        font-weight: bold;
-        margin-bottom: 8px;
+.checklist {
+    padding-left: 25px;
+    margin: 0px;
+    color: $sub-title;
+
+    .li-text {
+        color: $color-grey2;
     }
-    .checked-list-icons {
-        margin-left: 24px;
-        color: $text;
-        li {
-            i {
-                color: $corporate-primary;
-            }
-            p {
-                margin-bottom: 0;
-            }
-        }
-        &.color-text {
-            li i {
-                color: $text;
-            }
-        }
+
+    &.color-primary {
+        color: $corporate-primary;
     }
-    .checked-list {
-        padding-left: 16px;
-        li {
-            color: $corporate-primary;
-            p {
-                margin-bottom: 0;
-            }
-        }
+    &.color-pro {
+        color: $pro-primary;
+    }
+    &.color-gift {
+        color: $gift-primary;
+    }
+    &.color-info {
+        color: $info-color;
+    }
+    &.color-error {
+        color: $error-color;
+    }
+    &.color-warning {
+        color: $warning-color;
     }
 }
 
+.checklist-icon {
+    list-style-type: none;
+    padding-left: 25px;
+    margin: 0px;
 
-@media  (min-width: $lg) {
-    .checked-list-container .checked-list-icons {
-        &.double {
-            // Fuck this Shit, make FontAwsome Buging, don't know why... Plz God tell me
-            //columns: 2;
-            //-webkit-columns: 2;
-            //-moz-columns: 2;
+    color: $color-grey2;
+    i, .li-title {
+        color: $sub-title;
+    }
+
+    li {
+        position: relative;
+        i {
+            position: absolute;
+            left: -20px;
+            top: 5px;
+        }
+    }
+
+    &.color-primary {
+        i, .li-title {
+            color: $corporate-primary;
+        }
+    }
+    &.color-pro {
+        i, .li-title {
+            color: $pro-primary;
+        }
+    }
+    &.color-gift {
+        i, .li-title {
+            color: $gift-primary;
+        }
+    }
+    &.color-info {
+        i, .li-title {
+            color: $info-color;
+        }
+    }
+    &.color-error {
+        i, .li-title {
+            color: $error-color;
+        }
+    }
+    &.color-warning {
+        i, .li-title {
+            color: $warning-color;
         }
     }
 }
