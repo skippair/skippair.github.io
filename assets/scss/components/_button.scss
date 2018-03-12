@@ -56,10 +56,16 @@
 }
 
 .btn-light {
+    text-transform: initial;
     background-color: initial !important;
+    font-weight: initial;
     border: none;
     color: $color-grey2;
-    padding: 4px 10px;
+    padding: 4px 0px;
+
+    +.btn-light {
+        margin-left: 12px;
+    }
 }
 
 
