@@ -36,14 +36,14 @@
     .card-description {
         padding-bottom: 10px;
         .order-date {
-            display: inline-flex;
+            .icon {
+                margin-top: 15px;
+                color: $color-grey2;
+            }
             .date {
                 span {
                     font-size: 12px;
                 }
-            }
-            .date.finish {
-                padding-left: 10px;
             }
         }
     }
