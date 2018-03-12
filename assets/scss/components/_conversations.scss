@@ -151,11 +151,11 @@
       height: 100%;
       resize: none;
       border-radius: 2px 0px 0px 2px;
-      border: solid 1px $color-grey4;
+      border: solid 1px $color-grey1;
     }
     textarea:focus {
       outline: none !important;
-      border: solid 1px $color-grey4;
+      border: solid 1px $color-grey1;
     }
   }
   .message-send {
@@ -164,7 +164,7 @@
     padding: 6px;
     border-radius: 0px 2px 2px 0px;
     background-color: $color-grey3;
-    border: solid 1px $color-grey4;
+    border: solid 1px $color-grey1;
     border-top: none;
     button {
       float: right;
