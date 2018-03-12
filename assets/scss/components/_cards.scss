@@ -54,6 +54,9 @@
     .order-card .card-description .order-cta {
         .btn {
             width: auto;
+            &:not(.btn-group) {
+                display: inline-block;
+            }
         }
     }
 }
