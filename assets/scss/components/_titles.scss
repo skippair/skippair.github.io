@@ -21,6 +21,19 @@
         font-weight: normal;
     }
 }
+
+.title-round-number {
+    .number {
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        display: inline-block;
+        margin-right: 10px;
+        border: 1px solid;
+        color: $corporate-primary;
+        border-radius: 50%;
+    }
+}
 //@media (min-width: $md){
 //    .title-step {
 //        display: none;
