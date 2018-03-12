@@ -1,3 +1,133 @@
+/*
+ * Regroup css for the conversation utils.
+ * - Conversation cards
+ * - Message cards
+ * - Input for a new message
+ * - Action / status panel.
+ */
+
+// Cards for one conversation, stackable
+.conversation-cards {
+    display: block;
+    position: relative;
+    text-decoration: none !important;
+    
+    &+.conversation-cards {
+        margin-top: 24px;
+    }
+
+    .user-img {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        border-radius: 50%;
+        border: 2px solid white;
+    }
+
+    .time {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        color: $sub-title;
+        font-size: 14px;
+    }
+
+    .detail {
+        margin-left: 60px;
+
+        .title {
+            color: $sub-title;
+            font-size: 16px;
+            font-weight: bold;
+            margin-right: 60px;
+            .flag-new {
+                background-color: $info-color;
+                color: white;
+                font-size: 12px;
+                border-radius: 2px;
+                padding: 2px 4px;
+            }
+        }
+
+        .content {
+            color: $sub-title;
+            font-size: 14px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            span {
+                white-space: nowrap;
+            }
+        }
+    }
+
+    .status {
+        font-size: 14px;
+        i {
+            font-size: 12px;
+        }
+        &.info {
+            color: $info-color;
+        }
+        &.warning {
+            color: $warning-color;
+        }
+        &.error {
+            color: $error-color;
+        }
+    }
+}
+
+// Cards for one message, stackable
+.message-cards {
+    position: relative;
+    color: $color-grey2;
+    
+    +.message-cards {
+        margin-top: 24px;
+    }
+
+    .user-img {
+        position: absolute;
+        border-radius: 50%;
+        border: 1px solid $color-grey1;
+        img {
+            border: 3px solid white;
+            border-radius: 50%;
+            width: 60px;
+        }
+    }
+
+    .detail {
+        .content {
+            border: solid 1px $color-grey1;
+            padding: 16px;
+        }
+        .time {
+            text-align: right;
+            font-size: 14px;    
+        }
+    }
+
+    &.send {
+        .user-img {
+            right: 0px;
+        }
+        .detail {
+            margin-right: 80px;
+        }
+    }
+
+    &.received {
+        .user-img {
+            left: 0px;
+        }
+        .detail {
+            margin-left: 80px;
+        }
+    }
+}
+
+// Detail about status and available action
 .jumbotron-container {
   width: 100%;
   padding: 20px 30px;
@@ -8,6 +138,8 @@
     margin-bottom: 0px;
   }
 }
+
+// Input for new message
 .message-input {
   margin-bottom: $p;
   .message-text {
@@ -45,17 +177,5 @@
         margin-left: 10px;
       }
     }
-  }
-}
-.conversation-content {
-  .conversation {
-    padding: 20px 16px 20px 16px;
-    border:solid 1px $color-grey4;
-  }
-  .conversation-hour.client{
-    float: right;
-  }
-  .conversation-hour.pro {
-    float: left;
   }
 }

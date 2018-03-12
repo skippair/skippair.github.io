@@ -1,148 +1,120 @@
-<div class="tab-pane s-container fade" id="conversations" role="tabpanel" aria-labelledby="conversations-tab">
-  <h1>Conversations</h1>
-  <h2>Jumbotron</h2>
-  <div class="jumbotron-container">
-    <h3>Réservations confirmée. A bientôt à Hendayes !</h3>
-    <p>Votre pro, Serge est à votre disposition pour répondre aux questions que vous vous posez sur votre voyage.</p>
-    <button class="s-btn btn-big btn-validate">Voir le récapitulatif</button>
-  </div>
-  <div class="markdown-container">
-    {% highlight html %}
-    <div class="jumbotron-container">
-      <h3>Réservations confirmée. A bientôt à Hendayes !</h3>
-      <p>Votre pro, Serge est à votre disposition pour répondre aux questions que vous vous posez sur votre voyage.</p>
-      <button class="s-btn btn-big btn-validate">Voir le récapitulatif</button>
+<div class="tab-pane s-container fade active show" id="conversations" role="tabpanel" aria-labelledby="conversations-tab">
+    <h1>Conversations</h1>
+
+    <p>Gestion d'affichage des conversation et des messages.</p>
+    <p>une <strong>conversation</strong> regroupe plusieurs <strong>messages</strong></p>
+
+    <h2>Conversation cards</h2>
+    <p>
+        <strong>Status :</strong> Trois class sont disponible pour gérer la couleur du status. <strong>.info</strong> <strong>.warning</strong> <strong>.error</strong>
+        <br>
+        <strong>Responsive :</strong> Si le nom est trop long il s'écrit alors sur plusieur ligne et la hauteur de la cards augmentes. Le <strong>flag new</strong> peut se retrouver sur la ligne suivante si il n'y a pas la place.
+    </p>
+
+{% capture conversation-cards %}
+<a href="#" class="conversation-cards">
+    <img class="user-img" src="https://media.skippair.com/media/cache/fb/40/fb4013a1d1d21621ad5ef47740b5f38d.jpg">
+    <div class="time">15:05</div>
+    <div class="detail">
+        <div class="title">Thibault Schultz <span class="flag-new">Nouveau</span></div>
+        <div class="content">
+            <span>Lorem ipsum De nombreux utils sont disponible pour les tables de bootstrap, allez voir, De nombreux utils sont disponible pour les tables de bootstrap, allez voir</span>
+        </div>
+        <div class="status info"><i class="fa fa-circle-thin"></i> Pré-approuvé</div>
+    </div>    
+</a>
+
+<a href="#" class="conversation-cards">
+    <img class="user-img" src="https://media.skippair.com/media/cache/fb/40/fb4013a1d1d21621ad5ef47740b5f38d.jpg">
+    <div class="time">15:05</div>
+    <div class="detail">
+        <div class="title">Thibault Schultz</div>
+        <div class="content">
+            <span>Lorem ipsum De nombreux utils sont disponible pour les tables de bootstrap, allez voir, De nombreux utils sont disponible pour les tables de bootstrap, allez voir</span>
+        </div>
+        <div class="status warning"><i class="fa fa-circle-thin"></i> En attenre de validation</div>
+    </div>    
+</a>
+
+<a href="#" class="conversation-cards">
+    <img class="user-img" src="https://media.skippair.com/media/cache/fb/40/fb4013a1d1d21621ad5ef47740b5f38d.jpg">
+    <div class="time">15:05</div>
+    <div class="detail">
+        <div class="title">Thibault Schultz</div>
+        <div class="content">
+            <span>Lorem ipsum De nombreux utils sont disponible pour les tables de bootstrap, allez voir, De nombreux utils sont disponible pour les tables de bootstrap, allez voir</span>
+        </div>
+        <div class="status error"><i class="fa fa-circle-thin"></i> Refusé</div>
+    </div>    
+</a>
+{% endcapture %}
+
+    {{ conversation-cards }}
+    <div class="markdown-container">
+        {% highlight html linenos %}{{ conversation-cards }}{% endhighlight %}
     </div>
-    {% endhighlight %}
-  </div>
-  <h2>Message input</h2>
-  <div class="message-input">
-    <form action="">
-      <div class="message-text">
-        <textarea class="text" name="input-text" id="" cols="30" rows="10"></textarea>
-      </div>
-      <div class="message-send">
-        <button type="submit">Envoyer <i class="fa fa-paper-plane"></i></button>
-      </div>
-    </form>
-  </div>
-  <div class="markdown-container">
-    {% highlight html %}
-    <div class="message-input">
-      <form action="">
-        <div class="message-text">
-          <textarea class="text" name="input-text" id="" cols="30" rows="10"></textarea>
-        </div>
-        <div class="message-send">
-          <button type="submit">Envoyer <i class="fa fa-paper-plane"></i></button>
-        </div>
-      </form>
+
+    <!-- Messge list -->
+    <h2>Messages cards</h2>
+    <p>
+        Affiche un message d'une conversation. Utilisez <strong>.send</strong> ou <strong>.received</strong> pour différencer les messages reçus des messages envoyé.
+        <br>
+        L'image est doit être carré et de taille 60x60 px.
+        <br>
+        La mise à la ligne devras être gérer par le back en insérant des <strong>< br ></strong> à la place des retours à ligne. 
+    </p>
+
+{% capture message-list %}
+<div class="message-cards send">
+    <div class="user-img"><img src="https://media.skippair.com/media/cache/fb/40/fb4013a1d1d21621ad5ef47740b5f38d.jpg"></div>
+    <div class="detail">
+        <div class="content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rutrum velit eu mi maximus, quis convallis orci rutrum. Vivamus faucibus metus vitae augue ultrices rutrum. Aenean ut justo lectus. Curabitur eleifend laoreet sagittis. Pellentesque consequat arcu in dui pellentesque iaculis. Maecenas fermentum velit turpis, nec dignissim mi egestas eu. Donec mattis ut magna id rhoncus.
+        </div> 
+        <div class="time">15:05</div>
     </div>
-    {% endhighlight %}
-  </div>
-  <h2>Conversations</h2>
-  <div class="conversation-content">
-    <div class="row">
-      <div class="col-3 col-md-2 col-lg-2 col-xl-2">
-        <div class="avatar-chips-rounded"
-             style="background-image: url('https://media.nngroup.com/media/people/photos/IMG_2366-copy-400x400.jpg.400x400_q95_autocrop_crop_upscale.jpg')">
-          <div class="chips-work">
-            <i class="fa fa-user-o corporate-primary"></i>
-          </div>
-        </div>
-      </div>
-      <div class="col-9 col-md-10 col-lg-10 col-xl-10">
-        <div class="conversation">
-          <div class="conversation-text">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias cupiditate debitis delectus dolor
-              dolores eaque eius esse et fuga natus nobis non nostrum odio quos ratione, reprehenderit repudiandae
-              voluptates.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12">
-        <div class="conversation-hour client">
-          <p>15:34</p>
-        </div>
-      </div>
+</div>
+
+<div class="message-cards received">
+    <div class="user-img"><img src="https://media.skippair.com/media/cache/fb/40/fb4013a1d1d21621ad5ef47740b5f38d.jpg"></div>
+    <div class="detail">
+        <div class="content">
+            Phasellus eu dolor urna. In hac habitasse platea dictumst. Ut lobortis malesuada accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit purus sit amet felis ultrices bibendum. Nulla dignissim augue ac purus vehicula luctus. Mauris in neque felis.
+        </div> 
+        <div class="time">15:05</div>
     </div>
-    <div class="row">
-      <div class="col-9 col-md-10 col-lg-10 col-xl-10">
-        <div class="conversation">
-          <div class="conversation-text">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias cupiditate debitis delectus dolor
-              dolores eaque eius esse et fuga natus nobis non nostrum odio quos ratione, reprehenderit repudiandae
-              voluptates.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-3 col-md-2 col-lg-2 col-xl-2">
-        <div class="avatar-chips-rounded"
-             style="background-image: url('https://ekoczera.wikispaces.com/file/view/seacaptain.jpg/282828784/370x331/seacaptain.jpg')">
-          <div class="chips-work">
-            <i class="fa fa-anchor pro-primary"></i>
-          </div>
-        </div>
-      </div>
-      <div class="col-12">
-        <div class="conversation-hour pro">
-          <p>15:37</p>
-        </div>
-      </div>
+</div>
+
+<div class="message-cards send">
+    <div class="user-img"><img src="https://media.skippair.com/media/cache/fb/40/fb4013a1d1d21621ad5ef47740b5f38d.jpg"></div>
+    <div class="detail">
+        <div class="content">
+            Nulla dapibus quis velit at posuere. Fusce efficitur accumsan diam, a porta dolor condimentum ac. Aliquam mollis nisl ut lorem eleifend, nec vehicula augue suscipit. Donec faucibus sed neque ut convallis. Integer laoreet viverra mauris, in laoreet turpis scelerisque a. Nulla sit amet eros sem. Maecenas eu malesuada neque. Sed lacinia eget lacus fermentum pellentesque. Vivamus tempor eros sit amet mauris porttitor, nec eleifend tortor laoreet.
+        </div> 
+        <div class="time">15:05</div>
     </div>
-  </div>
-  <div class="markdown-container">
-    {% highlight html %}
-    <div class="conversation-content">
-      <div class="row">
-        <div class="col-3 col-md-2 col-lg-2 col-xl-2">
-          <div class="avatar-chips-rounded"
-               style="background-image: url('https://media.nngroup.com/media/people/photos/IMG_2366-copy-400x400.jpg.400x400_q95_autocrop_crop_upscale.jpg')">
-            <div class="chips-work">
-              <i class="fa fa-user-o corporate-primary"></i>
-            </div>
-          </div>
-        </div>
-        <div class="col-9 col-md-10 col-lg-10 col-xl-10">
-          <div class="conversation">
-            <div class="conversation-text">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias cupiditate debitis delectus dolor
-                dolores eaque eius esse et fuga natus nobis non nostrum odio quos ratione, reprehenderit repudiandae
-                voluptates.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-12">
-          <div class="conversation-hour client">
-            <p>15:34</p>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-9 col-md-10 col-lg-10 col-xl-10">
-          <div class="conversation">
-            <div class="conversation-text">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias cupiditate debitis delectus dolor
-                dolores eaque eius esse et fuga natus nobis non nostrum odio quos ratione, reprehenderit repudiandae
-                voluptates.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-3 col-md-2 col-lg-2 col-xl-2">
-          <div class="avatar-chips-rounded"
-               style="background-image: url('https://ekoczera.wikispaces.com/file/view/seacaptain.jpg/282828784/370x331/seacaptain.jpg')">
-            <div class="chips-work">
-              <i class="fa fa-anchor pro-primary"></i>
-            </div>
-          </div>
-        </div>
-        <div class="col-12">
-          <div class="conversation-hour pro">
-            <p>15:37</p>
-          </div>
-        </div>
-      </div>
+</div>
+
+<div class="message-cards send">
+    <div class="user-img"><img src="https://media.skippair.com/media/cache/fb/40/fb4013a1d1d21621ad5ef47740b5f38d.jpg"></div>
+    <div class="detail">
+        <div class="content">
+            Integer vitae diam non ex feugiat accumsan tristique vitae velit. Phasellus sagittis, purus non sodales sagittis, quam magna pellentesque est, nec tincidunt erat purus sit amet ex.
+            <br>
+            <br>
+            Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam lacinia ullamcorper lacus at euismod.
+            <br>
+            Etiam eu maximus felis. Duis maximus bibendum augue quis facilisis.
+            <br>
+            Mauris vulputate quis lacus iaculis faucibus. Vivamus sed suscipit ex. Integer gravida semper nulla at volutpat. Morbi facilisis suscipit eleifend. Ut viverra varius ante, sit amet porta nisi suscipit et. Praesent placerat convallis quam.
+        </div> 
+        <div class="time">15:05</div>
     </div>
-    {% endhighlight %}
-  </div>
+</div>
+{% endcapture %}
+
+    {{ message-list }}
+    <div class="markdown-container">
+        {% highlight html linenos %}{{ message-list }}{% endhighlight %}
+    </div>
 </div>

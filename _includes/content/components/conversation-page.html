@@ -1,0 +1,47 @@
+<div class="tab-pane s-container fade" id="conversation-page" role="tabpanel" aria-labelledby="buttons-tab">
+    <h1>Page conversation</h1>
+    
+    <!-- Status Action Section -->
+    <h2>Status and action section</h2>
+    <p></p>
+
+{% capture status-action-panel %}
+<div class="jumbotron-container">
+    <h2>Réservations confirmée. A bientôt à Hendayes !</h2>
+    <p>Votre pro, Serge est à votre disposition pour répondre aux questions que vous vous posez sur votre voyage.</p>
+    <button class="btn btn-light btn-primary" type="button"><i class="fa fa-check"></i> Pré-approuver</button>
+    <button class="btn btn-light btn-gift" type="button"><i class="fa fa-times"></i> Refuser</button>
+    <button class="btn btn-light btn-warning" type="button"><i class="fa fa-pencil"></i> Modifier</button>
+</div>
+{% endcapture %}
+
+    {{ status-action-panel }}
+    <div class="markdown-container">
+        {% highlight html linenos %}{{ status-action-panel }}{% endhighlight %}
+    </div>
+
+
+
+
+    <!-- Message input -->
+    <h2>Message input</h2>
+    <p></p>
+
+{% capture message-input %}
+<div class="message-input">
+    <form action="">
+        <div class="message-text">
+            <textarea class="text" name="input-text" id="" cols="30" rows="10"></textarea>
+        </div>
+        <div class="message-send">
+            <button type="submit">Envoyer <i class="fa fa-paper-plane"></i></button>
+        </div>
+    </form>
+</div>
+{% endcapture %}
+
+    {{ message-input }}
+    <div class="markdown-container">
+        {% highlight html linenos %}{{ message-input }}{% endhighlight %}
+    </div>
+</div>
