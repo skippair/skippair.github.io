@@ -13,6 +13,11 @@
         }
     }
 }
+
+/*
+ * #Cards Order Client Interface
+ */
+
 .order-card {
     margin-bottom: $p;
     border-radius: 2px;
@@ -27,9 +32,7 @@
             bottom: 0px;
             left: 16px;
             .description {
-                p {
-                    width: 200px;
-                }
+                p { width: 200px; }
             }
         }
     }
@@ -41,13 +44,21 @@
                 color: $color-grey2;
             }
             .date {
-                span {
-                    font-size: 12px;
-                }
+                span { font-size: 12px; }
             }
         }
     }
 }
+
+@include media-breakpoint-up(md) {
+    .order-card .card-description .order-cta {
+        .btn {
+            width: auto;
+        }
+    }
+}
+
+
 
 /*
  * # Card Staff For Product Page
