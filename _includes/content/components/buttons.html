@@ -1,4 +1,4 @@
-<div class="tab-pane s-container fade" id="buttons" role="tabpanel" aria-labelledby="buttons-tab">
+<div class="tab-pane s-container fade active show" id="buttons" role="tabpanel" aria-labelledby="buttons-tab">
     <h1>Skippair buttons</h1>
 
 <!--Basics Button-->
@@ -49,6 +49,22 @@
     {{ btn-icon }}
     <div class="markdown-container">
         {% highlight html linenos %}{{ btn-icon }}{% endhighlight %}
+    </div>
+
+
+<!--Light Button-->
+{% capture btn-light %}
+<button class="btn btn-light" type="button"><i class="fa fa-check"></i> Pré-approuver</button>
+<button class="btn btn-light btn-primary" type="button"><i class="fa fa-check"></i> Pré-approuver</button>
+<button class="btn btn-light btn-gift" type="button"><i class="fa fa-times"></i> Refuser</button>
+<button class="btn btn-light btn-warning" type="button"><i class="fa fa-pencil"></i> Modifier</button>
+{% endcapture %}
+
+    <h2>Light button</h2>
+    <p>Des bouton simplifier, sans background et sans border. Disponible avec des icons.</p>
+    {{ btn-light }}
+    <div class="markdown-container">
+        {% highlight html linenos %}{{ btn-light }}{% endhighlight %}
     </div>
 
 

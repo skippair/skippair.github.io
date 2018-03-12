@@ -34,7 +34,6 @@
 
 }
 
-
 .btn-group {
     padding: 0px;
     border: none;
@@ -56,6 +55,13 @@
     }
 }
 
+.btn-light {
+    background-color: initial !important;
+    border: none;
+    color: $color-grey2;
+    padding: 4px 10px;
+}
+
 
 // Color
 .btn-primary {
@@ -69,7 +75,7 @@
             border-color: $corporate-secondary;
         }
     }
-    &.btn-outline {
+    &.btn-outline, &.btn-light {
         color: $corporate-primary;
         &:not(:disabled):not(.disabled) {
             &:hover,
@@ -94,7 +100,7 @@
             border-color: $pro-secondary;
         }
     }
-    &.btn-outline {
+    &.btn-outline, &.btn-light {
         color: $pro-primary;
         &:not(:disabled):not(.disabled) {
             &:hover,
@@ -119,7 +125,7 @@
             border-color: $gift-secondary;
         }
     }
-    &.btn-outline {
+    &.btn-outline, &.btn-light {
         color: $gift-primary;
         &:not(:disabled):not(.disabled) {
             &:hover,
@@ -144,7 +150,7 @@
             border-color: $facebook-secondary;
         }
     }
-    &.btn-outline {
+    &.btn-outline, &.btn-light {
         color: $facebook-primary;
         &:not(:disabled):not(.disabled) {
             &:hover,
@@ -155,5 +161,30 @@
     }
     .icon {
         background-color: $facebook-secondary;
+    }
+}
+
+.btn-warning {
+    background-color: $warning-color;
+    border-color: $warning-color;
+    color: white;
+    &:not(:disabled):not(.disabled) {
+        &:hover,
+        &:active {
+            background-color: $warning-color-hover;
+            border-color: $warning-color-hover;
+        }
+    }
+    &.btn-outline, &.btn-light {
+        color: $warning-color;
+        &:not(:disabled):not(.disabled) {
+            &:hover,
+            &:active {
+                color: $warning-color-hover;
+            }
+        }
+    }
+    .icon {
+        background-color: $warning-color-hover;
     }
 }
