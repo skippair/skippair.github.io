@@ -1,90 +1,99 @@
 <div class="tab-pane s-container fade" id="checklists" role="tabpanel" aria-labelledby="checklists-tab">
-  <h1>Checklists</h1>
-  <p></p>
-  <h2>Check list</h2>
-  <div class="checked-list-container">
-    <p class="checked-list-title">Inclus</p>
-    <ul class="fa-ul checked-list-icons">
-      <li><i class="fa-li fa fa-check"></i><p>Hébergement sur le voilier</p></li>
-      <li><i class="fa-li fa fa-check"></i><p>Services du skipper professionnel</p></li>
-      <li><i class="fa-li fa fa-check"></i><p>Annexe motorisée</p></li>
-      <li><i class="fa-li fa fa-check"></i><p>Nettoyage</p></li>
-      <li><i class="fa-li fa fa-check"></i><p>Literie</p></li>
-      <li><i class="fa-li fa fa-check"></i><p>Gasoil</p></li>
-      <li><i class="fa-li fa fa-check"></i><p>Nourriture / Boissons (skipper inclus)</p></li>
-      <li><i class="fa-li fa fa-check"></i><p>Services d’hôtesse</p></li>
-    </ul>
+    <h1>Checklists</h1>
+
+
+    <h2>Check list sans Icon.</h2>
+
+    <p>Vous devez utiliser la class <strong>.li-text</strong> pour avoir un couleur différente sur les points.</p>
+
+{% capture checklist %}
+<ul class="checklist">
+    <li><span class="li-text">Hébergement sur le voilier</span></li>
+    <li><span class="li-text">Services du skipper professionnel</span></li>
+    <li><span class="li-text">Annexe motorisée Annexe motoriséeAnnexe motoriséeAnnexe motoriséeAnnexe motoriséeAnnexe motoriséeAnnexe motorisée</span></li>
+</ul>
+<ul class="checklist color-primary">
+    <li><span class="li-text">Hébergement sur le voilier</span></li>
+    <li><span class="li-text">Services du skipper professionnel</span></li>
+    <li><span class="li-text">Annexe motorisée Annexe motoriséeAnnexe motoriséeAnnexe motoriséeAnnexe motoriséeAnnexe motoriséeAnnexe motorisée</span></li>
+</ul>
+{% endcapture %}
+
+    {{ checklist }}
     <div class="markdown-container">
-      {% highlight html %}
-      <div class="checked-list-container">
-        <p class="checked-list-title">Inclus</p>
-        <ul class="fa-ul checked-list-icons">
-          <li><i class="fa-li fa fa-check"></i><p>Item 1</p></li>
-          <li><i class="fa-li fa fa-check"></i><p>Item 2</p></li>
-          <li><i class="fa-li fa fa-check"></i><p>Item 3</p></li>
-        </ul>
-      </div>
-      {% endhighlight %}
+        {% highlight html linenos %}{{ checklist }}{% endhighlight %}
     </div>
-    <p class="checked-list-title">Non inclus</p>
-    <ul class="fa-ul checked-list-icons">
-      <li><i class="fa-li fa fa-ban"></i><p>Transport jusqu’au lieu de rendez-vous</p></li>
-      <li><i class="fa-li fa fa-ban"></i><p>Restaurants ou activités facultatives</p></li>
-      <li><i class="fa-li fa fa-ban"></i><p>Frais de port</p></li>
-    </ul>
+
+
+    <h2>Check list avec Icon.</h2>
+
+{% capture checklist %}
+<ul class="checklist-icon">
+    <li><i class="fa fa-check"></i>Hébergement sur le voilier</li>
+    <li><i class="fa fa-bug"></i>Services du skipper professionnel</li>
+    <li><i class="fa fa-ban"></i>Annexe motorisée Annexe motoriséeAnnexe motoriséeAnnexe motoriséeAnnexe motoriséeAnnexe motoriséeAnnexe motorisée</li>
+</ul>
+<ul class="checklist-icon color-primary">
+    <li><i class="fa fa-check"></i>Hébergement sur le voilier</li>
+    <li><i class="fa fa-bug"></i>Services du skipper professionnel</li>
+    <li><i class="fa fa-ban"></i>Annexe motorisée Annexe motoriséeAnnexe motoriséeAnnexe motoriséeAnnexe motoriséeAnnexe motoriséeAnnexe motorisée</li>
+</ul>
+{% endcapture %}
+
+    {{ checklist }}
     <div class="markdown-container">
-      {% highlight html %}
-      <div class="checked-list-container">
-        <p class="checked-list-title">Non inclus</p>
-        <ul class="fa-ul checked-list-icons">
-          <li><i class="fa-li fa fa-ban"></i><p>Item 1</p></li>
-          <li><i class="fa-li fa fa-ban"></i><p>Item 2</p></li>
-          <li><i class="fa-li fa fa-ban"></i><p>Item 3</p></li>
-        </ul>
-      </div>
-      {% endhighlight %}
+        {% highlight html linenos %}{{ checklist }}{% endhighlight %}
     </div>
-    <p class="checked-list-title">Pensez à bien mettre dans votre valise...</p>
-    <ul class="checked-list">
-      <li><p>Transport jusqu’au lieu de rendez-vous</p></li>
-      <li><p>Restaurants ou activités facultatives</p></li>
-      <li><p>Frais de port</p></li>
-    </ul>
+
+
+    <h2>Couleur</h2>
+
+{% capture checklist %}
+<ul class="checklist-icon color-primary">
+    <li><i class="fa fa-check"></i>Hébergement sur le voilier</li>
+    <li><i class="fa fa-check"></i>Services du skipper professionnel</li>
+</ul>
+<ul class="checklist-icon color-info">
+    <li><i class="fa fa-check"></i>Hébergement sur le voilier</li>
+    <li><i class="fa fa-check"></i>Services du skipper professionnel</li>
+</ul>
+<ul class="checklist-icon color-warning">
+    <li><i class="fa fa-bug"></i>Hébergement sur le voilier</li>
+    <li><i class="fa fa-bug"></i>Services du skipper professionnel</li>
+</ul>
+<ul class="checklist-icon color-error">
+    <li><i class="fa fa-ban"></i>Hébergement sur le voilier</li>
+    <li><i class="fa fa-ban"></i>Services du skipper professionnel</li>
+</ul>
+{% endcapture %}
+
+    {{ checklist }}
     <div class="markdown-container">
-      {% highlight html %}
-      <div class="checked-list-container">
-        <p class="checked-list-title">Pensez à bien mettre dans votre valise...</p>
-        <ul class="checked-list">
-          <li><p>Item 1</p></li>
-          <li><p>Item 2<p></li>
-          <li><p>Item 3</p></li>
-        </ul>
-      </div>
-      {% endhighlight %}
+        {% highlight html linenos %}{{ checklist }}{% endhighlight %}
     </div>
-    <p class="checked-list-title">Pensez à bien mettre dans votre valise...</p>
-    <ul class="checked-list">
-      <li>Cadre de couverture</li>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos facere obcaecati similique! Amet atque dicta eaque illum iure laboriosam laudantium maxime molestiae nisi nostrum numquam officiis possimus quae, ullam voluptatem.</p>
-      <li>Montant des couvertures</li>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos facere <obcaecati></obcaecati> similique! Amet atque dicta eaque illum iure laboriosam laudantium maxime molestiae nisi nostrum numquam officiis possimus quae, ullam voluptatem.</p>
-      <li>Bénéficiaires</li>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos facere obcaecati similique! Amet atque dicta eaque illum iure laboriosam laudantium maxime molestiae nisi nostrum numquam officiis possimus quae, ullam voluptatem.</p>
-    </ul>
-  </div>
-  <div class="markdown-container">
-    {% highlight html %}
-    <div class="checked-list-container">
-      <p class="checked-list-title">Pensez à bien mettre dans votre valise...</p>
-      <ul class="checked-list">
-        <li>Your title</li>
-        <p>Your text<p>
-        <li>Your title</li>
-        <p>Your Text<p>
-        <li>Your title</li>
-        <p>Your text</p>
-      </ul>
+
+
+    <h2>Check list avec paragraphe</h2>
+
+{% capture checklist %}
+<ul class="checklist-icon color-primary">
+    <li>
+        <div class="li-title"><i class="fa fa-check"></i>Hébergement sur le voilier</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos facere obcaecati similique! Amet atque dicta eaque illum iure laboriosam laudantium maxime molestiae nisi nostrum numquam officiis possimus quae, ullam voluptatem.</p>
+    </li>
+    <li>
+        <div class="li-title"><i class="fa fa-check"></i>Hébergement sur le voilier</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos facere obcaecati similique! Amet atque dicta eaque illum iure laboriosam laudantium maxime molestiae nisi nostrum numquam officiis possimus quae, ullam voluptatem.</p>
+    </li>
+    <li>
+        <div class="li-title"><i class="fa fa-check"></i>Hébergement sur le voilier</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos facere obcaecati similique! Amet atque dicta eaque illum iure laboriosam laudantium maxime molestiae nisi nostrum numquam officiis possimus quae, ullam voluptatem.</p>
+    </li>
+</ul>
+{% endcapture %}
+
+    {{ checklist }}
+    <div class="markdown-container">
+        {% highlight html linenos %}{{ checklist }}{% endhighlight %}
     </div>
-    {% endhighlight %}
-  </div>
 </div>
