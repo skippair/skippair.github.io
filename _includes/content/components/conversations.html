@@ -11,8 +11,8 @@
         <strong>Responsive :</strong> Si le nom est trop long il s'écrit alors sur plusieur ligne et la hauteur de la cards augmentes. Le <strong>flag new</strong> peut se retrouver sur la ligne suivante si il n'y a pas la place.
     </p>
 
-{% capture conversation-cards %}
-<a href="#" class="conversation-cards">
+{% capture conversation-card %}
+<a href="#" class="conversation-card">
     <img class="user-img" src="https://media.skippair.com/media/cache/fb/40/fb4013a1d1d21621ad5ef47740b5f38d.jpg">
     <div class="time">15:05</div>
     <div class="detail">
@@ -24,7 +24,7 @@
     </div>    
 </a>
 
-<a href="#" class="conversation-cards">
+<a href="#" class="conversation-card">
     <img class="user-img" src="https://media.skippair.com/media/cache/fb/40/fb4013a1d1d21621ad5ef47740b5f38d.jpg">
     <div class="time">15:05</div>
     <div class="detail">
@@ -36,7 +36,7 @@
     </div>    
 </a>
 
-<a href="#" class="conversation-cards">
+<a href="#" class="conversation-card">
     <img class="user-img" src="https://media.skippair.com/media/cache/fb/40/fb4013a1d1d21621ad5ef47740b5f38d.jpg">
     <div class="time">15:05</div>
     <div class="detail">
@@ -49,9 +49,9 @@
 </a>
 {% endcapture %}
 
-    {{ conversation-cards }}
+    {{ conversation-card }}
     <div class="markdown-container">
-        {% highlight html linenos %}{{ conversation-cards }}{% endhighlight %}
+        {% highlight html linenos %}{{ conversation-card }}{% endhighlight %}
     </div>
 
     <!-- Messge list -->
@@ -65,50 +65,52 @@
     </p>
 
 {% capture message-list %}
-<div class="message-cards send">
-    <div class="user-img"><img src="https://media.skippair.com/media/cache/fb/40/fb4013a1d1d21621ad5ef47740b5f38d.jpg"></div>
-    <div class="detail">
-        <div class="content">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rutrum velit eu mi maximus, quis convallis orci rutrum. Vivamus faucibus metus vitae augue ultrices rutrum. Aenean ut justo lectus. Curabitur eleifend laoreet sagittis. Pellentesque consequat arcu in dui pellentesque iaculis. Maecenas fermentum velit turpis, nec dignissim mi egestas eu. Donec mattis ut magna id rhoncus.
-        </div> 
-        <div class="time">15:05</div>
+<div class="message-container">
+    <div class="message-card send">
+        <div class="user-img"><img src="https://media.skippair.com/media/cache/fb/40/fb4013a1d1d21621ad5ef47740b5f38d.jpg"></div>
+        <div class="detail">
+            <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rutrum velit eu mi maximus, quis convallis orci rutrum. Vivamus faucibus metus vitae augue ultrices rutrum. Aenean ut justo lectus. Curabitur eleifend laoreet sagittis. Pellentesque consequat arcu in dui pellentesque iaculis. Maecenas fermentum velit turpis, nec dignissim mi egestas eu. Donec mattis ut magna id rhoncus.
+            </div> 
+            <div class="time">15:05</div>
+        </div>
     </div>
-</div>
 
-<div class="message-cards received">
-    <div class="user-img"><img src="https://media.skippair.com/media/cache/fb/40/fb4013a1d1d21621ad5ef47740b5f38d.jpg"></div>
-    <div class="detail">
-        <div class="content">
-            Phasellus eu dolor urna. In hac habitasse platea dictumst. Ut lobortis malesuada accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit purus sit amet felis ultrices bibendum. Nulla dignissim augue ac purus vehicula luctus. Mauris in neque felis.
-        </div> 
-        <div class="time">15:05</div>
+    <div class="message-card received">
+        <div class="user-img"><img src="https://media.skippair.com/media/cache/fb/40/fb4013a1d1d21621ad5ef47740b5f38d.jpg"></div>
+        <div class="detail">
+            <div class="content">
+                Phasellus eu dolor urna. In hac habitasse platea dictumst. Ut lobortis malesuada accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit purus sit amet felis ultrices bibendum. Nulla dignissim augue ac purus vehicula luctus. Mauris in neque felis.
+            </div> 
+            <div class="time">15:05</div>
+        </div>
     </div>
-</div>
 
-<div class="message-cards send">
-    <div class="user-img"><img src="https://media.skippair.com/media/cache/fb/40/fb4013a1d1d21621ad5ef47740b5f38d.jpg"></div>
-    <div class="detail">
-        <div class="content">
-            Nulla dapibus quis velit at posuere. Fusce efficitur accumsan diam, a porta dolor condimentum ac. Aliquam mollis nisl ut lorem eleifend, nec vehicula augue suscipit. Donec faucibus sed neque ut convallis. Integer laoreet viverra mauris, in laoreet turpis scelerisque a. Nulla sit amet eros sem. Maecenas eu malesuada neque. Sed lacinia eget lacus fermentum pellentesque. Vivamus tempor eros sit amet mauris porttitor, nec eleifend tortor laoreet.
-        </div> 
-        <div class="time">15:05</div>
+    <div class="message-card send">
+        <div class="user-img"><img src="https://media.skippair.com/media/cache/fb/40/fb4013a1d1d21621ad5ef47740b5f38d.jpg"></div>
+        <div class="detail">
+            <div class="content">
+                Nulla dapibus quis velit at posuere. Fusce efficitur accumsan diam, a porta dolor condimentum ac. Aliquam mollis nisl ut lorem eleifend, nec vehicula augue suscipit. Donec faucibus sed neque ut convallis. Integer laoreet viverra mauris, in laoreet turpis scelerisque a. Nulla sit amet eros sem. Maecenas eu malesuada neque. Sed lacinia eget lacus fermentum pellentesque. Vivamus tempor eros sit amet mauris porttitor, nec eleifend tortor laoreet.
+            </div> 
+            <div class="time">15:05</div>
+        </div>
     </div>
-</div>
 
-<div class="message-cards send">
-    <div class="user-img"><img src="https://media.skippair.com/media/cache/fb/40/fb4013a1d1d21621ad5ef47740b5f38d.jpg"></div>
-    <div class="detail">
-        <div class="content">
-            Integer vitae diam non ex feugiat accumsan tristique vitae velit. Phasellus sagittis, purus non sodales sagittis, quam magna pellentesque est, nec tincidunt erat purus sit amet ex.
-            <br>
-            <br>
-            Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam lacinia ullamcorper lacus at euismod.
-            <br>
-            Etiam eu maximus felis. Duis maximus bibendum augue quis facilisis.
-            <br>
-            Mauris vulputate quis lacus iaculis faucibus. Vivamus sed suscipit ex. Integer gravida semper nulla at volutpat. Morbi facilisis suscipit eleifend. Ut viverra varius ante, sit amet porta nisi suscipit et. Praesent placerat convallis quam.
-        </div> 
-        <div class="time">15:05</div>
+    <div class="message-card send">
+        <div class="user-img"><img src="https://media.skippair.com/media/cache/fb/40/fb4013a1d1d21621ad5ef47740b5f38d.jpg"></div>
+        <div class="detail">
+            <div class="content">
+                Integer vitae diam non ex feugiat accumsan tristique vitae velit. Phasellus sagittis, purus non sodales sagittis, quam magna pellentesque est, nec tincidunt erat purus sit amet ex.
+                <br>
+                <br>
+                Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam lacinia ullamcorper lacus at euismod.
+                <br>
+                Etiam eu maximus felis. Duis maximus bibendum augue quis facilisis.
+                <br>
+                Mauris vulputate quis lacus iaculis faucibus. Vivamus sed suscipit ex. Integer gravida semper nulla at volutpat. Morbi facilisis suscipit eleifend. Ut viverra varius ante, sit amet porta nisi suscipit et. Praesent placerat convallis quam.
+            </div> 
+            <div class="time">15:05</div>
+        </div>
     </div>
 </div>
 {% endcapture %}
