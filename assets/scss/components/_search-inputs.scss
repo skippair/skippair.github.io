@@ -199,12 +199,12 @@ $main-filter-col-spacing: 16px;
 }
 
 /* Boat sharing filter ( radio input ) */
-.boat-sharing-filter {
+.reservation-type-filter {
     padding-left: $filter-spacing-md;
     padding-right: $filter-spacing-md;
     background-color: $back_color;
 
-    .boat-sharing-button {
+    .reservation-type-button {
         float: left;
         position: relative;
         margin-right:22px;
@@ -365,7 +365,7 @@ $main-filter-col-spacing: 16px;
         padding-left: $filter-spacing-lg - $main-filter-col-spacing/2;
         padding-right: $filter-spacing-lg - $main-filter-col-spacing/2;        
     }
-    .boat-sharing-filter,
+    .reservation-type-filter,
     .other-filter {
         padding-left: $filter-spacing-lg;
         padding-right: $filter-spacing-lg;
@@ -381,7 +381,7 @@ $main-filter-col-spacing: 16px;
         padding-left: $filter-spacing-xl - $main-filter-col-spacing/2;
         padding-right: $filter-spacing-xl - $main-filter-col-spacing/2;        
     }
-    .boat-sharing-filter,
+    .reservation-type-filter,
     .other-filter {
         padding-left: $filter-spacing-xl;
         padding-right: $filter-spacing-xl;

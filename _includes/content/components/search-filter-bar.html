@@ -1,3 +1,9 @@
+<div class="tab-pane s-container fade active show" id="search-filter-bar" role="tabpanel" aria-labelledby="states-tab">
+    <h1>Search Filter Bar</h1>
+
+    <h2>Customer Type Input</h2>
+    <p> This is the search bar used by the user to filter the Activity.</p>
+
 {% capture component %}
 <div class="filter-container">
     <form id="search-form">
@@ -59,20 +65,20 @@
         </div>
 
         <!-- Boat sharing filter row -->
-        <div class="row boat-sharing-filter">
+        <div class="row reservation-type-filter">
             <!-- Privated Cruise -->
-            <div class="boat-sharing-button">
+            <div class="reservation-type-button">
                 <input class="search-parameter" type="radio" id="private-boat" name="sharing" value="private" checked="checked">
                 <label class="private-shared private" for="private-boat">
-                    <div class="priv-shr-txt">Private cruise<span class="counter-container private_count">253</span></div>
+                    <div class="priv-shr-txt">Private diving<span class="counter-container private_count">253</span></div>
                 </label>
             </div>
 
             <!-- Shared Cruise -->
-            <div class="boat-sharing-button">
+            <div class="reservation-type-button">
                 <input class="search-parameter" type="radio" id="shared-boat" name="sharing" value="shared">
                 <label class="private-shared shared" for="shared-boat">
-                    <div class="priv-shr-txt">Shared cruise<span class="counter-container shared_count">123</span></div>
+                    <div class="priv-shr-txt">Shared diving<span class="counter-container shared_count">123</span></div>
                 </label>
             </div>
         </div>
@@ -81,50 +87,74 @@
         <div class="row other-filter">
             <div class="dropdown form-radio--dropdown">
                 <button class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                    <span class="text-button">Tous type de bateaux</span><span class="caret"></span>
+                    <span class="text-button">Tous thèmes de plongées</span><span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                     <li>
                         <label>
-                            <input class="search-parameter" type="radio" name="is_catamaran" value="0" data-label="Tous type de bateaux" data-default='true'>
-                            Tous type de bateaux
+                            <input class="search-parameter" type="radio" name="diving_theme" value="all" checked data-label="Tous thèmes de plongées" data-default='true'>
+                            Tous thèmes de plongées
                         </label>
                     </li>
                     <li>
                         <label>
-                            <input class="search-parameter" type="radio" name="is_catamaran" value="2" checked data-label="Monocoque">
-                            Monocoque
+                            <input class="search-parameter" type="radio" name="diving_theme" value="1" data-label="Tortue, Poissons & Coraux">
+                            Tortue, Poissons & Coraux
                         </label>
                     </li>
                     <li>
                         <label>
-                            <input class="search-parameter" type="radio" name="is_catamaran" value="1" data-label="Catamaran">
-                            Catamaran
+                            <input class="search-parameter" type="radio" name="diving_theme" value="2" data-label="Requins & Cétacés">
+                            Requins & Cétacés
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input class="search-parameter" type="radio" name="diving_theme" value="3" data-label="Vestiges et Epaves">
+                            Vestiges et Epaves
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input class="search-parameter" type="radio" name="diving_theme" value="4" data-label="Pleines Eaux">
+                            Pleines Eaux
                         </label>
                     </li>
                 </ul>
             </div>
             <div class="dropdown form-radio--dropdown">
                 <button class="dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                    <span class="text-button">Any kind of cruise</span><span class="caret"></span>
+                    <span class="text-button">Tout type de plongée</span><span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
                     <li>
                         <label>
-                            <input class="search-parameter" type="radio" name="style" value="all" data-label="Any kind of cruise" data-default='true' checked>
-                            Any kind of cruise
+                            <input class="search-parameter" type="radio" name="diving_style" value="all" data-label="Tout type de plongée" data-default='true' checked>
+                            Tout type de plongée
                         </label>
                     </li>
                     <li>
                         <label>
-                            <input class="search-parameter" type="radio" name="style" value="cruise" data-label="Cruise">
-                            Cruise
+                            <input class="search-parameter" type="radio" name="diving_style" value="cruise" data-label="Plongée découverte">
+                            Plongée découverte
                         </label>
                     </li>
                     <li>
                         <label>
-                            <input class="search-parameter" type="radio" name="style" value="sailing" data-label="Sailing class">
-                            Sailing class
+                            <input class="search-parameter" type="radio" name="diving_style" value="sailing" data-label="Baptême">
+                            Baptême
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input class="search-parameter" type="radio" name="diving_style" value="sailing" data-label="Formation">
+                            Formation
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input class="search-parameter" type="radio" name="diving_style" value="sailing" data-label="Palme-Masque-Tuba">
+                            Palme-Masque-Tuba
                         </label>
                     </li>
                 </ul>
@@ -274,12 +304,6 @@
     </form>
 </div>
 {% endcapture %}
-
-<div class="tab-pane s-container fade" id="search-filter-bar" role="tabpanel" aria-labelledby="states-tab">
-    <h1>Search Filter Bar</h1>
-
-    <h2>Customer Type Input</h2>
-    <p> This is the search bar used by the user to filter the Activity.</p>
 
     {{ component }}    
 
