@@ -1,0 +1,169 @@
+<div class="tab-pane s-container fade active show" id="tabs" role="tabpanel" aria-labelledby="tabs-tab">
+    <h1>Skippair tabs</h1>
+
+    <h2>Tabs </h2>
+    <p>
+        Multi table avec onglet pour la navigation. On combine la <a href="https://getbootstrap.com/docs/4.0/components/navs/#javascript-behavior">navigation de bootstrap</a> avec les tables.
+        <br>
+        Le css est très léger et se contente d'uniformiser le style des onglet avec le style des table-header.
+    </p>    
+
+{% capture btn-basics %}
+<ul class="nav nav-tabs table-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link color-waiting active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
+            <i class="fa fa-question-circle"></i> En attentes
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link color-validated" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">
+            <i class="fa fa-check"></i> Validées
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link color-decline" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">
+            <i class="fa fa-times"></i> Refusées
+        </a>
+    </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Intitulé voyage</th>
+              <th scope="col">Date de départ</th>
+              <th scope="col">Type</th>
+              <th scope="col">Nombre voyageurs</th>
+              <th scope="col">Durée</th>
+              <th scope="col">Options</th>
+              <th scope="col">Montant</th>
+              <th scope="col">Message</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Croisière plongée dans les Cyclades</td>
+              <td>12/03/18</td>
+              <td>Partagé</td>
+              <td>10</td>
+              <td>2 jours</td>
+              <td>Hotesse</td>
+              <td>5000€</td>
+              <td><a href="#">voir le message</a></td>
+              <td>valider refuser</td>
+            </tr>
+            <tr>
+              <td>Croisière plongée dans les Cyclades</td>
+              <td>12/03/18</td>
+              <td>Partagé</td>
+              <td>10</td>
+              <td>2 jours</td>
+              <td>Hotesse</td>
+              <td>5000€</td>
+              <td><a href="#">voir le message</a></td>
+              <td>valider refuser</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Réf</th>
+              <th scope="col">Intitulé voyage</th>
+              <th scope="col">Départ</th>
+              <th scope="col">Retour</th>
+              <th scope="col">Nombre voyageurs</th>
+              <th scope="col">Durée</th>
+              <th scope="col">Options</th>
+              <th scope="col">Montant</th>
+              <th scope="col">Contact client</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>738</td>
+              <td>Croisière plongée dans les Cyclades</td>
+              <td>12/03/18</td>
+              <td>12/03/18</td>
+              <td>10</td>
+              <td>2 jours</td>
+              <td>Hotesse</td>
+              <td>5000€</td>
+              <td>Sylvain ripoche<a href="#">voir le message</a></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Bon cadeau (dates à définir avec le client)</h2>
+
+        <table class="table table-striped table-gift">
+          <thead>
+            <tr>
+              <th scope="col">Réf</th>
+              <th scope="col">Intitulé voyage</th>
+              <th scope="col">Départ</th>
+              <th scope="col">Retour</th>
+              <th scope="col">Nombre voyageurs</th>
+              <th scope="col">Durée</th>
+              <th scope="col">Options</th>
+              <th scope="col">Montant</th>
+              <th scope="col">Contact client</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>738</td>
+              <td>Croisière plongée dans les Cyclades</td>
+              <td>12/03/18</td>
+              <td>12/03/18</td>
+              <td>10</td>
+              <td>2 jours</td>
+              <td>Hotesse</td>
+              <td>5000€</td>
+              <td>Sylvain ripoche<a href="#">voir le message</a></td>
+            </tr>
+          </tbody>
+        </table>   
+    </div>
+    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Intitulé voyage</th>
+              <th scope="col">Date de départ</th>
+              <th scope="col">Type</th>
+              <th scope="col">Nombre voyageurs</th>
+              <th scope="col">Durée</th>
+              <th scope="col">Options</th>
+              <th scope="col">Montant</th>
+              <th scope="col">Message</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Croisière plongée dans les Cyclades</td>
+              <td>12/03/18</td>
+              <td>Partagé</td>
+              <td>10</td>
+              <td>2 jours</td>
+              <td>Hotesse</td>
+              <td>5000€</td>
+              <td><a href="#">voir le message</a></td>
+              <td>valider refuser</td>
+            </tr>
+          </tbody>
+        </table>       
+    </div>
+</div>
+{% endcapture %}
+
+    {{ btn-basics }}
+    <div class="markdown-container">
+        {% highlight html linenos %}{{ btn-basics }}{% endhighlight %}
+    </div>
+</div>

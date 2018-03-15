@@ -1,0 +1,24 @@
+.table-tabs {
+    border: none;
+    .nav-item {
+        max-width: 33%;
+    }
+    .nav-link {
+        color: $sub-title;
+        border: none;
+        text-align: center;
+        &.color-waiting {
+            color: $warning-color;
+        }
+        &.color-validated {
+            color: $corporate-primary;
+        }
+        &.color-decline {
+            color: $error-color;
+        }
+        &.active {
+            color: $pro-primary;
+            background-color: $color-grey3;
+        }
+    }
+}

@@ -40,4 +40,10 @@
         font-size: 14px;
         line-height: 14px;
     }
+
+    &.table-gift {
+        th {
+            color: $gift-primary;
+        }
+    }
 }
