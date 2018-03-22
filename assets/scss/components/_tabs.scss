@@ -1,3 +1,27 @@
+.light-tabs {
+    justify-content: space-between;
+    border: none;
+    margin-bottom: 8px;
+
+    .nav-item {
+        margin: 0px;
+    }
+    .nav-link {
+        padding: 0px;
+        color: $color-grey2;
+        border: none;
+        padding-bottom: 8px;
+        &:hover {
+        }
+        &.active {
+            color: $sub-title;
+            font-weight: bold;
+            border: none;
+            border-bottom: 1px solid $sub-title;
+        }
+    }
+}
+
 .table-tabs {
     border: none;
     .nav-item {

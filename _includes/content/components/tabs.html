@@ -1,6 +1,49 @@
 <div class="tab-pane s-container fade" id="tabs" role="tabpanel" aria-labelledby="tabs-tab">
     <h1>Skippair tabs</h1>
 
+    <h2>Light Tabs </h2>
+
+{% capture btn-basics %}
+<div style="width:350px;">
+    <ul class="nav nav-tabs light-tabs" id="included2Tab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="included2-tab" data-toggle="tab" href="#included2" role="tab" aria-controls="included2" aria-selected="true">Inclus</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="not-included2-tab" data-toggle="tab" href="#not-included2" role="tab" aria-controls="not-included2" aria-selected="false">Non inclus</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="infos2-tab" data-toggle="tab" href="#infos2" role="tab" aria-controls="infos2" aria-selected="false">+infos</a>
+        </li>
+    </ul>
+    <div class="tab-content" id="included2TabContent">
+        <div class="tab-pane fade show active" id="included2" role="tabpanel" aria-labelledby="included2-tab">
+            <ul class="checklist-icon color-primary">
+                <li><i class="fa fa-check"></i>Hébergement sur le voilier</li>
+                <li><i class="fa fa-check"></i>Hébergement sur le voilier</li>
+                <li><i class="fa fa-check"></i>Hébergement sur le voilier</li>
+                <li><i class="fa fa-check"></i>Hébergement sur le voilier</li>
+            </ul>
+        </div>
+        <div class="tab-pane fade" id="not-included2" role="tabpanel" aria-labelledby="not-included2-tab">
+            <ul class="checklist-icon color-error">
+                <li><i class="fa fa-ban"></i>Hébergement sur le voilier</li>
+                <li><i class="fa fa-ban"></i>Hébergement sur le voilier</li>
+                <li><i class="fa fa-ban"></i>Hébergement sur le voilier</li>
+                <li><i class="fa fa-ban"></i>Hébergement sur le voilier</li>
+            </ul>
+        </div>
+        <div class="tab-pane fade" id="infos2" role="tabpanel" aria-labelledby="infos2-tab">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut maximus lectus, id finibus sem. Morbi et fringilla felis. Nam viverra ligula ac eros ultrices lacinia. Donec lobortis maximus feugiat. Phasellus egestas tincidunt scelerisque.</p>
+        </div>
+    </div>
+</div>
+{% endcapture %}
+
+    {{ btn-basics }}
+    <div class="markdown-container">
+        {% highlight html linenos %}{{ btn-basics }}{% endhighlight %}
+    </div>
     <h2>Tabs </h2>
     <p>
         Multi table avec onglet pour la navigation. On combine la <a href="https://getbootstrap.com/docs/4.0/components/navs/#javascript-behavior">navigation de bootstrap</a> avec les tables.

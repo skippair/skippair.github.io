@@ -1,0 +1,147 @@
+.reservation-panel {
+    box-shadow: 0px 6px 22.6px 1.4px rgba(2, 3, 2, 0.2);
+    position: relative;
+
+    .section {
+        padding: 0px 16px;
+    }
+
+    .price-heading {
+        position: absolute;
+        bottom: 100%;
+        width: 100%;
+        text-align: center;
+        background-color: $sub-title;
+        color: white;
+        font-size: 16px;
+        padding: 6px 0px;
+        .price {
+            font-weight: bold;
+            font-size: 18px;
+        }
+    }
+
+    .booking-gift-tabs {
+        border: none;
+        .nav-item {
+            width: 50%;
+            .nav-link {
+                border: none;
+                text-align: center;
+                font-size: 14px;
+                color: $color-grey2;
+                background-color: $color-grey3;
+                line-height: 14px;
+                padding: 12px 4px;
+                &.active {
+                    color: $sub-title;
+                    background-color: white;
+                }
+            }
+        }
+    }
+
+    .reservation-type-input {
+        display: flex;
+        justify-content: space-between;
+        padding: 16px 0px 12px 0px;
+        .form-check-inline {
+            margin: 0px;
+        }
+        .form-check {
+            font-size: 14px;
+            color: $color-grey2;
+            input {
+                margin: 0px;
+            }
+            input:checked+label {
+                font-weight: bold;
+                color: $sub-title;
+            }
+        }
+    }
+
+    .form-group {
+        margin-bottom: 4px;
+        .form-control {
+            height: 33px !important;
+        }
+        label {
+            font-size: 12px;
+            color: $sub-title;
+            margin-bottom: 4px;
+        }
+    }
+
+    .price-detail-table {
+        width: 100%;
+        font-size: 14px;
+        color: $color-grey2;
+        margin: 16px 0px;
+        .heading {
+            font-weight: bold;
+        }
+        td {
+            width: 50%;
+            padding: 4px;
+        }
+        tr:nth-child(odd) {
+            background-color: $color-grey3;
+        }
+    }
+
+    .price-detail-btn {
+        font-size: 12px;
+        color: $corporate-primary;
+        text-decoration: underline;
+        background-color: initial;
+        border: none;
+        margin-bottom: 12px;
+        padding: 0px;
+    }
+
+    .separator {
+        text-align: center;
+        margin-bottom: 0px;
+        font-size: 14px;
+        margin: 4px;
+    }
+
+    .call-to-actions {
+        margin-bottom: 16px;
+    }
+
+    .included-detail {
+        padding-bottom: 16px;
+        .checklist-icon li, p {
+            font-size: 14px;
+            margin: 0px;
+        }
+    }
+}
+
+.reservation-panel.color-gift {
+    .price-heading .price,
+    .price-detail-btn,
+    .booking-gift-tabs .nav-item .nav-link.active,
+    .checklist-icon i {
+        color: $gift-primary;
+    }
+    .light-tabs .nav-link.active {
+        color: $gift-primary;
+        border-color: $gift-primary;
+    }
+}
+
+.reservation-panel.color-booking {
+    .price-heading .price,
+    .price-detail-btn,
+    .booking-gift-tabs .nav-item .nav-link.active,
+    .checklist-icon i {
+        color: $corporate-primary;
+    }
+    .light-tabs .nav-link.active {
+        color: $corporate-primary;
+        border-color: $corporate-primary;
+    }
+}

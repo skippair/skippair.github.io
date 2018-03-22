@@ -1,0 +1,167 @@
+<div class="tab-pane s-container fade active show" id="reservation-panel" role="tabpanel" aria-labelledby="buttons-tab">
+    <h1>Reservation Panel</h1>
+    
+    <!-- Status Action Section -->
+    <h2>Diving</h2>
+    <p>Panel de réservation, pour les offres de type plongé.</p>
+
+{% capture reservation-panel %}
+<div class="reservation-panel color-booking" style="width:300px; margin-top:70px;">
+    <div class="price-heading">Dès <span class="price">70 €</span> / personne - 2 heures(s)</div>
+    <ul class="nav nav-tabs booking-gift-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="booking-tab" data-toggle="tab" href="#booking" role="tab" aria-controls="booking" aria-selected="true"><i class="fa fa-calendar"></i><br>Réserver un départ</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="gift-tab" data-toggle="tab" href="#gift" role="tab" aria-controls="gift" aria-selected="false"><i class="fa fa-gift"></i><br>Offrir le voyage</a>
+        </li>
+    </ul>
+    <div class="tab-content section" id="myTabContent">
+        <div class="tab-pane fade show active" id="booking" role="tabpanel" aria-labelledby="booking-tab">
+            <form>
+                <div class="reservation-type-input">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="reservation-type" id="rt-shared" value="shared" checked>
+                        <label class="form-check-label" for="rt-shared">Plongée privatisée</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="reservation-type" id="re-private" value="private">
+                        <label class="form-check-label" for="re-private">Plongée collective</label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label for="travelers-nb">Plongeurs</label>
+                        <select class="form-control" id="travelers-nb">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                    <div class="form-group col">
+                        <label for="departure_date">Départ</label>
+                        <input type="text" class="form-control" id="departure_date">
+                    </div>
+                    <div class="form-group col">
+                        <label for="return_date">Retour</label>
+                        <input type="text" class="form-control" id="return_date">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="schedule">Votre préférence pour le créneau</label>
+                    <select class="form-control" id="schedule">
+                        <option>10:00 - 12:00</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <table class="price-detail-table">
+                    <tr>
+                        <td class="heading">Prix/pers</td>
+                        <td>640€ - 5 jour(s)</td>
+                    </tr>
+                    <tr>
+                        <td class="heading">Voyageur(s)</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td class="heading">Total séjour</td>
+                        <td>1280€</td>
+                    </tr>
+                </table>
+                <button class="price-detail-btn">voir le détail des prix</button>
+                <div class='call-to-actions'>
+                    <button type="button" class="btn btn-block btn-primary">Réserver</button>
+                    <p class="separator">Ou</p>
+                    <button type="button" class="btn btn-outline btn-block btn-primary">Poser une question</button>
+                </div>
+            </form>
+        </div>
+        <div class="tab-pane fade" id="gift" role="tabpanel" aria-labelledby="gift-tab">
+            <form>
+                <div class="reservation-type-input">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="reservation-type" id="rt-shared" value="shared" checked>
+                        <label class="form-check-label" for="rt-shared">Plongée privatisée</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="reservation-type" id="re-private" value="private">
+                        <label class="form-check-label" for="re-private">Plongée collective</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="travelers-nb">Plongeurs</label>
+                    <select class="form-control" id="travelers-nb">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <table class="price-detail-table">
+                    <tr>
+                        <td class="heading">Prix/pers</td>
+                        <td>640€ - 5 jour(s)</td>
+                    </tr>
+                    <tr>
+                        <td class="heading">Voyageur(s)</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td class="heading">Total séjour</td>
+                        <td>1280€</td>
+                    </tr>
+                </table>
+                <button class="price-detail-btn">voir le détail des prix</button>
+                <div class='call-to-actions'>
+                    <button type="button" class="btn btn-block btn-gift">Offrir la croisière</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <ul class="nav nav-tabs light-tabs section" id="includedTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="included-tab" data-toggle="tab" href="#included" role="tab" aria-controls="included" aria-selected="true">Inclus</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="not-included-tab" data-toggle="tab" href="#not-included" role="tab" aria-controls="not-included" aria-selected="false">Non inclus</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="infos-tab" data-toggle="tab" href="#infos" role="tab" aria-controls="infos" aria-selected="false">+infos</a>
+        </li>
+    </ul>
+    <div class="tab-content section included-detail" id="includedTabContent">
+        <div class="tab-pane fade show active" id="included" role="tabpanel" aria-labelledby="included-tab">
+            <ul class="checklist-icon">
+                <li><i class="fa fa-check"></i>Hébergement sur le voilier</li>
+                <li><i class="fa fa-check"></i>Hébergement sur le voilier</li>
+                <li><i class="fa fa-check"></i>Hébergement sur le voilier</li>
+                <li><i class="fa fa-check"></i>Hébergement sur le voilier</li>
+            </ul>
+        </div>
+        <div class="tab-pane fade" id="not-included" role="tabpanel" aria-labelledby="not-included-tab">
+            <ul class="checklist-icon">
+                <li><i class="fa fa-ban"></i>Hébergement sur le voilier</li>
+                <li><i class="fa fa-ban"></i>Hébergement sur le voilier</li>
+                <li><i class="fa fa-ban"></i>Hébergement sur le voilier</li>
+                <li><i class="fa fa-ban"></i>Hébergement sur le voilier</li>
+            </ul>
+        </div>
+        <div class="tab-pane fade" id="infos" role="tabpanel" aria-labelledby="infos-tab">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut maximus lectus, id finibus sem. Morbi et fringilla felis. Nam viverra ligula ac eros ultrices lacinia. Donec lobortis maximus feugiat. Phasellus egestas tincidunt scelerisque.</p>
+        </div>
+    </div>
+</div>
+{% endcapture %}
+
+    {{ reservation-panel }}
+
+    <div class="markdown-container">
+        {% highlight html linenos %}{{ reservation-panel }}{% endhighlight %}
+    </div>
+</div>
