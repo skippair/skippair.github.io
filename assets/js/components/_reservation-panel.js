@@ -7,5 +7,5 @@ $(document).ready(function() {
             $('.reservation-panel').removeClass('color-booking');
             $('.reservation-panel').addClass('color-gift');
         }
-    })
+    });
 });
