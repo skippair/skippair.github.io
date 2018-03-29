@@ -4,19 +4,16 @@
     height: auto;
     overflow: auto;
     .activity-tags-list {
-        list-style-type: none;
-        padding: 0;
         margin: 0;
-        display: inline-block;
-        height: auto;
-        width: 100%;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
     .activity-tags-list .item {
-        float: left;
         width: 33%;
-        position: relative;
         text-align: center;
-        display: block;
         margin-top: 20px;
     }
     .activity-tags-list .item .icon {
