@@ -3,6 +3,12 @@
         border-right: 2px solid;
         padding-right: 12px;
         margin-right: 6px;
+        &.colored {
+          color: $corporate-primary;
+        }
+        &.thin {
+          border-right: 1px solid;
+        }
     }
     .sub-title {
         display: block;
@@ -11,6 +17,13 @@
         font-weight: normal;
         padding-left: 45px;
     }
+}
+.title-question {
+    @extend .mb-1;
+    font-weight: normal;
+    font-size: $p;
+    font-style: italic;
+    color: $corporate-primary;
 }
 .title-step {
     display: block;
