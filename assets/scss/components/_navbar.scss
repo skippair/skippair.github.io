@@ -29,9 +29,6 @@
   .navbar-collapse {
     ul {
       font-size: $text-sm;
-      li.navbar-links {
-        text-transform: uppercase;
-      }
       li.navbar-link-account {
         .dropdown-account {
           font-size: $text-sm;
