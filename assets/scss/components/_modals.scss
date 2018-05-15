@@ -4,7 +4,7 @@
     border: none;
   }
   .modal-content {
-    margin-top: 140px;
+    margin-top: 100px;
     .modal-body {
       padding-left: 30px;
       padding-right: 30px;
@@ -12,6 +12,11 @@
       text-align: center;
       i.modal-icon {
         font-size: 126px;
+      }
+
+    .text-field-group {
+      margin-bottom: 20px;
+      text-align: left;
       }
     }
   }
