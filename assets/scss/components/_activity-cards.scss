@@ -116,6 +116,7 @@ $cards_promo_color: $gift-primary; // Background color for the promo label.
             }
         }
         .cards-like {
+            display: none;
             position: absolute;
             right: 10px;
             top: 10px;
