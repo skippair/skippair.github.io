@@ -81,3 +81,16 @@
         }
     }
 }
+
+.user-chips {
+    height: 45px;
+    width: 45px;
+    background-color: $corporate-primary;
+    border-radius: 50%;
+    text-align: center;
+    text-transform: uppercase;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 45px;
+}

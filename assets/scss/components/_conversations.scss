@@ -16,10 +16,19 @@
         margin-top: 24px;
     }
 
-    .user-img {
+    .user-img, .user-chips {
         position: absolute;
         left: 0px;
         top: 0px;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .user-chips {
+      line-height: 50px;
+    }
+
+    .user-img {
         border-radius: 50%;
         border: 2px solid white;
     }
@@ -86,14 +95,23 @@
         margin-top: 24px;
     }
 
-    .user-img {
+    .user-img, .user-chips {
         position: absolute;
+        top: 0px;
+        width: 60px;
+        height: 60px;
+    }
+    
+    .user-chips {
+      line-height: 60px;
+    }
+    
+    .user-img {
         border-radius: 50%;
         border: 1px solid $color-grey1;
         img {
             border: 3px solid white;
             border-radius: 50%;
-            width: 60px;
         }
     }
 
