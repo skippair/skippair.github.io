@@ -1,7 +1,14 @@
 .main-navbar {
   z-index: 1072;
   background-color: #ffffff;
+  display: block;
   box-shadow: 0px 2px 5.9px 0.1px rgba(2, 3, 2, 0.15);
+  .main-navbar-mobile-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
   .link-mobile{
     color: $corporate-primary;
     font-size: 20px;
@@ -12,13 +19,22 @@
     right: 60px;
   }
   .link-search {
-    right: 95px;
+    right: 55px;
+    top: 10px;
   }
   .navbar-brand {
     .navbar-logo {
-      width: 130px;
-      height: 30px;
+      width: 34px;
+      height: 34px;
     }
+  }
+  .btn-search-mobile {
+    text-transform: none;
+    font-weight: normal;
+    color: $text;
+    border-color: $text;
+    border-radius: 3px;
+    padding: 4px 16px;
   }
   .navbar-toggler {
     border: none;
@@ -37,11 +53,46 @@
       }
     }
   }
+  .reservation-type-filter {
+    background: #fff;
+    padding-left: 0;
+    padding-right: 0;
+    .reservation-type-button {
+      flex-grow: 1;
+      margin-right: 18px;
+    }
+    [type="radio"]:checked + label {
+      border: none;
+      color: $corporate-primary;
+    }
+  }
 }
+
+@media screen and (min-width: $sm) {
+  .main-navbar {
+    .reservation-type-filter {
+        justify-content: center;
+      .reservation-type-button {
+        flex: none;
+        margin-right: 18px;
+      }
+    }
+  }
+}
+
 @media screen and (min-width: $lg) {
   .main-navbar {
+    display: flex;
     .link-mobile {
       display: none;
+    }
+    .navbar-brand {
+      padding-top: 0.3125rem;
+      padding-bottom: 0.3125rem;
+      .navbar-logo {
+        width: 130px;
+        height: 30px;
+      }
     }
     .navbar-collapse {
       ul {
