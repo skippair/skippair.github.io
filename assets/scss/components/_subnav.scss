@@ -22,37 +22,21 @@
 
     .nav-item {
         .nav-link {
-            color: $pro-lighter;
+            color: $text;
             font-size: 16px;
-            padding-right: 1px;
-            padding-left: 1px;
-            padding-top: 13px;
-            padding-bottom: 11px;
-            .text {
-                display: none;
-            }
-            i {
-                padding-right: 12px;
-                padding-left: 12px;
-            }
+            padding-right: 10px;
+            padding-left: 10px;
         }
 
         &.active {
-            font-weight: bold;
-            border-bottom: solid 2px white;
+            border-bottom: 2px solid $corporate-primary;
             .nav-link { 
-                color: white;
+                color: $corporate-primary;
             }
         }
+
     }
 
-    &.client {
-        background-color: $corporate-primary;
-    }
-
-    &.pro {
-        background-color: $pro-primary;
-    }
 }
 
 @include media-breakpoint-up(sm) {
@@ -83,33 +67,7 @@
                     padding-left: 0px;
                 }
             }
-
-            &.active {
-                border-color: $sub-title;
-                .nav-link { 
-                    color: $sub-title;
-                }
-            }
         }
 
-        &.client {
-            background-color: white;
-            .nav-item.active {
-                border-color:$corporate-primary;
-                .nav-link { 
-                    color: $corporate-primary;
-                }
-            }
-        }
-
-        &.pro {
-            background-color: white;
-            .nav-item.active {
-                border-color:$pro-primary;
-                .nav-link { 
-                    color: $pro-primary;
-                }
-            }
-        }
     }
 }
