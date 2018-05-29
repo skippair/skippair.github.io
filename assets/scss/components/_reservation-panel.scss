@@ -65,6 +65,12 @@
                 color: $sub-title;
             }
         }
+        .only-one-type {
+          flex-grow: 1;
+          color: $text;
+          text-align: center;
+          font-weight: 600;
+        }
     }
 
     .form-group {
