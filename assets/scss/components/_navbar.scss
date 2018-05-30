@@ -20,7 +20,7 @@
   }
   .link-search {
     right: 55px;
-    top: 10px;
+    top: 14px;
   }
   .navbar-brand {
     .navbar-logo {
@@ -43,6 +43,17 @@
     }
   }
   .navbar-collapse {
+    &.collapse, &.collapsing {
+      position: absolute;
+      background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+      width: 100%;
+      top: 50px;
+      z-index: 3;
+      left: 0px;
+      ul {
+        padding-left: 1em;
+      }
+    }
     ul {
       font-size: $text-sm;
       li.navbar-link-account {
