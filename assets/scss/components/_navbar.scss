@@ -32,7 +32,7 @@
     text-transform: none;
     font-weight: normal;
     color: $text;
-    border-color: $text;
+    border-color: $color-grey1;
     border-radius: 3px;
     padding: 4px 16px;
   }
@@ -106,6 +106,16 @@
       }
     }
     .navbar-collapse {
+
+
+    &.collapse {
+      position: static;
+      ul {
+        padding-left: 0;
+      }
+    }
+
+
       ul {
         li.navbar-link-account {
           position: absolute;
