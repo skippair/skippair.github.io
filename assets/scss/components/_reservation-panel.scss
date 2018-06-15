@@ -122,6 +122,9 @@
 
     .call-to-actions {
         margin-bottom: 16px;
+        & .btn:disabled {
+          opacity: 0.25;
+        }
     }
 
     .included-detail {
