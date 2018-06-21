@@ -93,6 +93,11 @@ a.btn:hover {
             border-color: $corporate-secondary;
         }
     }
+    &:disabled {
+        background-color: $corporate-primary;
+        border-color: $corporate-primary;
+        opacity: 0.35;
+    }
     &.btn-outline, &.btn-light {
         color: $corporate-primary;
         &:not(:disabled):not(.disabled) {
