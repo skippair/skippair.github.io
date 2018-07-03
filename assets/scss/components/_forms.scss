@@ -182,4 +182,17 @@
     }
 
   }
+
+  &.pro {
+    label {
+      border: 1px solid $pro-primary;
+    }
+    label:before {
+      background: $pro-primary;
+    }
+    input:checked + label {
+      background: $pro-primary;
+    }
+  }
+
 }
