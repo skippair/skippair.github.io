@@ -137,6 +137,31 @@ a.btn:hover {
     }
 }
 
+.btn-pro-lighter {
+    background-color: $pro-lighter;
+    border-color: $pro-lighter;
+    color: white;
+    &:not(:disabled):not(.disabled) {
+        &:hover,
+        &:active {
+            background-color: $pro-med-lighter;
+            border-color: $pro-med-lighter;
+        }
+    }
+    &.btn-outline, &.btn-light {
+        color: $pro-lighter;
+        &:not(:disabled):not(.disabled) {
+            &:hover,
+            &:active {
+                color: $pro-med-lighter;
+            }
+        }
+    }
+    .icon {
+        background-color: $pro-med-lighter;
+    }
+}
+
 .btn-gift {
     background-color: $gift-primary;
     border-color: $gift-primary;
