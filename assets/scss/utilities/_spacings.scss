@@ -1,10 +1,10 @@
-h1 {
+h1, .h1 {
   margin-bottom: $p*2;
 }
-h2 {
+h2, .h2 {
   margin-bottom: $p;
 }
-h3 {
+h3, .h3 {
   margin-bottom: 8px;
 }
 .title-step {
