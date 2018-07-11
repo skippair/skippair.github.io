@@ -91,6 +91,12 @@
         margin-right: 18px;
       }
     }
+    .nav-link {
+      font-size: 16px;
+    }
+    .navbar-collapse ul li.navbar-link-account .dropdown-account {
+      font-size: 14px;
+    }
   }
 }
 
@@ -101,11 +107,12 @@
       display: none;
     }
     .navbar-brand {
-      padding-top: 0.3125rem;
-      padding-bottom: 0.3125rem;
+      margin-left: -12px;
+      padding-top: 0;
+      padding-bottom: 0;
       .navbar-logo {
-        width: 130px;
-        height: 30px;
+        width: 195px;
+        height: 45px;
       }
     }
     .navbar-collapse {
