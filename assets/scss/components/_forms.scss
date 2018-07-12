@@ -91,6 +91,17 @@
     from { background:$corporate-primary; }
     to 	{ width:0; background:transparent; }
   }
+
+  &.split {
+    input {
+      display: inline-block;
+      width: 45%;
+    }
+    input:focus {
+      outline:none;
+      border-bottom: solid 2px $corporate-primary;;
+    }
+  }
 }
 
 .form-group {

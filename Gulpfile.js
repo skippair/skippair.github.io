@@ -22,6 +22,7 @@ gulp.task('js', function () {
     './assets/js/components/_carousel.js',
     './assets/js/components/_form-select.js',
     './assets/js/components/_checkbox-dropdown.js',
+    './assets/js/components/_bootstrap-timepicker.js',
     './assets/js/components/_reservation-panel.js'
   ])
       .pipe(concat('main.js'))
