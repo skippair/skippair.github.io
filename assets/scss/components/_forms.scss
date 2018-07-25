@@ -210,11 +210,11 @@
 
 }
 
-.delete {
+.btn-checkbox {
+  display: inline-block;
 
-  p {
-    margin-top: 0.8em;
-    margin-left: 15px;
+  div {
+    margin-top: 0;
     display: -moz-inline-stack;
     display: inline-block;
     vertical-align: middle;
@@ -244,16 +244,31 @@
 
     label:before {
       font-family: "FontAwesome";
-      color: $color-grey2;
-      content: '\f00d';
       width: 20px;
       height: 20px;
       position: absolute;
       z-index: 2;
       font-size: 24px;
       top: -8px;
-      left: 2px;
+      left: 1px;
       display: block;
+    }
+
+  }
+
+}
+
+.delete {
+
+  div {
+
+    label {
+      border: 1px solid $color-grey1;
+    }
+
+    label:before {
+      color: $color-grey2;
+      content: '\f00d';
     }
 
     input:checked + label {
@@ -261,6 +276,26 @@
     }
     input:checked + label:before {
       color: $red;
+    }
+
+  }
+
+}
+
+.edit {
+
+  div {
+
+    label {
+      border: 1px solid $color-grey1;
+    }
+
+    label:before {
+      color: $color-grey2;
+      content: '\f040';
+      font-size: 18px;
+      top: -3px;
+      left: 0px;
     }
 
   }
