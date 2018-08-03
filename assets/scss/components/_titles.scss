@@ -52,3 +52,29 @@
 //        display: none;
 //    }
 //}
+
+
+.section-title {
+  @extend .mb-5;
+  text-align: center;
+  span:first-child {
+    display: block;
+    color: $corporate-primary;
+    font-family: 'Amatic SC', cursive;
+    font-size:24px;
+    font-weight: 700;
+  }
+  span:nth-child(2) {
+    color: $text;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+  hr {
+    @extend .mt-3;
+    width: 20px;
+    height: 1px;
+    background-color: $corporate-primary;
+    border: none;
+  }
+}
