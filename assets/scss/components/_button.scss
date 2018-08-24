@@ -115,6 +115,31 @@ a.btn:hover {
     }
 }
 
+.btn-dream {
+    background-color: $color-yellow1;
+    border-color: $color-yellow1;
+    color: white;
+    &:not(:disabled):not(.disabled) {
+        &:hover,
+        &:active {
+            background-color: $color-yellow2;
+            border-color: $color-yellow2;
+        }
+    }
+    &.btn-outline, &.btn-light {
+        color: $color-yellow1;
+        &:not(:disabled):not(.disabled) {
+            &:hover,
+            &:active {
+                color: $color-yellow2;
+            }
+        }
+    }
+    .icon {
+        background-color: $color-yellow2;
+    }
+}
+
 .btn-pro {
     background-color: $pro-primary;
     border-color: $pro-primary;

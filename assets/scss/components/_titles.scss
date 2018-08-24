@@ -61,14 +61,15 @@
     display: block;
     color: $corporate-primary;
     font-family: 'Amatic SC', cursive;
-    font-size:24px;
+    font-size: 28px;
     font-weight: 700;
   }
   span:nth-child(2) {
     color: $text;
     letter-spacing: 1px;
+    font-size: 16px;
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: 400;
   }
   hr {
     @extend .mt-3;

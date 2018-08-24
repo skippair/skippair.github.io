@@ -24,7 +24,7 @@
   }
   .navbar-brand {
     .navbar-logo {
-      width: 34px;
+      width: 140px;
       height: 34px;
     }
   }
@@ -78,6 +78,17 @@
     [type="radio"]:checked + label {
       border: none;
       color: $corporate-primary;
+    }
+  }
+
+
+  &.navbar-transparent {
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    .link-mobile,
+    .navbar-toggler i {
+      color: #fff;
     }
   }
 }
@@ -139,5 +150,16 @@
         }
       }
     }
+
+    &.navbar-transparent .navbar-collapse {
+      background: transparent;
+      box-shadow: none;
+      border: none;
+      .navbar-nav > li > a {
+        color: #fff;
+        font-weight: 600;
+      }
+    }
+
   }
 }
