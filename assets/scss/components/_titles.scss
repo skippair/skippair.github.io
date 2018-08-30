@@ -55,7 +55,7 @@
 
 
 .section-title {
-  @extend .mb-5;
+  margin-bottom: 3rem;
   text-align: center;
   span:first-child {
     display: block;
@@ -77,5 +77,10 @@
     height: 1px;
     background-color: $corporate-primary;
     border: none;
+  }
+  &.white {
+    span:first-child { color: #fff; }
+    span:nth-child(2) { color: #fff; }
+    hr { background-color: #fff; }
   }
 }

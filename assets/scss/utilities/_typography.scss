@@ -54,3 +54,12 @@ p {
 a.text-link {
   text-decoration: underline;
 }
+
+.rounded-nb {
+    width: 30px;
+    height: 30px;
+    color: $corporate-primary;
+    border: 1px solid  $corporate-primary;
+    border-radius: 50%;
+    text-align: center;
+}
