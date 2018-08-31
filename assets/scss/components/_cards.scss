@@ -201,3 +201,20 @@
      }
     }
 }
+
+
+.why-card {
+text-align: center;
+margin-bottom: $p*2;
+padding: 0 2em;
+div {
+  margin-top: $p;
+  b {
+    font-size: 16px;
+    color: $corporate-primary;
+  }
+  p {
+    margin-top: $p/1.5;
+  }
+}
+}

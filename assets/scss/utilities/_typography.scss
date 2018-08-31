@@ -51,6 +51,12 @@ p {
   font-size: $p;
 }
 
+p.intro {
+  color: $sub-title;
+  margin-bottom: 45px;
+  font-weight: bold;
+}
+
 a.text-link {
   text-decoration: underline;
 }

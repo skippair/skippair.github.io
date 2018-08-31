@@ -1,0 +1,41 @@
+.process {
+
+  color: $text;
+  font-size: 16px;
+
+  .process-nb .rounded-nb {
+    margin-right: 18px;
+  }
+  .process-border {
+    background-position: 15px top;
+    background-repeat: repeat-y;
+  }
+  .process-title {
+    color: $corporate-primary;
+    font-weight: 600;
+  }
+  .process-text {
+    padding:10px 0 25px 0; 
+  }
+
+  table {
+    tr:first-child th:first-child {
+      background-color: $color-grey1;
+    }
+    th, td {
+      padding: 15px 20px;
+      border: 1px solid $color-grey1;
+    }
+    th {
+      background-color: $color-grey3;
+      color: $sub-title;
+      small {
+        display: block;
+        color: $color-grey2;
+      }
+    }
+    td {
+      color:  $corporate-primary;
+    }
+  }
+}
