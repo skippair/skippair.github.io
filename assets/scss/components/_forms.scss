@@ -117,6 +117,17 @@
   }
 }
 
+form.pro {
+  .text-field-group input:focus ~ label,
+  .text-field-group input:valid:not(:placeholder-shown) ~ label {
+    color: $pro-primary;
+  }
+  &.pro .text-field-group .bar:before,
+  &.pro .text-field-group .bar:after {
+    background: $pro-primary;
+  }
+}
+
 .form-group {
     margin-bottom: 0px;
 }

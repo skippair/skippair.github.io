@@ -28,6 +28,7 @@ $active_page_color: $corporate-primary;
             border: 1px solid $active_page_color;
             background-color: $active_page_color;
             color: white;
+            cursor: auto;
         }
 
         &.disabled {

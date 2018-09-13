@@ -66,4 +66,9 @@
         color: $corporate-primary;
       }
     }
+
+    .nav-pills .sublist a {
+      display: block;
+      font-weight: normal;
+    }
 }
