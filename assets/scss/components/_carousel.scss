@@ -58,7 +58,7 @@
         .avatars-description {
             left: 5vw;
             top: auto;
-            bottom: 80px;
+            bottom: 60px;
             .avatar-chips-rounded {
                 height: 80px;
                 width: 80px;
@@ -78,9 +78,13 @@
                 display: inline-block;
                 width: 250px;
                 left: 90px;
-                bottom: 30px;
+                bottom: 38px;
                 top: auto;
+                line-height: 1.2em;
                 .icon { margin-right: 5px; }
+                p+p {
+                  font-size: 13px;
+                }
             }
         }
         .activity-carousel-title {
