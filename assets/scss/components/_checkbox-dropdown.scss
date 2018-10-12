@@ -1,5 +1,5 @@
 $empty_input_color: $color-grey2;
-$actived_input_color: $sub-title;
+$actived_input_color: $corporate-primary;
 
 
 .form-radio--dropdown {
@@ -26,8 +26,7 @@ $actived_input_color: $sub-title;
     /* When the choice selected is not the default one,
     dropdown will have a active class */
     &.active button {
-        // color: $actived_input_color;
-        color: $empty_input_color;
+        color: $actived_input_color;
     }
 
     /* Dropdown will have a show class when it's open */

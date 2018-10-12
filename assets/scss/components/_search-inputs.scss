@@ -7,7 +7,7 @@
 
 $back_color: $color-grey3;
 $empty_input_color: $color-grey2;
-$actived_input_color: $sub-title;
+$actived_input_color: $corporate-primary;
 
 // Spacing for sm (768px) device.
 // It's the first media since the filter are hidden one smaller device.
@@ -175,8 +175,10 @@ $main-filter-col-spacing: 16px;
         color: $empty_input_color;
     }
     input.form-control,
-    input:not(:empty)~.form-control-icon,
-    input:not(:empty)+div {
+    input:not(:empty)+.form-control-icon,
+    input:not(:empty)+div,
+    input~.form-control-icon,
+    input+.form-control-icon {
         color: $actived_input_color;
     }
 }
