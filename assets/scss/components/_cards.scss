@@ -64,7 +64,7 @@
 
 
 /*
- * # Card Staff For Product Page
+ * # Card Staff For Product Page & Home page
  */
 .card-staff {
     background: #fff;
@@ -99,6 +99,7 @@
         }
     }
     .card-body {
+        clear: both;
         margin-bottom: $paragraph-margin-bottom * 2;
         .card-body__motto {
             font-style: italic;
@@ -133,6 +134,27 @@
           font-weight: 600;
         }
       }
+    }
+
+    &.home {
+      margin-bottom: 30px;
+      height: 400px;
+      .card-head {
+        .card-head__info {
+          bottom: 20px;
+          ul {
+            padding-left: 15px;
+          }
+        }
+      }
+      .card-body {
+          position: relative;
+          i {
+            position: absolute;
+            top: -40px;
+            left: 15px;
+          }
+     }
     }
 }
 
@@ -213,6 +235,7 @@
         text-transform: uppercase;
         color: #fff;
         letter-spacing: 1.4px;
+        pointer-events: none;
         strong {
           display:block;
           font-size:24px;
@@ -220,14 +243,14 @@
         }
       }
        
-      a {
-       transition: all .5s ease-in-out;
-       background-size: cover;
-       background-position: center;
-       &:hover {
-         transform: scale(1.1);
-       }
-     }
+      a:not(.btn) {
+        transition: all .5s ease-in-out;
+        background-size: cover;
+        background-position: center;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
     }
 }
 
