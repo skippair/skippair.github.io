@@ -58,9 +58,15 @@
             }
         }
 
+        .subtitle {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
         .content {
             color: $sub-title;
-            font-size: 14px;
+            font-style: italic;
+            font-size: 16px;
             overflow: hidden;
             text-overflow: ellipsis;
             span {
