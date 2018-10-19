@@ -89,11 +89,12 @@ $main-filter-col-spacing: 16px;
             color: $corporate-primary;
         }
         .parent {
-            // font-weight: 600;
+            font-size: 15px;
+            font-weight: 600;
         }
         .child {
             color: grey;
-            font-size: 15px;
+            font-size: 14px;
             padding-left: 9px;
         }
         .default-info {
