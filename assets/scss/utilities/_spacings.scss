@@ -23,3 +23,16 @@ h3, .h3 {
     margin-bottom:$p;
 }
 
+.vert-follow {
+	margin: 0 auto 20px auto;
+	height: 60px;
+	background: $corporate-primary;
+	width: 1px;
+	&.white {
+		background: white;
+	}
+	&.m-top-neg {
+	  margin-top: -30px;
+	}
+}
+
