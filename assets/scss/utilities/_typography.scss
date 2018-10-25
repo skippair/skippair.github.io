@@ -51,6 +51,11 @@ p {
   font-size: $p;
 }
 
+ul.like-p {
+  font-size: $p;
+  color: $text
+}
+
 p.intro {
   color: $sub-title;
   margin-bottom: 45px;
