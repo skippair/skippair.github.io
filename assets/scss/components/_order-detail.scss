@@ -1,4 +1,27 @@
 .order-detail-panel {
+
+    .card-image {
+      margin-left: -16px;
+      margin-right: -16px;
+      margin-top: -25px;
+      min-height: 120px;
+      position: relative;
+      padding: 8px;
+      .avatars-description {
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 100%;
+        padding-left: 10px;
+        .description {
+          left: 75px;
+        }
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+
     h3, p {
         margin-bottom: 0px;
         line-height: 20px;

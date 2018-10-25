@@ -5,8 +5,12 @@
     padding: 15px 20px 15px 20px;
     .infos {
         i {
-            font-size: 22px;
-            margin-right: 10px;
+            font-size: 16px;
+            margin-right: 5px;
+        }
+        p {
+            font-size: 14px;
+            margin-bottom: 0.75rem;
         }
         p.link {
             text-align: center;
@@ -165,6 +169,7 @@
             height: 266px;
             float: left;
             margin-right: 20px;
+            margin-bottom: 10px;
         }
         .card-body {
             .btn-validate {
