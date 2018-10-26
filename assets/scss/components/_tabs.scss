@@ -27,10 +27,16 @@
     .nav-item {
         max-width: 33%;
     }
+    .nav-item + .nav-item {
+        margin-left: -1px;
+    }
     .nav-link {
         color: $sub-title;
-        border: none;
+        border:1px solid $color-grey1; 
         text-align: center;
+        i {
+          display: block;
+        }
         &.color-waiting {
             color: $warning-color;
         }
@@ -43,8 +49,19 @@
         &.active {
             color: white;
             background-color: $pro-primary;
+            border: 1px solid $pro-primary;
         }
     }
+}
+
+@include media-breakpoint-up(md) {
+  .table-tabs {
+      .nav-link {
+        i {
+          display: inline-block;
+        }
+      }
+  }
 }
 
 .vertical-tabs {

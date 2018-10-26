@@ -3,7 +3,12 @@
   margin-right: auto;
   margin-left: auto;
 }
-@media (max-width: $lg) {
+@media (max-width: $sm) {
+  .s-container {
+    width: 96%;
+  }
+}
+@media (min-width: $sm) and (max-width: $lg) {
   .s-container {
     width: 90%;
   }
