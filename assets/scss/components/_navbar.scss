@@ -17,17 +17,28 @@
     position: absolute;
     top: 15px;
   }
+  .link-mobile,
+  .navbar-toggler {
+    font-size: 1.5em;
+  }
   .link-phone {
     right: 60px;
   }
   .link-search {
-    right: 55px;
-    top: 12px;
+    right: 95px;
+    top: 13px;
   }
   .navbar-brand {
-    .navbar-logo {
+    #main-logo {
       width: 140px;
       height: 48px;
+    }
+    #main-logo-search-mobile {
+      height: 32px;
+      width: 32px;
+      margin-left: 5px;
+      margin-top: 8px;
+      margin-bottom: 8px;
     }
   }
   .btn-search-mobile {
@@ -37,6 +48,15 @@
     border-color: $color-grey1;
     border-radius: 3px;
     padding: 4px 16px;
+    width: 100%;
+    font-size: 1.15em;
+    color: $corporate-primary;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    &:hover, &:active {
+      color: $corporate-primary !important;   
+    border-color: $color-grey1 !important; 
+    }
   }
   .navbar-toggler {
     border: none;
@@ -76,10 +96,26 @@
     .reservation-type-button {
       flex-grow: 1;
       margin-right: 18px;
+      .priv-shr-txt {      
+        line-height: 1.5em;
+        padding-left: 20px;
+        padding-bottom: 5px;
+        height: auto;
+        width: 150px;
+      }
+      .counter-container {
+        width: 28px;
+        height: 28px;
+        right : 15px;
+        font-size: 13px;
+        padding-top: 5px;
+      }
     }
     [type="radio"]:checked + label {
       border: none;
       color: $corporate-primary;
+      font-weight: 700;
+      border-bottom: 3px solid $corporate-primary;
     }
   }
 
@@ -127,6 +163,14 @@
       .reservation-type-button {
         flex: none;
         margin-right: 18px;
+        .priv-shr-txt {
+          padding-right: 60px;
+          line-height: 2em;
+          width: auto;
+          .counter-container {
+            top: 2px;
+          }
+        }
       }
     }
     .nav-link {
@@ -148,7 +192,7 @@
       margin-left: -12px;
       padding-top: 0;
       padding-bottom: 0;
-      .navbar-logo {
+      #main-logo {
         width: 195px;
         height: 45px;
       }

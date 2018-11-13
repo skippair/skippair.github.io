@@ -222,7 +222,7 @@ $main-filter-col-spacing: 16px;
         .priv-shr-txt {
             padding-right: 30px;
             height: 32px;
-            line-height: 2;
+            line-height: 2em;
             font-size: 15px;
         }
         .counter-container {
@@ -233,10 +233,10 @@ $main-filter-col-spacing: 16px;
             height: 21px;
             color: white;
             background-color: $empty_input_color;
-            font-size: 10px;
+            font-size: 12px;
             border-radius: 28px;
-            font-weight: 400;
-            padding-top: 4px;
+            font-weight: 600;
+            padding-top: 2px;
             text-align: center;
             line-height: 1.42857143;
         }

@@ -47,9 +47,19 @@
         }
     }
 
+    .form-group.invalid {
+      label {
+        color: $error-color;
+        font-weight: 600;
+      }
+      input {
+       border-color: $error-color;
+      }
+    }
+
     .reservation-type-input {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         padding: 16px 0px 12px 0px;
         .form-check-inline {
             margin: 0px;
