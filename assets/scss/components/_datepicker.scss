@@ -1,0 +1,53 @@
+body {
+
+  .datepicker.dropdown-menu {
+    font-size: 1.1em;
+    background-color: $color-grey3;  
+    width: 300px; 
+
+      table.table-condensed {
+        margin-top: 0.5em;
+        margin-left: auto;
+        margin-right: auto;
+        width: 224px; /* (=32px*7) */
+
+        th {
+          font-size: 1.2em;
+
+          &.datepicker-switch {
+            text-transform: uppercase;
+            color: $corporate-primary;
+            font-weight: 600;
+            padding: 0.5em;
+          }
+
+          &.prev, &.next {
+            color: $sub-title;
+            font-weight: bold;
+          }
+        }
+
+        .dow, tfoot th {
+          text-transform: capitalize;
+          color: $sub-title;
+        }
+
+        td, .dow {
+          width: 32px;
+          height: 32px;
+          padding: auto;
+        }
+
+        td.disabled {
+          color: $color-lightblack;
+        }
+
+        tfoot th {
+          font-weight: normal;
+          padding: 0.5em;
+        }
+      }
+
+  }
+
+}
