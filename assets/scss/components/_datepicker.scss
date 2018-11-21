@@ -3,7 +3,7 @@ body {
   .datepicker.dropdown-menu {
     font-size: 1.1em;
     background-color: $color-grey3;  
-    width: 300px; 
+    width: 230px; 
 
       table.table-condensed {
         margin-top: 0.5em;
@@ -51,3 +51,16 @@ body {
   }
 
 }
+
+
+@media (min-width: $md) {
+
+  body {
+
+    .datepicker.dropdown-menu {
+    
+      width: 300px;
+
+    }
+  }
+} 
