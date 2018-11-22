@@ -145,6 +145,13 @@
             font-size: 14px;
             margin: 0px;
         }
+
+        #infos {
+          line-height: 1em;
+        }
+        br+br {
+          display: none;
+        }
     }
 }
 
