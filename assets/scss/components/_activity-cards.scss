@@ -34,6 +34,7 @@ $cards_description_color: $sub-title; // Police color for the additional informa
 $cards_button_color: #4965b5; // Background color for "See the cruise".
 $cards_price_color: #6889E0; // Background color for the price.
 $cards_promo_color: $gift-primary; // Background color for the promo label.
+$cards_best_sale_color: $corporate-primary;
 
 .cruise-cards {
     border-radius: 3px;
@@ -141,6 +142,18 @@ $cards_promo_color: $gift-primary; // Background color for the promo label.
             text-transform: uppercase;
             font-size: 13px;
         }
+        .cards-best-sale {
+            display: none;
+            position: absolute;
+            color: white;
+            background-color: $cards_best_sale_color;
+            right: 10px;
+            top: 10px;
+            padding: 2px 8px;
+            border-radius: 3px;
+            text-transform: uppercase;
+            font-size: 13px;
+        }
     }
     .cards-description {
         padding: 8px 10px;
@@ -204,6 +217,9 @@ $cards_promo_color: $gift-primary; // Background color for the promo label.
         }
     }
     &.promo .cards-img .cards-promo {
+        display: block;
+    }
+    &.best-sale .cards-img .cards-best-sale {
         display: block;
     }
     &.force-square {
