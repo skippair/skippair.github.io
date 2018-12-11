@@ -30,15 +30,17 @@
     thead th, tbody th {
         vertical-align: top;
     }
-    th, td {
-        padding: 16px 8px;
-    }
-    th {
-        line-height: 16px;
-    }
-    td {
-        font-size: 14px;
-        line-height: 14px;
+    &:not(.table-sm) {
+        th, td {
+            padding: 16px 8px;
+        }
+        th {
+            line-height: 16px;
+        }
+        td {
+            font-size: 14px;
+            line-height: 14px;
+        }
     }
 
     &.table-gift {

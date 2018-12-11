@@ -82,7 +82,8 @@
   display: inline-block;
   margin-bottom: 47px;
 }
-.select select {
+.select select,
+.select .autocomplete-as-select {
   display: inline-block;
   width: 100%;
   cursor: pointer;

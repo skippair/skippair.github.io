@@ -119,7 +119,10 @@
 
 form.pro {
   .text-field-group input:focus ~ label,
-  .text-field-group input:valid:not(:placeholder-shown) ~ label {
+  .text-field-group input:valid:not(:placeholder-shown) ~ label,
+  textarea:focus ~ label,
+  textarea:valid:not(:placeholder-shown) ~ label,
+  label.fake-valid {
     color: $pro-primary;
   }
   &.pro .text-field-group .bar:before,
@@ -216,6 +219,42 @@ form.pro {
       background: #FFF;
     }
 
+  }
+
+  &.left {
+    p {
+      margin-left: -5px;
+    }
+    span {
+      margin-left: 1.5em;
+    }
+  }
+
+  &.mini {
+    p {
+      margin-top: 0.1rem;
+      margin-bottom: 0.2rem;
+      height: 24px;
+      line-height: 22px;
+      width: 50px;
+      label {
+        font-size: 14px;
+        text-indent: 20px;
+      }
+      label:before {
+        width: 12px;
+        height: 12px;
+        top: 5px;
+        left: 4px;
+      }
+      input:checked + label {
+        text-indent: 5px;
+      }
+      input:checked + label::before {
+        left: 30px;
+      }
+
+    }
   }
 
   &.pro {
