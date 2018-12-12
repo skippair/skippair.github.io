@@ -87,7 +87,8 @@
   display: inline-block;
   width: 100%;
   cursor: pointer;
-  padding: 10px 15px;
+  margin-top: 8px;
+  padding: 8px 15px;
   outline: 0;
   border: 1px solid $color-grey2;
   border-radius: 0;
@@ -103,8 +104,8 @@
 }
 .select-arrow {
   position: absolute;
-  top: 16px;
-  right: 15px;
+  top: 24px;
+  right: 10px;
   width: 0;
   height: 0;
   pointer-events: none;

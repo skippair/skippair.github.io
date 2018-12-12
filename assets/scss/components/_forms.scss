@@ -1,7 +1,13 @@
 // Starting forms
-.text-field-group {
+.text-field-group,
+.select-field-group {
   position:relative;
   margin-bottom:45px;
+
+  &.condensed {
+    margin-bottom:35px;
+  }
+
   input ,
   textarea {
     font-size:16px;
@@ -41,7 +47,7 @@
   textarea:focus ~ label,
   textarea:valid:not(:placeholder-shown) ~ label,
   label.fake-valid { 
-    top:-20px;
+    top:-14px;
     font-size:14px;
     color:$corporate-primary;
   }
