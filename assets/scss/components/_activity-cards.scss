@@ -36,16 +36,18 @@ $cards_price_color: #6889E0; // Background color for the price.
 $cards_promo_color: $gift-primary; // Background color for the promo label.
 $cards_best_sale_color: $corporate-primary;
 
-.cruise-cards {
+.base-cards {
     border-radius: 3px;
     overflow: hidden;
     display: block;
     box-shadow: 0px 4px 7.7px 0.3px rgba(2, 3, 2, 0.14);
+
     .cards-img {
         position: relative;
         padding-bottom: 75%;
         min-height: $cards_img_min_height;
         overflow: hidden;
+
         &__photo {
             position: absolute;
             width: 100%;
@@ -53,11 +55,34 @@ $cards_best_sale_color: $corporate-primary;
             transition: all .5s ease-in-out;
             background-size: cover;
         }
+
         &__overlay {
             position: absolute;
             bottom: 0px;
             color: white;
             padding-bottom: 15px;
+
+            .title {
+                font-size: 18px;
+                line-height: 1.2;
+                padding: 0px 10px;
+                min-height: 30px;
+            }
+        }
+    }
+    &:hover {
+        text-decoration: initial;
+    }
+}
+
+.cruise-cards {
+    .cards-img {
+
+        &__overlay {
+            .title {
+                font-weight: 800;
+                min-height: 44.44px;
+            }
             /* Skipper round information ( Img, Name, Starting Port ) */
             .skipper-round {
                 padding-left: 10px;
@@ -91,14 +116,7 @@ $cards_best_sale_color: $corporate-primary;
                     }
                 }
             }
-            /* Title of the cruise */
-            .title {
-                font-size: 18px;
-                font-weight: 800;
-                line-height: 1.2;
-                padding: 0px 10px;
-                min-height: 44.44px;
-            }
+
             /* Rating of the cruise */
             .rating {
                 padding-left: 10px;
@@ -203,7 +221,6 @@ $cards_best_sale_color: $corporate-primary;
         }
     }
     &:hover {
-        text-decoration: initial;
         .cards-img__photo {
             transform: scale(1.1);
         }
