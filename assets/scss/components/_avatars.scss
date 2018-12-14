@@ -5,16 +5,16 @@
     background-size: 100% 100%;
     background-color: $color-grey1;
     margin-bottom: 16px;
-    height: 180px;
-    width: 180px;
+    height: 100px;
+    width: 100px;
     border-radius: 50%;
     margin-left: auto;
     margin-right: auto;
     .avatar-modify {
         position: relative;
-        top: 125px;
+        top: 50px;
         height: 55px;
-        width: 180px;
+        width: 100px;
         background-color: $color-white1;
         opacity: 0.74;
         text-align: center;
@@ -32,6 +32,18 @@
         }
     }
 }
+
+@media (min-width: $lg) {
+  .avatar-profil-rounded {
+    height: 180px;
+    width: 180px;
+    .avatar-modify {
+      top: 125px;
+      width: 180px;
+    }
+  }
+}
+
 .avatar-chips-rounded {
     position: relative;
     background-position: center;

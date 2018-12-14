@@ -154,8 +154,10 @@
 // ON/OFF btn
 .onoff {
 
+  /* Span can be inside or outside p */
   span {
     color: $text;
+    font-size: 16px;
   }
 
   p {
@@ -235,14 +237,25 @@
       background: #FFF;
     }
 
+    /* Span can be inside or outside p */
+    span {
+      color: $text;
+      position: absolute;
+      white-space: nowrap;
+      pointer-events: none;
+    }
+    input:checked ~ span {
+      color: $pro-primary;
+    }
+
   }
 
   &.left {
     p {
       margin-left: -5px;
-    }
-    span {
-      margin-left: 1.5em;
+      span {
+        left: 110px;
+      }
     }
   }
 
@@ -269,7 +282,9 @@
       input:checked + label::before {
         left: 30px;
       }
-
+      span {
+        left: 70px;
+      }
     }
   }
 
