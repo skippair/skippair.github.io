@@ -38,6 +38,14 @@
 .control:hover input:not([disabled]):checked ~ .control-indicator {
   background: $corporate-secondary;
 }
+form.pro {
+  .control input:checked ~ .control-indicator {
+    background: $pro-primary;
+  }
+  .control:hover input:not([disabled]):checked ~ .control-indicator {
+    background: $pro-secondary;
+  }  
+}
 .control input:disabled ~ .control-indicator {
   background: #e6e6e6;
   opacity: 0.6;
