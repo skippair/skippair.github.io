@@ -251,6 +251,9 @@ form.pro {
       position: absolute;
       white-space: nowrap;
       pointer-events: none;
+      a {
+        pointer-events: auto;
+      }
     }
     input:checked ~ span {
       color: $pro-primary;
