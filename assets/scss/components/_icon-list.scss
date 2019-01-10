@@ -16,6 +16,12 @@
         text-align: center;
         margin-top: 20px;
     }
+    .activity-tags-list .item a {
+        color: $text;
+        &:hover, &:active {
+          text-decoration: none;
+        }
+    }
     .activity-tags-list .item .icon {
         width: 100%;
         font-size: 25px;
