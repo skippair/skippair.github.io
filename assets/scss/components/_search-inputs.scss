@@ -14,7 +14,7 @@ $actived_input_color: $corporate-primary;
 $filter-spacing-md: 16px;
 
 // Spacing for sm (992px) device.
-$filter-spacing-lg: 20px;
+$filter-spacing-lg: 40px;
 
 // Spacing for sm (1200px) device.
 $filter-spacing-xl: 24px;
@@ -150,6 +150,17 @@ $main-filter-col-spacing: 16px;
         text-align: center;
         pointer-events: none;
     }
+    &.form-group-xl {
+        .form-control {
+            padding-left: 38px;
+        }
+        .form-control-icon {
+          height: 42px;
+          line-height: 42px;
+          width: 42px;
+          font-size: 20px;
+        }  
+    }
 }
 
 /* Theming */
@@ -183,35 +194,22 @@ $main-filter-col-spacing: 16px;
     input+.form-control-icon {
         color: $actived_input_color;
     }
-}
 
-.filter-container {
-    padding: 0px 15px;
-    background-color: white;
-}
-
-.main-filter {
-    padding-left: $filter-spacing-md - $main-filter-col-spacing/2;
-    padding-right: $filter-spacing-md - $main-filter-col-spacing/2;
-    padding-top: 18px;
-    padding-bottom: 10px;
-    .col {
-        padding: 0 $main-filter-col-spacing/2;
+    &.form-group-xl {
+        .form-control {
+          height: 42px;
+          font-size: 24px;
+        }  
     }
-    background-color: $back_color;
+
 }
+
 
 /* Boat sharing filter ( radio input ) */
 .reservation-type-filter {
     padding-left: $filter-spacing-md;
     padding-right: $filter-spacing-md;
-    background-color: $back_color;
 
-    .reservation-type-button {
-        float: left;
-        position: relative;
-        margin-right:22px;
-    }
     [type="radio"] {
         display: none;
     }
@@ -220,30 +218,38 @@ $main-filter-col-spacing: 16px;
         cursor: pointer;
         color: $empty_input_color;
         font-weight: 400;
+        padding: 1em;
+        background: rgba(255, 255, 255, 0.9);
         .priv-shr-txt {
-            padding-right: 30px;
-            height: 32px;
-            line-height: 2em;
-            font-size: 15px;
+            padding: 0 50px 10px 0px;
+            line-height: 1em;
+            font-size: 24px;
+            small {
+              display: block;
+              line-height: 14px;
+              font-size: 14px;
+              color: $color-grey2;
+              margin-top: 5px;
+              font-weight: 300;
+            }
         }
         .counter-container {
             position: absolute;
-            top: 7px;
-            right: 0px;
-            width: 21px;
+            top: 13px;
+            right: 16px;
+            width: 40px;
             height: 21px;
             color: white;
             background-color: $empty_input_color;
-            font-size: 12px;
+            font-size: 16px;
             border-radius: 28px;
             font-weight: 600;
-            padding-top: 2px;
             text-align: center;
-            line-height: 1.42857143;
+            line-height: 1.3;
         }
     }
     [type="radio"]:checked+label {
-        border-bottom: 2px solid $corporate-primary;
+        background: rgba(255, 255, 255, 0.98);
         font-weight: 600;
         color: $actived_input_color;
         .counter-container {
@@ -252,15 +258,57 @@ $main-filter-col-spacing: 16px;
     }
 }
 
-/* Other filter row */
-.other-filter {
-    position: relative;
-    padding-top: 14px;
-    padding-bottom: 14px;
-    padding-left: $filter-spacing-md;
-    padding-right: $filter-spacing-md;
-    /* Design for dropdown button and button on this row */
-    button,
+/* Generics design for all dropdown */
+.dropdown {
+    display: inline;
+    padding-right: 32px;
+    .dropdown-menu {
+        top: 30px;
+        border-radius: 2px;
+        padding: 6px 12px;
+        width: 230px;
+        border-color: #f5f5f5;
+    }
+    &.open button {
+        background-color: #f5f5f5;
+    }
+}
+
+/* Button that open the ordering option */
+.ordering-filter {
+    position: absolute;
+    right: $filter-spacing-md;
+    border: solid 1px #dbdbdb;
+    border-radius: 2px;
+    padding: 0px 0px;
+    .dropdown-menu {
+        width: initial;
+        min-width: initial;
+        margin-top: 6px;
+        border-radius: 2px;
+        border: 1px solid $color-grey1;
+    }
+    li {
+        cursor: pointer;
+        text-align: right;
+        width: 160px;
+        color: $color-grey2;
+        &:hover {
+            color: $corporate-primary;
+        }
+    }
+    .text-button {
+        &:not(.default) {
+            color: #00CCCC;
+        }
+        &:not(:empty)+.default {
+            display: none;
+        }
+    }
+    .caret {
+        margin-left: 12px;
+    }
+        button,
     button:hover,
     button:focus {
         height: 25px;
@@ -279,89 +327,6 @@ $main-filter-col-spacing: 16px;
     button.active {
         color: $actived_input_color;
     }
-
-    /* Generics design for all dropdown */
-    .dropdown {
-        display: inline;
-        padding-right: 32px;
-        .dropdown-menu {
-            top: 30px;
-            border-radius: 2px;
-            padding: 6px 12px;
-            width: 230px;
-            border-color: #f5f5f5;
-        }
-        &.open button {
-            background-color: #f5f5f5;
-        }
-    }
-
-
-    /* Button that open the ordering option */
-    .ordering-filter {
-        position: absolute;
-        right: $filter-spacing-md;
-        border: solid 1px #dbdbdb;
-        border-radius: 2px;
-        padding: 0px 0px;
-        .dropdown-menu {
-            width: initial;
-            min-width: initial;
-            margin-top: 6px;
-            border-radius: 2px;
-            border: 1px solid $color-grey1;
-        }
-        li {
-            cursor: pointer;
-            text-align: right;
-            width: 160px;
-            color: $color-grey2;
-            &:hover {
-                color: $corporate-primary;
-            }
-        }
-        .text-button {
-            &:not(.default) {
-                color: #00CCCC;
-            }
-            &:not(:empty)+.default {
-                display: none;
-            }
-        }
-        .caret {
-            margin-left: 12px;
-        }
-    }
-}
-
-/* Other filter collapse */
-.other-filter-collapse {
-    padding-left: 10px;
-
-    .full-height {
-        height: 100vh;
-    }
-
-    .filter-group {
-        margin-bottom: 16px;
-    }
-
-    .filter-title {
-        color: $actived_input_color;
-        margin-top: 16px;
-        margin-bottom: 6px;
-    }
-    label {
-        color: $empty_input_color;
-        input {
-            position: relative;
-            top: 1px;
-            margin-right: 5px;
-        }
-        &:hover {
-            color: $corporate-primary;
-        }
-    }
 }
 
 // Spacing for large device and above. (desktops, 992px and up)
@@ -375,7 +340,7 @@ $main-filter-col-spacing: 16px;
         padding-left: $filter-spacing-lg;
         padding-right: $filter-spacing-lg;
     }
-    .other-filter .ordering-filter {
+    .ordering-filter {
         right: $filter-spacing-lg;
     }
 }
@@ -391,7 +356,7 @@ $main-filter-col-spacing: 16px;
         padding-left: $filter-spacing-xl;
         padding-right: $filter-spacing-xl;
     }
-    .other-filter .ordering-filter {
+    .ordering-filter {
         right: $filter-spacing-xl;
     }
 }
