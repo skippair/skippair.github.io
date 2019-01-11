@@ -19,7 +19,6 @@ $filter-spacing-lg: 40px;
 // Spacing for sm (1200px) device.
 $filter-spacing-xl: 24px;
 
-$main-filter-col-spacing: 16px;
 
 /** 
  * Form Select
@@ -150,17 +149,6 @@ $main-filter-col-spacing: 16px;
         text-align: center;
         pointer-events: none;
     }
-    &.form-group-xl {
-        .form-control {
-            padding-left: 38px;
-        }
-        .form-control-icon {
-          height: 42px;
-          line-height: 42px;
-          width: 42px;
-          font-size: 20px;
-        }  
-    }
 }
 
 /* Theming */
@@ -195,20 +183,11 @@ $main-filter-col-spacing: 16px;
         color: $actived_input_color;
     }
 
-    &.form-group-xl {
-        .form-control {
-          height: 42px;
-          font-size: 24px;
-        }  
-    }
-
 }
 
 
 /* Boat sharing filter ( radio input ) */
 .reservation-type-filter {
-    padding-left: $filter-spacing-md;
-    padding-right: $filter-spacing-md;
 
     [type="radio"] {
         display: none;
@@ -221,9 +200,11 @@ $main-filter-col-spacing: 16px;
         padding: 1em;
         background: rgba(255, 255, 255, 0.9);
         .priv-shr-txt {
-            padding: 0 50px 10px 0px;
             line-height: 1em;
-            font-size: 24px;
+            font-size: 16px;
+            div {
+              padding-right: 32px;
+            }
             small {
               display: block;
               line-height: 14px;
@@ -236,8 +217,8 @@ $main-filter-col-spacing: 16px;
         .counter-container {
             position: absolute;
             top: 13px;
-            right: 16px;
-            width: 40px;
+            right: 6px;
+            width: 32px;
             height: 21px;
             color: white;
             background-color: $empty_input_color;
@@ -259,14 +240,17 @@ $main-filter-col-spacing: 16px;
 }
 
 /* Generics design for all dropdown */
-.dropdown {
-    display: inline;
-    padding-right: 32px;
+.form-radio--dropdown.dropdown-search {
+
+    button, button:focus, button:active, button:hover {
+        .text-button {
+          font-size: 18px;
+        }
+    }
     .dropdown-menu {
         top: 30px;
         border-radius: 2px;
         padding: 6px 12px;
-        width: 230px;
         border-color: #f5f5f5;
     }
     &.open button {
@@ -329,34 +313,57 @@ $main-filter-col-spacing: 16px;
     }
 }
 
-// Spacing for large device and above. (desktops, 992px and up)
-@include media-breakpoint-up(lg) {
-    .main-filter {
-        padding-left: $filter-spacing-lg - $main-filter-col-spacing/2;
-        padding-right: $filter-spacing-lg - $main-filter-col-spacing/2;        
+
+
+@include media-breakpoint-up(md) {
+    .form-select--autocomplete {
+        .form-group {
+            &.form-group-xl {
+                .angle, .remove {
+                  top: 5px;
+                  font-size: 24px;
+                }
+                .form-control {
+                  height: 42px;
+                  font-size: 24px;
+                }  
+            }
+        }
     }
-    .reservation-type-filter,
-    .other-filter {
-        padding-left: $filter-spacing-lg;
-        padding-right: $filter-spacing-lg;
+    .form-group.has-iconlabel {
+        &.form-group-xl {
+            .form-control {
+                padding-left: 38px;
+            }
+            .form-control-icon {
+              height: 42px;
+              line-height: 42px;
+              width: 42px;
+              font-size: 20px;
+            }  
+        }
     }
-    .ordering-filter {
-        right: $filter-spacing-lg;
+
+    .reservation-type-filter {
+      label .priv-shr-txt {
+        font-size: 24px;
+        .counter-container {
+            width: 40px;
+            right: 16px;
+        }
+        div {
+              padding-right: 50px;
+        }
+      }
     }
 }
 
-// Spacing for extra large device and above. (large desktops, 1200px and up)
-@include media-breakpoint-up(xl) {
-    .main-filter {
-        padding-left: $filter-spacing-xl - $main-filter-col-spacing/2;
-        padding-right: $filter-spacing-xl - $main-filter-col-spacing/2;        
-    }
-    .reservation-type-filter,
-    .other-filter {
-        padding-left: $filter-spacing-xl;
-        padding-right: $filter-spacing-xl;
-    }
-    .ordering-filter {
-        right: $filter-spacing-xl;
+@include media-breakpoint-up(lg) {
+    .reservation-type-filter {
+      label .priv-shr-txt {
+        small {
+          padding-right: 50px;
+        }
+      }
     }
 }
