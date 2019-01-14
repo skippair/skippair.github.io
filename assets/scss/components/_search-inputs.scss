@@ -230,6 +230,15 @@ $filter-spacing-xl: 24px;
             text-align: center;
             line-height: 1.3;
         }
+
+        img {
+          position: absolute;
+          height: 45px;
+          top: 14px;
+          left: 20px;
+          display: none;
+        }
+
     }
     [type="radio"]:checked+label {
         background: rgba(255, 255, 255, 0.97);
@@ -374,5 +383,32 @@ $filter-spacing-xl: 24px;
   .reservation-type-filter {
     margin-left: 45px;
     margin-right: 45px;
+
+    label {
+      .priv-shr-txt { 
+        margin-left: 85px;
+      }
+      &.private {
+          .priv-shr-txt { 
+            margin-left: 78px;
+          }
+      }
+      img.not-ok {
+        display: block;
+      }
+      img.ok {
+        display: none;
+      }
+    }
+
+    [type="radio"]:checked+label {
+        img.not-ok {
+          display: none;
+        }
+        img.ok {
+          display: block;
+        }
+    }
+
   }
 }
