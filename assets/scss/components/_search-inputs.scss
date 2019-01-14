@@ -199,6 +199,8 @@ $filter-spacing-xl: 24px;
         font-weight: 400;
         padding: 1em;
         background: rgba(255, 255, 255, 0.9);
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
         .priv-shr-txt {
             line-height: 1em;
             font-size: 16px;
@@ -230,7 +232,7 @@ $filter-spacing-xl: 24px;
         }
     }
     [type="radio"]:checked+label {
-        background: rgba(255, 255, 255, 0.98);
+        background: rgba(255, 255, 255, 0.97);
         font-weight: 600;
         color: $actived_input_color;
         .counter-container {
@@ -366,4 +368,11 @@ $filter-spacing-xl: 24px;
         }
       }
     }
+}
+
+@media (min-width: $xl){
+  .reservation-type-filter {
+    margin-left: 45px;
+    margin-right: 45px;
+  }
 }
