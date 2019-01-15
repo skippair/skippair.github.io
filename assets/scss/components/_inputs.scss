@@ -83,6 +83,22 @@ form.pro {
   background: #7b7b7b;
 }
 
+.control.control-sm {
+  margin-bottom: 5px;
+  padding-left: 24px;
+  .control-indicator {
+    height: 16px;
+    width: 16px;
+    top: 3px;
+    &::after {
+      left: 6px;
+      top: 6px;
+      height: 5px;
+      width: 5px;
+    }
+  }
+}
+
 // SELECT and SELECT likes
 .select,
 .form-checkbox--dropdown {

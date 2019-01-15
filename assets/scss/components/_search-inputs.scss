@@ -188,19 +188,23 @@ $filter-spacing-xl: 24px;
 
 /* Boat sharing filter ( radio input ) */
 .reservation-type-filter {
+    margin-bottom: 15px;
+    margin-left: 0;
+    margin-right: 0;
 
     [type="radio"] {
         display: none;
     }
     label {
+        box-shadow: 0px 4px 7.7px 0.3px rgba(2, 3, 2, 0.14);
+        border-radius: 3px;
         margin-bottom: 0px;
         cursor: pointer;
         color: $empty_input_color;
         font-weight: 400;
-        padding: 1em;
-        background: rgba(255, 255, 255, 0.9);
-        border-top-left-radius: 3px;
-        border-top-right-radius: 3px;
+        padding: 1em 0.3em;
+        background: $color-grey3;
+        opacity: 0.7;
         .priv-shr-txt {
             line-height: 1em;
             font-size: 16px;
@@ -241,7 +245,8 @@ $filter-spacing-xl: 24px;
 
     }
     [type="radio"]:checked+label {
-        background: rgba(255, 255, 255, 0.97);
+        background: #fff;
+        opacity: 1;
         font-weight: 600;
         color: $actived_input_color;
         .counter-container {
@@ -250,28 +255,11 @@ $filter-spacing-xl: 24px;
     }
 }
 
-/* Generics design for all dropdown */
-.form-radio--dropdown.dropdown-search {
-
-    button, button:focus, button:active, button:hover {
-        .text-button {
-          font-size: 18px;
-        }
-    }
-    .dropdown-menu {
-        top: 30px;
-        border-radius: 2px;
-        padding: 6px 12px;
-        border-color: #f5f5f5;
-    }
-    &.open button {
-        background-color: #f5f5f5;
-    }
-}
 
 /* Button that open the ordering option */
 .ordering-filter {
     position: absolute;
+    top: 12px;
     right: $filter-spacing-md;
     border: solid 1px #dbdbdb;
     border-radius: 2px;
@@ -331,12 +319,12 @@ $filter-spacing-xl: 24px;
         .form-group {
             &.form-group-xl {
                 .angle, .remove {
-                  top: 5px;
-                  font-size: 24px;
+                  top: 4px;
+                  font-size: 18px;
                 }
                 .form-control {
-                  height: 42px;
-                  font-size: 24px;
+                  height: 36px;
+                  font-size: 18px;
                 }  
             }
         }
@@ -347,25 +335,32 @@ $filter-spacing-xl: 24px;
                 padding-left: 38px;
             }
             .form-control-icon {
-              height: 42px;
-              line-height: 42px;
-              width: 42px;
-              font-size: 20px;
+              height: 36px;
+              line-height: 36px;
+              width: 36px;
+              font-size: 18px;
             }  
         }
     }
 
     .reservation-type-filter {
+      label {
+        padding: 1em;
+      }
       label .priv-shr-txt {
         font-size: 24px;
         .counter-container {
             width: 40px;
-            right: 16px;
+            right: 21px;
         }
         div {
               padding-right: 50px;
         }
       }
+    }
+
+    .ordering-filter {
+      top: -13px;
     }
 }
 
@@ -381,9 +376,6 @@ $filter-spacing-xl: 24px;
 
 @media (min-width: $xl){
   .reservation-type-filter {
-    margin-left: 45px;
-    margin-right: 45px;
-
     label {
       .priv-shr-txt { 
         margin-left: 85px;
