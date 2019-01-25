@@ -316,7 +316,8 @@ $filter-spacing-xl: 24px;
 
 
 @include media-breakpoint-up(md) {
-    .form-select--autocomplete {
+    .form-select--autocomplete,
+    .form-select {
         .form-group {
             &.form-group-xl {
                 .angle, .remove {
