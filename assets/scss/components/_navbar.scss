@@ -139,22 +139,6 @@
     }
   }
 
-  #dropdown-cruises {
-    min-width: 525px;
-    font-size: 13px;
-    a.title, a {
-      display: block;
-    }
-    a.title {
-      color: $sub-title;
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
-    a:not(.corpo-bold) {
-      color: $text;
-    }
-  }
-
   &.absolute-top {
     position: absolute;
     top: 0;
@@ -247,12 +231,6 @@
       }
     }
 
-  #dropdown-cruises {
-    min-width: 525px;
-    .row + .row {
-      margin-top: 1.1em;
-    }
-  }
 
   }
 }
