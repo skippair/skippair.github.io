@@ -11,6 +11,24 @@ body {
         margin-right: auto;
         width: 224px; /* (=32px*7) */
 
+        .datepicker-switch:hover,
+        .prev:hover,
+        .next:hover,
+        tr td.day:hover,
+        tr td.day.focused,
+        tr th:hover {
+          cursor: pointer;
+          background: #eee;
+        }
+        .prev.disabled,
+        .next.disabled {
+          visibility: hidden;
+        }
+
+        th, td {
+          text-align: center;
+        }
+
         th {
           font-size: 1em;
 
@@ -50,6 +68,86 @@ body {
 
   }
 
+  .datepicker.dropdown-menu table.table-condensed tr {
+
+    td.today {
+        border-collapse: separate !important;
+        background: white !important;
+        border: 1px solid black;
+        border-radius: 50% !important;
+        border-color: #000 !important;
+    }
+
+    td.open-date,
+    td.new.open-date,
+    td.old.open-date {
+        background-color: $corporate-primary;
+        border-radius: 50% !important;
+        &:hover, &:active {
+          background-color: $corporate-secondary !important;
+        }
+        color: #fff;
+    }
+    td.open-date-on-return {
+        background-color: $corporate-primary;
+        border-radius: 0 50% 50% 0 !important;
+    }
+
+    td.invalid-date,
+    td.invalid-date.disabled {
+        background-color: $color-grey1;
+        border-radius: 50% !important;
+        &:hover {
+          background-color: $color-grey1;
+          cursor: help;
+        }
+    }
+
+    td.notopen-date,
+    td.notopen-date:hover {
+      background: none;
+      cursor: default;
+    }
+
+    td.active {
+        background-image: none !important;
+    }
+
+    td.select-start-date {
+        background-color: $pro-primary !important;
+        border-radius: 50% 0 0 50% !important;
+        color: #fff;
+        &.disabled {
+          color: #fff !important;
+        }
+    }
+    td.select-end-date {
+        background-color: $pro-primary !important;
+        border-radius: 50%;
+        color: #fff;
+    }
+    td.between-start-end-date + td.select-end-date,
+    td.select-end-date.flex {
+        border-radius: 0 50% 50% 0;
+    }
+
+    td.between-start-end-date,
+    td.disabled.between-start-end-date {
+        background-color: $pro-primary !important;
+        border-radius: 0 !important;
+        color: #fff;
+    }
+    .legend {
+      color: $text;
+      text-align: left;
+      i {
+        vertical-align: top;
+        font-size: 1.35em;
+        color: $corporate-primary;
+        margin-right: 0.5em;
+      }
+    }
+  }
 }
 
 
