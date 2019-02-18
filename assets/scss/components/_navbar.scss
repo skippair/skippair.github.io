@@ -188,15 +188,15 @@
           }
         }
         li.navbar-link-help {
+          align-self: flex-end;
           .nav-link {
             font-style: italic;
             text-align: center;
-            align-self: flex-end;
             padding: 10px 0 11px 10px;
+            margin-right: 15px;
             line-height: 18px;
             b {
               font-size: 18px;
-              color: $corporate-primary;
             }
           }
         }
