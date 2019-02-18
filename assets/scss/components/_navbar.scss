@@ -84,41 +84,16 @@
           border: none;
         }
       }
+      li.navbar-link-help {
+        .nav-link {
+          color: $corporate-primary;
+        }
+      }
     }
   }
   .dropdown-menu {
     z-index: 1200;
   }
-  .reservation-type-filter {
-    background: #fff;
-    padding-left: 0;
-    padding-right: 0;
-    .reservation-type-button {
-      flex-grow: 1;
-      margin-right: 18px;
-      .priv-shr-txt {      
-        line-height: 1.5em;
-        padding-left: 20px;
-        padding-bottom: 5px;
-        height: auto;
-        width: 150px;
-      }
-      .counter-container {
-        width: 28px;
-        height: 28px;
-        right : 15px;
-        font-size: 13px;
-        padding-top: 5px;
-      }
-    }
-    [type="radio"]:checked + label {
-      border: none;
-      color: $corporate-primary;
-      font-weight: 700;
-      border-bottom: 3px solid $corporate-primary;
-    }
-  }
-
 
   .navbar-nav .nav-link {
     padding: 0.5rem;
@@ -201,14 +176,28 @@
 
 
       ul {
+        width: 100%;
         li.navbar-link-account {
-          position: absolute;
-          right: 60px;
+          align-self: flex-end;
+          margin-left: auto;
           .dropdown-account {
             width: 175px;
             border: 1px solid $color-grey1;
             top: 47px;
             left: 24px;
+          }
+        }
+        li.navbar-link-help {
+          .nav-link {
+            font-style: italic;
+            text-align: center;
+            align-self: flex-end;
+            padding: 10px 0 11px 10px;
+            line-height: 18px;
+            b {
+              font-size: 18px;
+              color: $corporate-primary;
+            }
           }
         }
       }
