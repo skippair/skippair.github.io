@@ -153,6 +153,7 @@
           display: none;
         }
     }
+
 }
 
 .reservation-panel.color-gift {
@@ -178,5 +179,27 @@
     .light-tabs .nav-link.active {
         color: $corporate-primary;
         border-color: $corporate-primary;
+    }
+}
+
+#no-date-contact {
+    display:block;
+    position:absolute;
+    top:-55px;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    padding:10px 0;
+    color: #fff;
+    border: 1px solid $color-yellow1;
+    background: $color-yellow1;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    &:hover, &:active {
+      background: $color-yellow2;
+      border-color: $color-yellow2;
+      text-decoration: none;
     }
 }
