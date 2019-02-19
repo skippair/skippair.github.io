@@ -41,23 +41,6 @@
       margin-bottom: 8px;
     }
   }
-  .btn-search-mobile {
-    text-transform: none;
-    font-weight: normal;
-    color: $text;
-    border-color: $color-grey1;
-    border-radius: 3px;
-    padding: 4px 16px;
-    width: 100%;
-    font-size: 1.15em;
-    color: $corporate-primary;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    &:hover, &:active {
-      color: $corporate-primary !important;   
-    border-color: $color-grey1 !important; 
-    }
-  }
   .navbar-toggler {
     border: none;
     i {
