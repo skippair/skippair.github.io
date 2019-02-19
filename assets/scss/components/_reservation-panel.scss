@@ -182,7 +182,7 @@
     }
 }
 
-#no-date-contact {
+.no-date-contact {
     display:block;
     position:absolute;
     top:-55px;
@@ -201,5 +201,6 @@
       background: $color-yellow2;
       border-color: $color-yellow2;
       text-decoration: none;
+      color: #fff;
     }
 }
