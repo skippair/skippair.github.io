@@ -140,6 +140,8 @@
     }
 
     .included-detail {
+        max-height: 150px;
+        overflow-y: scroll;
         padding-bottom: 16px;
         .checklist-icon li, p {
             font-size: 14px;
@@ -148,8 +150,6 @@
 
         #infos {
           line-height: 1em;
-          max-height: 100px;
-          overflow-y: scroll;
         }
     }
 
