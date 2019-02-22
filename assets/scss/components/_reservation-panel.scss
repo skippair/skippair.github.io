@@ -148,9 +148,8 @@
 
         #infos {
           line-height: 1em;
-        }
-        br+br {
-          display: none;
+          max-height: 100px;
+          overflow-y: scroll;
         }
     }
 
