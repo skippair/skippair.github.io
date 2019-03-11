@@ -44,6 +44,12 @@ h3, .h3 {
   font-size: $h3;
 }
 
+h4, .h4 {
+  color: $sub-title;
+  font-weight: bold;
+  font-size: 16px;
+}
+
 //TEXT
 //  Typo and font-size for texts
 p {

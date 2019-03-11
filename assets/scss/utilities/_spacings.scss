@@ -45,3 +45,11 @@ h3, .h3 {
 	position: relative;
 }
 
+.border-bot {
+    border-bottom: solid 1px $color-grey1;
+    padding-bottom: 30px;
+}
+.border-top {
+    border-top: solid 1px $color-grey1;
+    padding-top: 30px;
+}
