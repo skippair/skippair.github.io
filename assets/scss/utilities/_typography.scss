@@ -85,3 +85,14 @@ a.corpo-bold {
     border-radius: 50%;
     text-align: center;
 }
+
+.crossed {
+    position: relative;
+    &::after {
+        content:"";
+        position:absolute;
+        top:50%; left:0; width:100%; height:1px; 
+        background:$text;
+        transform:rotate(-15deg);
+    }
+}

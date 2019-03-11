@@ -151,6 +151,11 @@ a.btn:hover {
             border-color: $pro-secondary;
         }
     }
+    &:disabled {
+        background-color: $pro-primary;
+        border-color: $pro-primary;
+        opacity: 0.35;
+    }
     &.btn-outline, &.btn-light {
         color: $pro-primary;
         &:not(:disabled):not(.disabled) {

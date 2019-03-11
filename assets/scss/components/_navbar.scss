@@ -41,23 +41,6 @@
       margin-bottom: 8px;
     }
   }
-  .btn-search-mobile {
-    text-transform: none;
-    font-weight: normal;
-    color: $text;
-    border-color: $color-grey1;
-    border-radius: 3px;
-    padding: 4px 16px;
-    width: 100%;
-    font-size: 1.15em;
-    color: $corporate-primary;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    &:hover, &:active {
-      color: $corporate-primary !important;   
-    border-color: $color-grey1 !important; 
-    }
-  }
   .navbar-toggler {
     border: none;
     i {
@@ -84,41 +67,27 @@
           border: none;
         }
       }
+      li.navbar-link-help {
+        .nav-link {
+          color: $corporate-primary;
+        }
+      }
     }
   }
   .dropdown-menu {
-    z-index: 1200;
-  }
-  .reservation-type-filter {
-    background: #fff;
-    padding-left: 0;
-    padding-right: 0;
-    .reservation-type-button {
-      flex-grow: 1;
-      margin-right: 18px;
-      .priv-shr-txt {      
-        line-height: 1.5em;
-        padding-left: 20px;
-        padding-bottom: 5px;
-        height: auto;
-        width: 150px;
-      }
-      .counter-container {
-        width: 28px;
-        height: 28px;
-        right : 15px;
-        font-size: 13px;
-        padding-top: 5px;
-      }
-    }
-    [type="radio"]:checked + label {
-      border: none;
-      color: $corporate-primary;
-      font-weight: 700;
-      border-bottom: 3px solid $corporate-primary;
+    border-radius: 0;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 0;
+    .dropdown-item {
+        color: rgba(0, 0, 0, 0.5);
+        border-bottom: 2px solid transparent;
+        &:hover, &:active {
+          color: $corporate-primary;
+          border-color: $corporate-primary;
+          background: #fff;
+        }
     }
   }
-
 
   .navbar-nav .nav-link {
     padding: 0.5rem;
@@ -136,22 +105,6 @@
     .link-mobile,
     .navbar-toggler i {
       color: #fff;
-    }
-  }
-
-  #dropdown-cruises {
-    min-width: 525px;
-    font-size: 13px;
-    a.title, a {
-      display: block;
-    }
-    a.title {
-      color: $sub-title;
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
-    a:not(.corpo-bold) {
-      color: $text;
     }
   }
 
@@ -215,16 +168,37 @@
       }
     }
 
+    .dropdown-menu {
+      z-index: 1200;
+      box-shadow: 0px 4px 7.7px 0.3px rgba(2, 3, 2, 0.14);
+      top: 57px;
+      padding: 0;
+      .dropdown-item {
+          padding: 0.75rem 0.75rem;
+          font-size: 15px;
+      }
+    }
 
       ul {
+        width: 100%;
         li.navbar-link-account {
-          position: absolute;
-          right: 60px;
+          align-self: flex-end;
+          margin-left: auto;
           .dropdown-account {
             width: 175px;
-            border: 1px solid $color-grey1;
-            top: 47px;
-            left: 24px;
+          }
+        }
+        li.navbar-link-help {
+          align-self: flex-end;
+          .nav-link {
+            font-style: italic;
+            text-align: center;
+            padding: 10px 0 11px 10px;
+            margin-right: 15px;
+            line-height: 18px;
+            b {
+              font-size: 18px;
+            }
           }
         }
       }
@@ -247,12 +221,6 @@
       }
     }
 
-  #dropdown-cruises {
-    min-width: 525px;
-    .row + .row {
-      margin-top: 1.1em;
-    }
-  }
 
   }
 }
