@@ -68,6 +68,10 @@ p.intro {
   font-weight: bold;
 }
 
+p.sm {
+  font-size: $text-sm;
+}
+
 a.text-link {
   text-decoration: underline;
 }
