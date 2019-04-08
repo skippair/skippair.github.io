@@ -121,6 +121,14 @@
         }
     }
 
+    .user-staff-badge {
+        position: absolute;
+        top: 65px;
+        width: 50px;
+        left: 5px;
+        font-size: 10px;
+    }
+
     .detail {
         .content {
             border: solid 1px $color-grey1;
@@ -133,12 +141,13 @@
         }
     }
 
+    &.staff .detail .content {
+      border: 1px solid $corporate-secondary;
+    }
+
     &.send {
         .user-img {
-            right: 0px;
-        }
-        .detail {
-            margin-right: 80px;
+            display: none;
         }
     }
 
@@ -147,7 +156,7 @@
             left: 0px;
         }
         .detail {
-            margin-left: 80px;
+            margin-left: 70px;
         }
     }
 }
@@ -208,4 +217,22 @@
 // Container for messages-cards.
 .message-container {
     margin-bottom: 32px;
+}
+
+
+@media screen and (min-width: $lg) {
+  .message-card {
+    &.send {
+        .detail {
+            margin-left: 160px;
+        }
+    }
+
+    &.received {
+        .detail {
+            margin-left: 80px;
+            margin-right: 80px;
+        }
+    }
+  }
 }
