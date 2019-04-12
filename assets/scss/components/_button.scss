@@ -31,11 +31,20 @@ a.btn:hover {
 .btn-outline {
     background-color: initial !important;
     border-color: $color-grey2;
+    &.corporate-primary {
+      color: $corporate-primary;
+      border-color: $corporate-primary;
+    }
     &:not(:disabled):not(.disabled) {
         &:hover,
         &:active {
             border-color: $sub-title;
             color: $sub-title;
+        }
+        &.corporate-primary:hover,
+        &.corporate-primary:active {
+            color: $corporate-secondary;
+            border-color: $corporate-secondary;
         }
     }
 
