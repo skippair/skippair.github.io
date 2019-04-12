@@ -21,11 +21,19 @@
   .navbar-toggler {
     font-size: 1.5em;
   }
+  .link-messages {
+    right: 170px;
+    top: 19px;
+  }
+  .link-travel {
+    right: 110px;
+    top: 19px;
+  }
   .link-phone {
-    right: 60px;
+    right: 53px;
   }
   .link-search {
-    right: 95px;
+    right: 81px;
     top: 13px;
   }
   .navbar-brand {
@@ -86,6 +94,31 @@
           border-color: $corporate-primary;
           background: #fff;
         }
+    }
+  }
+
+  .nav-notif {
+    display: block;
+    font-size: 14px;
+    .badge {
+      font-size: 14px;
+      color: #fff;
+
+      background-color: $color-grey2;
+      &:hover, &:active {
+        background-color: rgba(0, 0, 0, 0.5);          
+      }
+
+      &.active {
+        background-color: $gift-primary;
+        &:hover, &:active {
+          background-color: $gift-secondary;          
+        }
+      }
+
+      i {
+        margin-right: 3px;
+      }
     }
   }
 
@@ -158,6 +191,12 @@
         height: 45px;
       }
     }
+    .nav-notif {
+      padding: 1.2rem 0.5rem;
+      .badge {
+        vertical-align: bottom;
+      }
+    }
     .navbar-collapse {
 
 
@@ -181,15 +220,19 @@
 
       ul {
         width: 100%;
+        li.navbar-link-right {
+          align-self: flex-end;        
+          &.first-navbar-link-right {
+            margin-left: auto;
+          }
+        }
+
         li.navbar-link-account {
-          align-self: flex-end;
-          margin-left: auto;
           .dropdown-account {
             width: 175px;
           }
         }
         li.navbar-link-help {
-          align-self: flex-end;
           .nav-link {
             font-style: italic;
             text-align: center;
