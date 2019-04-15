@@ -104,15 +104,15 @@
       font-size: 14px;
       color: #fff;
 
-      background-color: $color-grey2;
+      background-color: rgba(0, 0, 0, 0.5);
       &:hover, &:active {
-        background-color: rgba(0, 0, 0, 0.5);          
+        background-color: $color-grey2;
       }
 
       &.active {
-        background-color: $gift-primary;
+        background-color: $corporate-secondary;
         &:hover, &:active {
-          background-color: $gift-secondary;          
+          background-color: $corporate-primary;          
         }
       }
 
