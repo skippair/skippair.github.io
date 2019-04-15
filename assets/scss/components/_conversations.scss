@@ -7,19 +7,35 @@
  */
 
 // Cards for one conversation, stackable
-.conversation-card {
-    display: block;
-    position: relative;
-    text-decoration: none !important;
+.table.table-conversation .conversation-row {
     
-    &+.conversation-card {
-        margin-top: 24px;
+    td {
+      border-left: none;
+      height: 100px;
+      vertical-align: middle;
+      font-size: 16px;
+      cursor: pointer;
     }
 
+    &:hover td {
+        background-color: rgba(0, 0, 0, 0.065);
+    }
+
+    .flag-new {
+        background-color: $info-color;
+        color: white;
+        font-size: 14px;
+        border-radius: 2px;
+        padding: 2px 4px;
+    }
+
+    .user {
+      text-align: center;
+    }
+    .name {
+      margin-bottom: 0.5em;
+    }
     .user-img, .user-chips {
-        position: absolute;
-        left: 0px;
-        top: 0px;
         width: 50px;
         height: 50px;
     }
@@ -33,50 +49,19 @@
         border: 2px solid white;
     }
 
-    .time {
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        color: $sub-title;
-        font-size: 14px;
+    .title {
+        margin-bottom:0.5em;
     }
 
-    .detail {
-        margin-left: 60px;
+    .subtitle {
+        margin-bottom: 0.5em;
+    }
 
-        .title {
-            color: $sub-title;
-            font-size: 16px;
-            font-weight: bold;
-            margin-right: 60px;
-            .flag-new {
-                background-color: $info-color;
-                color: white;
-                font-size: 12px;
-                border-radius: 2px;
-                padding: 2px 4px;
-            }
-        }
-
-        .subtitle {
-            font-size: 14px;
-            font-weight: 600;
-        }
-
-        .content {
-            color: $sub-title;
-            font-style: italic;
-            font-size: 16px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            span {
-                white-space: nowrap;
-            }
-        }
+    .content {
+        color: $sub-title;
     }
 
     .status {
-        font-size: 14px;
         i {
             font-size: 12px;
         }
