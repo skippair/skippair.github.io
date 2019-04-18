@@ -13,7 +13,14 @@
     width: 90%;
   }
 }
-@media (min-width: $lg){
+
+@media (min-width: $lg) and (max-width: $xl) {
+  .s-container {
+    width: 85%;
+  }
+}
+
+@media (min-width: $xl){
   .s-container {
     width: 75%;
   }
