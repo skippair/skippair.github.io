@@ -28,7 +28,7 @@
  */
 
 $cards_img_min_height: 260px;
-$cards_price_height: 41px;
+$cards_price_height: 45px;
 $cards_skipper_hat_color: $corporate-primary; // The color of the hat icon int he skipper info.
 $cards_description_color: $sub-title; // Police color for the additional information.
 $cards_button_color: $corporate-secondary; // Background color for "See the cruise".
@@ -193,14 +193,29 @@ $cards_best_sale_color: $corporate-primary;
             color: white;
             text-align: center;
         }
+        .per {
+            position: absolute;
+            color: #fff;
+            border-radius: 0px 5px 0px 0px;
+            width: 65px;
+            height: $cards_price_height;
+            text-align: left;
+            top: 0px;
+            left: 0px;
+            text-transform: uppercase;
+            font-size: 12px;
+            line-height: 12px;
+            padding-top: 11px;
+            padding-left: 5px;
+        }
         .promo {
             position: absolute;
             color: #fff;
             background-color: $gift-secondary;
             border-radius: 0 0px 5px 0px;
             width: 65px;
-            height: 42px;
-            line-height: 42px;
+            height: $cards_price_height;
+            line-height: $cards_price_height;
             text-align: center;
             top: 0px;
             right: 0px;
@@ -209,18 +224,16 @@ $cards_best_sale_color: $corporate-primary;
         }
         .price {
             flex-grow: 1;
+            font-size: 14px;
             background-color: $cards_price_color;
-            font-size: 13px;
-            line-height: 1;
+            line-height: 125%;
             padding-top: 5px;
             .amount {
-                font-size: 18px;
+                font-size: 16px;
                 font-weight: 800;
             }
             .crossed {
-                font-size: 18px;
                 &::after {
-                    height:2px; 
                     background:#fff;
                 }
             }
