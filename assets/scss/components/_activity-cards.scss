@@ -164,6 +164,13 @@ $cards_best_sale_color: $corporate-primary;
             text-transform: uppercase;
             font-size: 13px;
         }
+        .cards-all-included {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+            font-size: 100%;
+        }
     }
     .cards-description {
         padding: 8px 10px;
