@@ -230,12 +230,12 @@ $cards_best_sale_color: $corporate-primary;
         }
         .price {
             flex-grow: 1;
-            font-size: 14px;
+            font-size: 13px;
             background-color: $cards_price_color;
             line-height: 125%;
             padding-top: 5px;
             .amount {
-                font-size: 16px;
+                font-size: 18px;
                 font-weight: 800;
                 display: block;
             }
