@@ -278,3 +278,20 @@ a.btn:hover {
         background-color: $warning-color-hover;
     }
 }
+
+.btn-rounded {
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    width: 1.5em;
+    height: 1.5em;
+    line-height: 1.5em;
+    border: 1px solid $color-grey1;
+    color: $sub-title;
+    background: transparent;
+    cursor: pointer;
+    &.primary {
+        border-color: $corporate-primary;
+        color: $corporate-primary;
+    }
+}
