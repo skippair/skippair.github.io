@@ -138,6 +138,13 @@ form.pro {
   }
 }
 
+form.gift {
+  .form-group input.form-control {
+    color: $gift-primary;
+  }
+  
+}
+
 .form-group {
     margin-bottom: 0px;
 }
