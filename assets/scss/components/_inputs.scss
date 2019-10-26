@@ -327,6 +327,21 @@ form.pro {
     }
   }
 
+  &.warning {
+    label {
+      border: 1px solid orange;
+    }
+    label:before {
+      background: orange;
+    }
+    input:checked + label {
+      background: orange;
+    }
+    input:checked ~ span {
+      color: orange;
+    }
+  }
+
 }
 
 // Chechbox  as button
