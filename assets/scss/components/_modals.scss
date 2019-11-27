@@ -86,3 +86,33 @@
     opacity: 1;
   }
 }
+
+
+/* HELP MODAL */
+#help-modal, #help-modal-conf {
+  .modal-dialog {
+    .modal-content {
+      min-height: 300px;
+    }
+  }
+}
+
+@media screen and (min-width: $md) {
+  #help-modal, #help-modal-conf {
+    .modal-dialog {
+      max-width: 80%;
+      width: 80%;
+    }
+  }
+}
+@media screen and (min-width: $lg) {
+  #help-modal, #help-modal-conf {
+    .modal-dialog {
+      max-width: 60%;
+      width: 60%;
+      form button {
+        margin-top: 25px;
+      }
+    }
+  }
+}
