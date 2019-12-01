@@ -100,16 +100,16 @@
 @media screen and (min-width: $md) {
   #help-modal, #help-modal-conf {
     .modal-dialog {
-      max-width: 80%;
-      width: 80%;
+      max-width: 70%;
+      width: 70%;
     }
   }
 }
 @media screen and (min-width: $lg) {
   #help-modal, #help-modal-conf {
     .modal-dialog {
-      max-width: 60%;
-      width: 60%;
+      max-width: 50%;
+      width: 50%;
       form button {
         margin-top: 25px;
       }
