@@ -197,14 +197,22 @@ $filter-spacing-xl: 24px;
     }
     label {
         box-shadow: 0px 4px 7.7px 0.3px rgba(2, 3, 2, 0.14);
-        border-radius: 3px;
+        border-radius: 15px;
         margin-bottom: 0px;
         cursor: pointer;
         color: $empty_input_color;
         font-weight: 400;
         padding: 1em 0.3em;
         background: $color-grey3;
+        border: 2px solid;
+        border-color: $corporate-lighter;
         opacity: 0.7;
+        &.private {
+          border-radius: 15px 0 0 15px;
+        }
+        &.shared {
+          border-radius: 0 15px 15px 0;
+        }
         .priv-shr-txt {
             line-height: 1em;
             font-size: 16px;
@@ -242,11 +250,15 @@ $filter-spacing-xl: 24px;
           left: 20px;
           display: none;
         }
+        &.private img {
+          left: 32px;
+        }
 
     }
     [type="radio"]:checked+label {
         background: #fff;
         opacity: 1;
+        border-color: $actived_input_color;
         font-weight: 600;
         color: $actived_input_color;
         .counter-container {
@@ -353,12 +365,19 @@ $filter-spacing-xl: 24px;
         .counter-container {
             width: 40px;
             right: 21px;
+            &.shared_count {
+                right: 33px;
+            }
         }
         div {
               padding-right: 50px;
         }
       }
+      .reservation-type-button:last-child {
+        margin-left: -1px;
+      }
     }
+
 
     .ordering-filter {
       top: -13px;
