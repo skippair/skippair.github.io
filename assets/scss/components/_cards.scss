@@ -208,6 +208,9 @@
             color: $text;
         }
     }
+    .checked-list-icons .fa {
+      color: $corporate-primary;
+    }
 }
 
 @media  (min-width: $lg) {
