@@ -7,7 +7,7 @@ $active_page_color: $corporate-primary;
     font-size: 18px;
     text-align: center;
     margin: 40px 0px 40px 0px;
-    
+
     .page-number,
     .previous,
     .next {
@@ -36,6 +36,12 @@ $active_page_color: $corporate-primary;
         }
     }
 
+    .page-number-sep {
+        line-height: 26px;
+        display: inline-block;
+        margin: 0px 3px;
+        color: $other_page_color;
+   }
     .next,
     .previous {
         color: $active_page_color;
